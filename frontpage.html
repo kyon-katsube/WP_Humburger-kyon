@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+ <head>
+ <meta charset="utf-8">
+ <title>Hamburger</title>
+ <meta name="description" content="ハンバーガーショップのサイトです">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!--CSS-->
+ <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">                                    <!--ress.cssの設定-->
+ <link rel="stylesheet" href="css/front-page.css">                                                          <!--これから指定するCSS-->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2? family=M+PLUS+1p:wght@400;500;700;800;900 &family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+ </head>
+
+<body>
+   <!--front-page-->
+   
+    <header>
+        <div class="p-menu">    <!--メニューボタン-->
+          <button class="c-button">Menu</button>  
+        </div>
+        <h1 class="c-title">Hamburger</h1>
+        <form action="#" method="get" class="p-search-form">
+           <label for="search"></label>
+           <input type="text" id="search" class="p-search-form__text">
+           <input class="c-button--search" type="submit" value="検索">
+          
+         </form>
+    </header>   
+      
+      <article class="contents">
+        <div class="p-main-visual">
+          <img src="images/mainvisual-pc.jpg">
+          <h2>ダミーサイト</h2>
+        </div>
+
+        <div class="p-branch-menu"> <!--TakeOut全体のくくり-->
+           <div class="p-branch-menu__contents">
+             <img src="images/front-page-takeout-image.png">
+             <h3>Take Out</h3>
+              <div class="p-branch-menu__contents__wrapper">
+                <div class="p-branch-menu__contents__wrapper__detail">
+                   <h4>Take Out1</h4>
+                   <p>当店のテイクアウトで利用できる商品を掲載しています1当店のテイクアウトで利用できる商品を掲載しています1当店のテイクアウトで利用できる商品を掲載しています1当店のテイクアウトで利用できる商品を掲載しています1当店のテイクアウトで利用できる商品を掲載しています1当店のテイクアウトで利用できる商品を掲載しています1</p>
+                </div>
+                <div class="p-branch-menu__contents__wrapper__detail">
+                   <h4>Take Out2</h4>
+                   <p>当店のテイクアウトで利用できる商品を掲載しています2</p>
+                </div>  
+              </div>   <!--__wrapperの閉じタグ-->
+           </div>      <!--__contentsの閉じタグ-->
+
+           <div class="p-branch-menu__contents">
+            <img src="images/front-page-Eatin-image.png">
+            <h3>Eat In</h3>
+            <div class="p-branch-menu__contents__wrapper">
+               <div class="p-branch-menu__contents__wrapper__detail">
+                  <h4>Take Out3</h4>
+                  <p>当店のテイクアウトで利用できる商品を掲載しています3</p>
+               </div>
+               <div class="p-branch-menu__contents__wrapper__detail">
+                  <h4>Take Out4</h4>
+                  <p>当店のテイクアウトで利用できる商品を掲載しています4</p>
+               </div> 
+            </div>    
+          </div>
+
+        </div> <!--p-branch-menuの閉じタグ-->
+
+     <aside>
+        <!--サイドバー入れる-->
+
+     </aside>
+    </article>     
+
+    <section id="p-location">
+       <div class="p-location__wrapper">
+          <h2>見出しが入ります</h2>
+          <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+       </div>  
+       <div class="p-location__map">
+          <!--GoogleMapリンク-->
+       </div>  
+    </section>
+
+    <footer>
+       <div class="p-footer">
+          <p>ショップ情報 ｜ ヒストリー</p>
+          <p>copyright : Raise Tech</p>
+       </div>
+    </footer>
+
+
+
+<!--jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>            
+<script src="script.js"></script>          
+
+</body>
+</html>
