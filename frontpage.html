@@ -20,16 +20,51 @@
    
     <header>
         <div class="p-menu">    <!--メニューボタン-->
-          <button class="c-button--menu">Menu</button>  
+          <button class="c-btn--menu">Menu</button>  
         </div>
         <h1 class="c-title">Hamburger</h1>
         <form action="#" method="get" class="p-search-form">
            <label for="search"></label>
            <input type="text" id="search" class="p-search-form__text">
-           <input class="c-button--search" type="submit" value="検索">
+           <input class="c-btn--search" type="submit" value="検索">
          </form>
     </header>   
-      
+    
+
+    <aside> <!--Menuをタップして出てくるメニュー表示-->
+     <div class="c-btn--close"><span></span><span></span></div> <!--×ボタン用-->
+      <nav class="p-menu-list">
+       <div class="p-menu-list__wrapper">
+        <ul class="p-menu-list__wrapper__main">
+         <h3>バーガー</h3>
+           <li>ハンバーガー</li>
+           <li>チーズバーガー</li>
+           <li>テリヤキバーガー</li>
+           <li>アボカドバーガー</li>
+           <li>フィッシュバーガー</li>
+           <li>ベーコンバーガー</li>
+           <li>チキンバーガー</li>
+        </ul>
+        <ul class="p-menu-list__wrapper__side">
+          <h3>サイド</h3>
+            <li>ポテト</li>
+            <li>サラダ</li>
+            <li>ナゲット</li>
+            <li>コーン</li>
+         </ul>
+         <ul class="p-menu-list__wrapper__drink">
+          <h3>ドリンク</h3>
+            <li>コーラ</li>
+            <li>ファンタ</li>
+            <li>オレンジ</li>
+            <li>アップル</li>
+            <li>紅茶（ice/Hot)</li>
+            <li>コーヒー(Ice/Hot)</li>
+         </ul>
+        </div>  
+       </nav>
+      </aside>
+
     <article class="contents">
         <div class="c-main-visual">
           <img src="images/mainvisual-pc.jpg">
@@ -66,11 +101,7 @@
           </div>
 
         </div> <!--p-branch-menuの閉じタグ-->
-
-     <aside>
-        <!--サイドバー入れる-->
-
-     </aside>
+      
     </article>     
 
     <section id="p-location">
@@ -91,7 +122,7 @@
 
 <!--jQuery-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>            
-<script src="script.js"></script>          
+<script src="frontpage.js"></script>          
 
 </body>
 </html>

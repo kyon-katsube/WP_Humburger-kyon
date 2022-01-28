@@ -46,7 +46,7 @@ h1 {
   justify-content: center;
 }
 
-.p-search-form__text, .c-button--search {
+.p-search-form__text, .c-btn--search {
   border-radius: 10px;
   border: 1px solid;
   color: #616161;
@@ -61,7 +61,7 @@ h1 {
   background-color: #FFF;
 }
 
-.c-button--search {
+.c-btn--search {
   width: 78px;
   background: linear-gradient(to bottom, #F2EDE9 0%, #DED8D3 100%);
 }
@@ -147,20 +147,90 @@ h1 {
   padding: 0 10px 30px 10px;
 }
 
+.c-btn--close.active {
+  content: "";
+  position: fixed;
+  z-index: 200;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  transition: all 0.6s;
+}
+.c-btn--close.active span {
+  display: inline-block;
+  position: absolute;
+  top: 16px;
+  width: 45px;
+  height: 6px;
+  background-color: #707070;
+}
+.c-btn--close.active span:first-child {
+  transform: rotate(-45deg);
+}
+.c-btn--close.active span:last-child {
+  transform: rotate(45deg);
+}
+
+.p-menu-list {
+  background-color: rgba(112, 112, 112, 0.9);
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  transition: all 0.6s;
+}
+.p-menu-list.panelactive {
+  left: 0;
+  transition: all 0.6s;
+}
+.p-menu-list__wrapper {
+  background-color: #FFF7EF;
+  padding-top: 220px;
+  padding-left: 40px;
+  position: absolute;
+  right: 0;
+  width: 328px;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.p-menu-list__wrapper__main {
+  margin-bottom: 40px;
+}
+.p-menu-list__wrapper h3 {
+  font-size: 24px;
+  font-family: "M PLUS 1p", sans-serif;
+  margin-bottom: 40px;
+}
+.p-menu-list__wrapper li {
+  list-style: none;
+  font-size: 20px;
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: normal;
+  line-height: 2.5em;
+  padding-left: 20px;
+}
+
 section {
   background-image: url("../images/front-page-map.png");
   background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 50%;
   margin-top: 50px;
   position: relative;
 }
 section::before {
   content: "";
-  background-color: rgba(132, 132, 132, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
+  bottom: 50%;
 }
 section .p-location__wrapper {
   padding: 50px 40px;
