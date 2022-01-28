@@ -152,7 +152,7 @@ h1 {
   position: fixed;
   z-index: 200;
   top: 20px;
-  right: 20px;
+  right: 30px;
   cursor: pointer;
   width: 32px;
   height: 32px;
@@ -198,7 +198,7 @@ h1 {
   height: 100vh;
   overflow-y: scroll;
 }
-.p-menu-list__wrapper__main {
+.p-menu-list__wrapper__contents {
   margin-bottom: 40px;
 }
 .p-menu-list__wrapper h3 {
