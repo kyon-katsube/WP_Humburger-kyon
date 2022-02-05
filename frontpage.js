@@ -3,16 +3,18 @@ $(function(){
     //sp版でMenuを押すとハンバーガーのナビメニューが出てくる実装
 
     $(".c-btn--menu").click(function () {//Menuボタンがクリックされたら
-        $(".c-btn--close").toggleClass('active');//×ボタンを activeクラスを付与して表示
-        $(".p-menu-list").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+        $(".c-btn--close").toggleClass('active');//×ボタンを activeクラスを付与して表示      
+        $(".p-menu-list__cover").toggleClass('backactive');//空要素のクラスにpanelactiveクラスを付与
+        $(".p-menu-list__wrapper").toggleClass('slideactive');
       });
       
-console.log('test'); 
+      console.log('test'); 
 
     $(".c-btn--close").click(function () {//×ボタンがクリックされたら
         $(this).removeClass('active');//ボタンの activeクラスを除去し
-        $(".p-menu-list").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
-     });
+        $(".p-menu-list__cover").removeClass('backactive');//ナビゲーションのpanelactiveクラスも除去
+        $(".p-menu-list__wrapper").removeClass('slideactive');
+      });
 
 
      //ナビメニューが出たら背景を固定する（SP/TAB版）

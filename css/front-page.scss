@@ -1,4 +1,8 @@
+@use "../scss/Foundation/mixin" as m;
+@import "../scss/Foundation/variables";
 @charset "UTF-8";
+
+
 
 /*共通部分---------------*/
 html {
@@ -9,7 +13,7 @@ body {
     line-height: 1.0;
     color:$base-gray;
     overflow-x: hidden; //レスポンシブで通常は左側から飛び出す横のスクロールバーをかくしておくため//
-    min-width:320px;
+    min-width:320px; 
 }
 
 a {
@@ -39,6 +43,7 @@ h1 {
     text-align: right;
     padding:15px 20px;
     font-size:20px;
+    z-index:3;
 }
 
 .p-search-form {
@@ -59,16 +64,31 @@ h1 {
     background:url(../images/search-mark.png) no-repeat center left 15px;
     background-size:24px 24px;
     background-color:$base-white;
+    @include m.tab {
+       width:396px;
+    }
+}
+
+.c-btn--menu{   //Menuボタン
+    @include m.tab{
+        font-size:34px;
+    }
+    &:hover {
+    cursor:pointer;
+    }
 }
 
 .c-btn--search {
     width:78px;
     background:linear-gradient(to bottom,#F2EDE9 0%,#DED8D3 100%);
+    @include m.tab{
+        width:136px;
+    }
 }
 
-.c-main-visual {
+.c-main-visual {  //ダミーサイト
     position:relative;
-  h2 {
+    h2 {
        color:$base-white;
        font-size:36px;
        font-family:'M PLUS 1p',sans-serif;
@@ -76,12 +96,21 @@ h1 {
        position:absolute;
        top:50%;
        left:20px;
-   }
-   img {           //見本と縮尺違う？？
+     }
+     img {           
        width:100%;
        height:285px;
        object-fit: cover;
    }
+}
+
+.p-branch-menu {     //takeoutとeatinを横並び
+    @include m.tab{
+    display:flex;
+    }
+    // @include m.pc{    //あとで記述する
+    //  display:grid;   
+    // }
 }
 
 .p-branch-menu__contents-first{
@@ -103,7 +132,7 @@ h1 {
 
     h2 {                     //TakeOut Eatinの白文字
         color:$base-white;
-        font-size:41px;
+        font-size:40px;
         position:absolute;
         top:20px;
         left:12px;
@@ -141,14 +170,15 @@ h1 {
          }
 
         p {         
-          font-size:16px;
+        //   font-size:16px; //デフォルト？記述不要？
           font-weight: normal;
           padding:0 10px 30px 10px;
         }
        }  //__detail
       }   //contents-wrapper
 
-      //サイドバー
+
+  //サイドバー
       .c-btn--close.active {      //×ボタン
           content: "";
           position:fixed;
@@ -177,30 +207,41 @@ h1 {
       }
       
       .p-menu-list { 
-        background-color:$navmenu-background-gray;
         top:0;
-        left:100%;//menuボタンを押すまでは非表示 メインとサイドバーの割合
         width:100%;
         height:100vh;
-        position:fixed;
-        z-index:1;  //上へ持ってくる
-        display:flex; //子要素のピンクを親と同じ高さにする
-        transition:all 0.6s; //アニメーションの速度
-
-        &.panelactive {  //jsでアクティブクラスがついたら表示させる
-           left:0;
-           transition:all 0.6s; //アニメーションの速度
-          }
+        z-index:2;  //上へ持ってくる
+        display:none;
         
-           &__wrapper {
+        &__cover {  //jsでアクティブクラスがついたら表示させる
+                position:fixed;
+                top:0;
+                width:100%;
+                height:100vh;
+                display: block;          
+                background-color:$navmenu-background-gray; 
+                animation:1s fadeIn forwards;
+                @keyframes fadeIn{
+                   from{opacity:0}
+                   to  {opacity:1} 
+                 }       
+         }  //&__cover      
+     
+           &__wrapper {          
               background-color:$base-pink; 
+              right:-120%;//menuボタンを押すまでは非表示 メインとサイドバーの割合
               padding-top:220px; //ハンバーガーの開始置
               padding-left:40px;
               position:absolute;
-              right:0;
               width:328px;
               height:100vh;
               overflow-y: scroll;
+              z-index:3; 
+              animation :none;
+              &.slideactive {
+                  right:0; 
+                  transition:all 1s;          
+              }    
          
               &__contents {
                   margin-bottom:40px;
@@ -218,13 +259,11 @@ h1 {
                   font-weight:normal;
                   line-height:2.5em;
                   padding-left:20px;
-              } 
-           } //wrapperの閉じタグ
-        }
+               } 
+             } //wrapperの閉じタグ
+        }  //p-menu-listの閉じタグ
 
-
-
-
+  //グレーのMAP部分
       section {
           background-image: url("../images/front-page-map.png");
           background-size: cover;
@@ -240,6 +279,13 @@ h1 {
             right: 0;
             top: 0;
             bottom: 50%;
+            @include m.tab{     //tabのときは薄グレーなし
+                display:none;
+            }
+            @include m.pc {      //pcのときは右から38％が薄グレー
+                 right:38%;
+                 bottom:0;
+            }
           }
       .p-location__wrapper {
          padding:50px 40px;
@@ -288,4 +334,4 @@ h1 {
               text-align:center;
               padding-top:35px;
           }
-      }
+        }//footerの閉じタグ
