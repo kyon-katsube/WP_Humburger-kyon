@@ -2,15 +2,15 @@
 $sizes:sp,tab,pc;
 
 //breakpoint定義 
-$breakpoint:(           
+$breakpoints:(           
 'sp':'screen and (min-width:320px) ',
 'tab':'screen and (min-width:600px)',
 'pc':'screen and (min-width:1025px)',
 )!default;
 
 // @mixinの定義
-@mixin mq($bp) {
-    @media #{map-get($breakpoint, $bp)} {
+@mixin mq($breakpoint:sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
       @content;
     }
   }

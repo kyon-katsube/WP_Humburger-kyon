@@ -4,16 +4,16 @@ $(function(){
 
     $(".c-btn--menu").click(function () {//Menuボタンがクリックされたら
         $(".c-btn--close").toggleClass('active');//×ボタンを activeクラスを付与して表示      
-        $(".p-menu-list__cover").toggleClass('backactive');//空要素のクラスにpanelactiveクラスを付与
-        $(".p-menu-list__wrapper").toggleClass('slideactive');
+        $(".c-wrapper").toggleClass('backactive');//空要素のクラスにpanelactiveクラスを付与
+        $(".p-sidebar").toggleClass('slideactive'); //サイドバーが出現
       });
       
       console.log('test'); 
 
     $(".c-btn--close").click(function () {//×ボタンがクリックされたら
         $(this).removeClass('active');//ボタンの activeクラスを除去し
-        $(".p-menu-list__cover").removeClass('backactive');//ナビゲーションのpanelactiveクラスも除去
-        $(".p-menu-list__wrapper").removeClass('slideactive');
+        $(".c-wrapper").removeClass('backactive');//ナビゲーションのpanelactiveクラスも除去
+        $(".p-sidebar").removeClass('slideactive');//サイドバーが右に隠れる
       });
 
 

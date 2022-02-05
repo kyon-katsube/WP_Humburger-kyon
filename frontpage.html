@@ -30,13 +30,14 @@
          </form>
     </header>   
     
+    <div class="c-wrapper"></div>
 
-    <aside> <!--Menuをタップして出てくるメニュー表示-->
+    <aside class="p-sidebar"> <!--Menuをタップして出てくるメニュー表示-->
      <button class="c-btn--close"><span></span><span></span></button> <!--×ボタン用-->
-      <nav class="p-menu-list">
-       <div class="p-menu-list__cover"></div> <!--SP時の黒い背景用-->
-       <div class="p-menu-list__wrapper">
-        <ul class="p-menu-list__wrapper__contents">
+      <nav class="p-sidebar-list">
+       <!-- <div class="p-menu-list__cover"></div> <!--SP時の黒い背景用-->
+       <!-- <div class="p-menu-list__wrapper"> -->
+        <ul class="p-sidebar-list__contents">
          <h3>バーガー</h3>
            <li>ハンバーガー</li>
            <li>チーズバーガー</li>
@@ -46,14 +47,14 @@
            <li>ベーコンバーガー</li>
            <li>チキンバーガー</li>
         </ul>
-        <ul class="p-menu-list__wrapper__contents">
+        <ul class="p-sidebar-list__contents">
           <h3>サイド</h3>
             <li>ポテト</li>
             <li>サラダ</li>
             <li>ナゲット</li>
             <li>コーン</li>
          </ul>
-         <ul class="p-menu-list__wrapper__contents">
+         <ul class="p-sidebar-list__contents">
           <h3>ドリンク</h3>
             <li>コーラ</li>
             <li>ファンタ</li>
@@ -62,18 +63,18 @@
             <li>紅茶（ice/Hot)</li>
             <li>コーヒー(Ice/Hot)</li>
          </ul>
-        </div>  
+        <!-- </div>   -->
        </nav>
       </aside>
 
-    <article class="p-contents">
+    <main class="p-contents">
         <div class="c-main-visual">
           <img src="images/mainvisual-pc.jpg">
           <h2>ダミーサイト</h2>
         </div>
 
         <div class="p-branch-menu"> <!--TakeOut全体のくくり-->
-           <div class="p-branch-menu__contents-first p-branch-menu__contents">
+           <article class="p-branch-menu__contents-first p-branch-menu__contents">
               <h2>Take Out</h2>
               <div class="p-branch-menu__contents__wrapper">
                 <div class="p-branch-menu__contents__wrapper__detail">
@@ -85,9 +86,9 @@
                    <p>当店のテイクアウトで利用できる商品を掲載しています2</p>
                 </div>  
               </div>   <!--__wrapperの閉じタグ-->
-           </div>      <!--__contents-firstの閉じタグ-->
+            </article>      <!--__contents-firstの閉じタグ-->
 
-           <div class="p-branch-menu__contents-second p-branch-menu__contents">
+           <article class="p-branch-menu__contents-second p-branch-menu__contents">
             <h2>Eat In</h2>
             <div class="p-branch-menu__contents__wrapper">
                <div class="p-branch-menu__contents__wrapper__detail">
@@ -99,11 +100,11 @@
                   <p>当店のテイクアウトで利用できる商品を掲載しています4</p>
                </div> 
             </div>    
-          </div>
+           </article>
 
         </div> <!--p-branch-menuの閉じタグ-->
       
-    </article>     
+      </main>     
 
     <section id="p-location">
        <div class="p-location__wrapper">
