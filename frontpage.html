@@ -17,7 +17,8 @@
 
 <body>
    <!--front-page-->
-   
+   <div class="p-container">
+
     <header>
         <div class="p-menu">    <!--メニューボタン-->
           <button class="c-btn--menu">Menu</button>  
@@ -34,35 +35,36 @@
 
     <aside class="p-sidebar"> <!--Menuをタップして出てくるメニュー表示-->
      <button class="c-btn--close"><span></span><span></span></button> <!--×ボタン用-->
-      <nav class="p-sidebar-list">
-       <!-- <div class="p-menu-list__cover"></div> <!--SP時の黒い背景用-->
-       <!-- <div class="p-menu-list__wrapper"> -->
-        <ul class="p-sidebar-list__contents">
-         <h3>バーガー</h3>
-           <li>ハンバーガー</li>
-           <li>チーズバーガー</li>
-           <li>テリヤキバーガー</li>
-           <li>アボカドバーガー</li>
-           <li>フィッシュバーガー</li>
-           <li>ベーコンバーガー</li>
-           <li>チキンバーガー</li>
-        </ul>
-        <ul class="p-sidebar-list__contents">
-          <h3>サイド</h3>
-            <li>ポテト</li>
-            <li>サラダ</li>
-            <li>ナゲット</li>
-            <li>コーン</li>
+      <h2>Menu</h2>
+         <nav class="p-sidebar-list">
+         <!-- <div class="p-menu-list__cover"></div> <!--SP時の黒い背景用-->
+         <!-- <div class="p-menu-list__wrapper"> -->
+         <ul class="p-sidebar-list__contents">
+            <h3 a href="#">バーガー</h3>
+            <li a href="#">ハンバーガー</li>
+            <li a href="#">チーズバーガー</li>
+            <li a href="#">テリヤキバーガー</li>
+            <li a href="#">アボカドバーガー</li>
+            <li a href="#">フィッシュバーガー</li>
+            <li a href="#">ベーコンバーガー</li>
+            <li a href="#">チキンバーガー</li>
          </ul>
          <ul class="p-sidebar-list__contents">
-          <h3>ドリンク</h3>
-            <li>コーラ</li>
-            <li>ファンタ</li>
-            <li>オレンジ</li>
-            <li>アップル</li>
-            <li>紅茶（ice/Hot)</li>
-            <li>コーヒー(Ice/Hot)</li>
-         </ul>
+            <h3 a href="#">サイド</h3>
+               <li a href="#">ポテト</li>
+               <li a href="#">サラダ</li>
+               <li a href="#">ナゲット</li>
+               <li a href="#">コーン</li>
+            </ul>
+            <ul class="p-sidebar-list__contents">
+            <h3 a href="#">ドリンク</h3>
+               <li a href="#">コーラ</li>
+               <li a href="#">ファンタ</li>
+               <li a href="#">オレンジ</li>
+               <li a href="#">アップル</li>
+               <li a href="#">紅茶（ice/Hot)</li>
+               <li a href="#">コーヒー(Ice/Hot)</li>
+            </ul>
         <!-- </div>   -->
        </nav>
       </aside>
@@ -103,23 +105,24 @@
            </article>
 
         </div> <!--p-branch-menuの閉じタグ-->
-      
-      </main>     
 
-    <section id="p-location">
-       <div class="p-location__wrapper">
-          <h2>見出しが入ります</h2>
-          <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-       </div>
-    </section>
+        <section id="p-location">
+            <div class="p-location__wrapper">
+               <h2>見出しが入ります</h2>
+               <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            </div>
+         </section>
+ 
+      </main>    
 
     <footer>
        <div class="p-footer">
-          <p class="c-category-title">ショップ情報 ｜ ヒストリー</p>
+          <p class="c-category-title" a href="#">ショップ情報 ｜ ヒストリー</p>
           <p class="c-copyright">copyright : RaiseTech</p>
        </div>
     </footer>
-
+  
+  </div> <!--pc版grid用のdivタグ-->
 
 
 <!--jQuery-->
