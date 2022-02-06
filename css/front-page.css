@@ -52,10 +52,10 @@ h1 {
 }
 @media screen and (min-width:1025px) {
   h1 {
-    position: absolute;
-    top: 66.5px;
-    left: 66.5px;
+    display: flex;
+    align-items: center;
     font-size: 64px;
+    margin: auto auto auto 20px;
   }
 }
 
@@ -64,6 +64,11 @@ h1 {
   padding: 15px 20px;
   font-size: 20px;
   z-index: 3;
+}
+@media screen and (min-width:1025px) {
+  .p-header {
+    padding: 0;
+  }
 }
 
 .c-search-form {
@@ -75,6 +80,8 @@ h1 {
   .c-search-form {
     margin: auto 20px;
     position: relative;
+    width: 100%;
+    max-width: 542px;
   }
 }
 
@@ -92,17 +99,16 @@ h1 {
   background-size: 24px 24px;
   background-color: #fff;
 }
-@media screen and (min-width:1025px), (max-width:1180px) {
+@media screen and (min-width:600px) {
   .c-search-form__text {
     width: 100%;
     min-width: 230px;
-    max-width: 396px;
+    max-width: 542px;
   }
 }
 @media screen and (min-width:1025px) {
   .c-search-form__text {
-    width: 100%;
-    max-width: 396px;
+    margin-right: 146px;
   }
 }
 
@@ -127,6 +133,15 @@ h1 {
 @media screen and (min-width:600px) {
   .c-btn--search {
     width: 136px;
+  }
+}
+@media screen and (min-width:1025px) {
+  .c-btn--search {
+    position: absolute;
+    width: 136px;
+    bottom: 0;
+    right: 0;
+    margin-left: 10px;
   }
 }
 

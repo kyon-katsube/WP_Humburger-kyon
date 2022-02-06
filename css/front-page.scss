@@ -54,10 +54,10 @@ h1 {
     text-align: center;
     font-size:40px;
     @include m.mq(pc) {
-    position:absolute;
-    top:66.5px;
-    left:66.5px;
+    display: flex;
+    align-items:center;
     font-size:64px;
+    margin:auto auto auto 20px;
     }
 }
 
@@ -66,6 +66,9 @@ h1 {
     padding:15px 20px;
     font-size:20px;
     z-index:3;
+    @include m.mq(pc) {
+        padding:0;
+    }
 }
 
 .c-search-form {
@@ -75,6 +78,8 @@ h1 {
     @include m.mq(pc) {
      margin:auto 20px;
      position:relative;
+     width:100%;
+     max-width:542px;
     }
 }
 
@@ -90,14 +95,13 @@ h1 {
     background:url(../images/search-mark.png) no-repeat center left 15px;
     background-size:24px 24px;
     background-color:v.$base-white;
-    @include m.mq(sm-pc){
+    @include m.mq(tab){
         width:100%;
         min-width:230px;
-        max-width:396px;
+        max-width:542px;
     }
     @include m.mq(pc){
-        width:100%;
-        max-width:396px;
+    margin-right:146px;
     }
 }
 
@@ -118,6 +122,13 @@ h1 {
     background:linear-gradient(to bottom,#F2EDE9 0%,#DED8D3 100%);
     @include m.mq(tab){
         width:136px;
+    }
+    @include m.mq(pc){
+        position:absolute;
+        width:136px;
+        bottom:0;
+        right:0;
+        margin-left:10px;
     }
 }
 
