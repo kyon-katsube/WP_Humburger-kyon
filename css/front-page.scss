@@ -61,37 +61,44 @@ h1 {
     }
 }
 
-.p-menu {
+.p-header {
     text-align: right;
     padding:15px 20px;
     font-size:20px;
     z-index:3;
 }
 
-.p-search-form {
+.c-search-form {
     margin:40px 20px;
     display: flex;
-    justify-content:center;
+    justify-content:center;    
     @include m.mq(pc) {
      margin:auto 20px;
+     position:relative;
     }
 }
 
-.p-search-form__text, .c-btn--search{   //検索窓と検索ボタン
+.c-search-form__text,.c-btn--search{   //検索窓と検索ボタン
     border-radius: 10px;
     border:1px solid;
     color:v.$searchform-gray;
     height:46px;
 }
-.p-search-form__text {     //検索窓
+.c-search-form__text {     //検索窓
     width:230px;
     margin-right:10px;
     background:url(../images/search-mark.png) no-repeat center left 15px;
     background-size:24px 24px;
     background-color:v.$base-white;
-    @include m.mq(tab) {
-       width:396px;
-    }  
+    @include m.mq(sm-pc){
+        width:100%;
+        min-width:230px;
+        max-width:396px;
+    }
+    @include m.mq(pc){
+        width:100%;
+        max-width:396px;
+    }
 }
 
 .c-btn--menu{   //Menuボタン
@@ -143,9 +150,6 @@ main {
     grid-template-columns:1fr 1fr;
     gap:5%;
     }
-    // @include m.pc{    //あとで記述する
-    //  display:grid;
-    // }
 }
 
 .p-branch-menu__contents-first{
@@ -263,10 +267,12 @@ main {
             right:0;  
         }
         @include m.mq(pc) {
+            position:static;
             right:0;
             width:367px;
             height:auto;
-            background-size:contain;
+            overflow-y:inherit;
+            transition:inherit;
          }
 
         //×ボタンの設定
@@ -296,7 +302,7 @@ main {
         }
 
       h2 {    //PC用の「Menu」表示
-        @include m.mq(tab-or-less) {
+        @include m.mq(lesstab) {
            display:none;
          }
          @include m.mq(pc) {

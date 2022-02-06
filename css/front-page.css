@@ -59,41 +59,50 @@ h1 {
   }
 }
 
-.p-menu {
+.p-header {
   text-align: right;
   padding: 15px 20px;
   font-size: 20px;
   z-index: 3;
 }
 
-.p-search-form {
+.c-search-form {
   margin: 40px 20px;
   display: flex;
   justify-content: center;
 }
 @media screen and (min-width:1025px) {
-  .p-search-form {
+  .c-search-form {
     margin: auto 20px;
+    position: relative;
   }
 }
 
-.p-search-form__text, .c-btn--search {
+.c-search-form__text, .c-btn--search {
   border-radius: 10px;
   border: 1px solid;
   color: #616161;
   height: 46px;
 }
 
-.p-search-form__text {
+.c-search-form__text {
   width: 230px;
   margin-right: 10px;
   background: url(../images/search-mark.png) no-repeat center left 15px;
   background-size: 24px 24px;
   background-color: #fff;
 }
-@media screen and (min-width:600px) {
-  .p-search-form__text {
-    width: 396px;
+@media screen and (min-width:1025px), (max-width:1180px) {
+  .c-search-form__text {
+    width: 100%;
+    min-width: 230px;
+    max-width: 396px;
+  }
+}
+@media screen and (min-width:1025px) {
+  .c-search-form__text {
+    width: 100%;
+    max-width: 396px;
   }
 }
 
@@ -279,10 +288,12 @@ h1 {
 }
 @media screen and (min-width:1025px) {
   .p-sidebar {
+    position: static;
     right: 0;
     width: 367px;
     height: auto;
-    background-size: contain;
+    overflow-y: inherit;
+    transition: inherit;
   }
 }
 .p-sidebar .c-btn--close.active {
@@ -308,7 +319,7 @@ h1 {
 .p-sidebar .c-btn--close.active span:last-child {
   transform: rotate(45deg);
 }
-@media screen and (max-width:1024px) {
+@media screen and (max-width:600px) {
   .p-sidebar h2 {
     display: none;
   }
