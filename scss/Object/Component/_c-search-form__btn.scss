@@ -1,9 +1,0 @@
-@use "../scss/Foundation/mixin" as m;
-@use "../scss/Foundation/variables" as v;
-@charset "UTF-8";
-
-.c-search-form__btn { //検索ボタン　色はデフォルトで
-    border-radius: 10px;
-    border:1px solid;
-    background:linear-gradient(to bottom,#F2EDE9 0%,#DED8D3 100%);
-}

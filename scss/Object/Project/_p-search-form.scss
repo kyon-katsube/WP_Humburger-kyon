@@ -2,10 +2,11 @@
 @use "../scss/Foundation/variables" as v;
 @charset "UTF-8";
 
-@use "../scss/Object/Component/c-search-form__btn";
-@use "../scss/Object/Component/c-search-form__text";
+@use "../Component/c-btn";
+@use "../Component/c-search-form";
 
-.c-search-form {          //c-search-formとしてcomponentに
+
+.p-search-form {          
     margin:40px 20px;
     display: flex;
     justify-content:center;    
@@ -17,26 +18,11 @@
     }
 }
 
-
-.c-btn--search {     //検索ボタン
-    width:78px;
-    height:46px;
-    @include m.mq(tab){
-        width:136px;
-    }
-    @include m.mq(pc){
-        position:absolute;
-        width:136px;
-        bottom:0;
-        right:0;
-        margin-left:10px;
-    }
-}
-
-.c-search-form__text{   //検索窓
+.p-search-form__box{   //検索窓 c-input-boxの内容は自動反映
     width:230px;
     height:46px;
     margin-right:10px;
+    padding-left:40px;  //虫眼鏡マークより右から記入させるため
     background-size:24px 24px;
     @include m.mq(tab){
         width:100%;
@@ -47,3 +33,19 @@
     margin-right:146px;
     }
 }
+
+.p-search-form__button{   //検索ボタンc-button-search自動反映
+     height:46px;
+     width:78px;
+     background:linear-gradient(to bottom,#F2EDE9 0%,#DED8D3 100%);
+        @include m.mq(tab){
+            width:136px;
+        }
+        @include m.mq(pc){
+            position:absolute;
+            width:136px;
+            bottom:0;
+            right:0;
+            margin-left:10px;
+        }
+  }

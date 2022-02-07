@@ -1,0 +1,60 @@
+@use "../scss/Foundation/mixin" as m;
+@use "../scss/Foundation/variables" as v;
+@charset "UTF-8";
+
+.c-button--search{   //検索ボタンのベース
+    border-radius: 10px;
+    border:1px solid;
+    color:v.$searchform-gray; 
+}
+
+
+//Menuボタン（sp/pc)・×ボタン　いったんすべてのスタイル転記
+
+.c-button--menu--sp{   //sp/tabのMenuボタン
+    @include m.mq(tab){
+        font-size:v.$font-l;
+    }
+    @include m.mq(pc){
+        display:none;
+    }
+    &:hover {
+    cursor:pointer;
+    }
+}
+
+.c-button--menu--pc {    //PC用の「Menu」表示  c-btn p-btn--menu__pcへ
+    @include m.mq(lesspc) {
+       display:none;
+     }
+     @include m.mq(pc) {
+        display:block;
+        font-size:v.$font-l;
+        padding:40px;
+      }
+  }
+
+  .c-button--cross.active {     //c-btn p-btn--cross//l-sidebarへ
+    content: "";
+    position:absolute;
+    z-index:200; //ボタン最前面に
+    top:20px;
+    right:40px;
+    width:45px;
+    height:45px;
+    transition:all 1.5s; //アニメーションの速度
+    & span {
+        display:block;
+        position:absolute;
+        width:45px;
+        height:6px;
+        background-color:v.$base-gray;
+    }
+
+    & span:first-child{
+        transform:rotate(-45deg);
+        }
+    & span:last-child{
+        transform:rotate(45deg);
+    }
+} //c-btn--close

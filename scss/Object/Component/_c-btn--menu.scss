@@ -1,9 +1,0 @@
-@use "../scss/Foundation/mixin" as m;
-@use "../scss/Foundation/variables" as v;
-@charset "UTF-8";
-
-.c-btn--menu__sp{   //sp/tabのMenuボタン
-    &:hover {
-    cursor:pointer;
-    }
-}

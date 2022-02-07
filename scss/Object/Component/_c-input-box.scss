@@ -2,7 +2,7 @@
 @use "../scss/Foundation/variables" as v;
 @charset "UTF-8";
 
-.c-search-form__text{  //検索窓
+.c-input-box {  //検索窓
     border-radius: 10px;
     border:1px solid;
     color:v.$searchform-gray;
