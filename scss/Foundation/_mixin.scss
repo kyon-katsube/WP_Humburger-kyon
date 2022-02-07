@@ -6,6 +6,7 @@ $breakpoints:(
 'sp':'screen and (min-width:320px) ',
 'tab':'screen and (min-width:600px)',
 'pc':'screen and (min-width:1025px)',
+'lesspc':'screen and (max-width:1024px)',
 'lesstab':'screen and (max-width:600px) '
 )!default;
 

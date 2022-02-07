@@ -1,0 +1,49 @@
+@use "../scss/Foundation/mixin" as m;
+@use "../scss/Foundation/variables" as v;
+@charset "UTF-8";
+
+@use "../scss/Object/Component/c-search-form__btn";
+@use "../scss/Object/Component/c-search-form__text";
+
+.c-search-form {          //c-search-formとしてcomponentに
+    margin:40px 20px;
+    display: flex;
+    justify-content:center;    
+    @include m.mq(pc) {
+     margin:auto 20px;
+     position:relative;
+     width:100%;
+     max-width:542px;
+    }
+}
+
+
+.c-btn--search {     //検索ボタン
+    width:78px;
+    height:46px;
+    @include m.mq(tab){
+        width:136px;
+    }
+    @include m.mq(pc){
+        position:absolute;
+        width:136px;
+        bottom:0;
+        right:0;
+        margin-left:10px;
+    }
+}
+
+.c-search-form__text{   //検索窓
+    width:230px;
+    height:46px;
+    margin-right:10px;
+    background-size:24px 24px;
+    @include m.mq(tab){
+        width:100%;
+        min-width:230px;
+        max-width:542px;
+    }
+    @include m.mq(pc){
+    margin-right:146px;
+    }
+}

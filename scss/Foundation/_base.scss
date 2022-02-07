@@ -1,0 +1,24 @@
+/*共通部分---------------*/
+
+@use "../scss/Foundation/variables" as v;
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: v.$M1;
+    line-height: 1.0;
+    color:v.$base-gray;
+    overflow-x: hidden; //レスポンシブで通常は左側から飛び出す横のスクロールバーをかくしておくため//
+    min-width:320px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
