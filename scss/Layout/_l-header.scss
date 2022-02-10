@@ -19,23 +19,24 @@ header {          //header全体
         }
     }
 
-.p-header {       //PC時のMenuボタン
-    text-align: center;
-    font-size:v.$font-ll;
+.p-header {       //sp/tab時のMenuボタンの位置
+    text-align: right;
+    padding:15px 20px;
+    font-size:v.$font-s;
+    z-index:3;
     @include m.mq(pc) {
-    display: flex;
-    align-items:center;
-    font-size:v.$font-xl;
-    margin:auto auto auto 40px;
+        padding:0;
     }
 }
 
 .c-title{        //header h1
     font-size:v.$font-ll;
     @include m.mq(pc) {
-    display: flex;
-    align-items:center;
+    display: flex;  //不要？
+    align-items:center;   //不要？
     font-size:v.$font-xl;
-    margin:auto auto auto 40px;
+    margin:auto auto auto 40px; //不要？
     }
 }
+
+//検索窓はuseで呼び出し
