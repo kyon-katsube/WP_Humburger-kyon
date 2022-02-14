@@ -1,15 +1,15 @@
-@use "../scss/Foundation/mixin" as m;
-@use "../scss/Foundation/variables" as v;
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
 @charset "UTF-8";
 
-@use "../Component/c-btn";
-@use "../Component/c-search-form";
+// @use "../Component/c-button";
+// @use "../Component/c-input-box";
 
 
 .p-search-form {          
     margin:40px 20px;
     display: flex;
-    justify-content:center;    
+    justify-content:center;   
     @include m.mq(pc) {
      margin:auto 20px;
      position:relative;
@@ -23,14 +23,17 @@
     height:46px;
     margin-right:10px;
     padding-left:40px;  //虫眼鏡マークより右から記入させるため
+    background-image:url(../images/search-mark.png) no-repeat center left 15px;
     background-size:24px 24px;
+    background-color:v.$base-white;
+    
     @include m.mq(tab){
         width:100%;
         min-width:230px;
         max-width:542px;
     }
     @include m.mq(pc){
-    margin-right:146px;
+        margin-right:146px;
     }
 }
 

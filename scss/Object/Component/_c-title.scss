@@ -1,0 +1,12 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
+.c-title--top {    //p-top-title l-headerへ
+    text-align: center;
+    font-size:v.$font-ll;
+}
+
+.c-title--page{
+    text-align:center;
+    position:absolute;
+    }

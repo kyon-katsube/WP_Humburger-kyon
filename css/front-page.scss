@@ -1,3 +1,4 @@
+@use "../scss/Foundation/base" ;
 @use "../scss/Foundation/mixin" as m;
 @use "../scss/Foundation/variables" as v;
 @charset "UTF-8";
@@ -25,8 +26,8 @@ img {
 }
 
 
-//pc版grid用の記述   //どこに入れる？？
-.p-container {
+//pc版grid用の記述   //cとpに分けてfoundationでpを読み込む
+.p-grid {
     @include m.mq(pc) {
     display:grid;
     grid-template-rows:217px 1fr 150px;
@@ -51,7 +52,7 @@ header {    //l-headerへ
         }
 }
 
-.c-title {    //h1 l-headerへ
+.p-top-title {    //h1 l-headerへ
     text-align: center;
     font-size:v.$font-ll;
     @include m.mq(pc) {
@@ -62,7 +63,7 @@ header {    //l-headerへ
     }
 }
 
-.p-header {   //l-headerへ
+.p-header-button {   //p-header-buttonへ
     text-align: right;
     padding:15px 20px;
     font-size:v.$font-s;
@@ -94,7 +95,7 @@ header {    //l-headerへ
     width:230px;
     margin-right:10px;
     padding-left:40px;  //虫眼鏡マークより右から記入させるため
-    background:url(../images/search-mark.png) no-repeat center left 15px;
+    background-image:url(../images/search-mark.png) no-repeat center left 15px;
     background-size:24px 24px;
     background-color:v.$base-white;
     @include m.mq(tab){
@@ -134,15 +135,15 @@ header {    //l-headerへ
     }
 }
 
-main {
+main {            //l-mainへ
     @include m.mq(pc) {
         grid-row:2/3;
         grid-column:1/2 ;
         }
 }
-.c-main-visual {  //ダミーサイト
-    position:relative;
-    h2 {
+.p-main-visual {  //ダミーサイト
+    position:relative;    //c-main-visualに
+    .p-page-title{
        color:v.$base-white;
        font-size:v.$font-l;
        text-align:center;
@@ -255,7 +256,7 @@ main {
                 from{opacity:0}
                 to  {opacity:1}
                 }
-         }  //&__cover.backactive
+         }  //&__cover.backactive  //activeが外れたときの動き方も記述する
        } //c-wrapper
 
       //サイドバー

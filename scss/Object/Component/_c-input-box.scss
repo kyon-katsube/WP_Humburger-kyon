@@ -1,11 +1,9 @@
-@use "../scss/Foundation/mixin" as m;
-@use "../scss/Foundation/variables" as v;
-@charset "UTF-8";
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
 
 .c-input-box {  //検索窓
     border-radius: 10px;
     border:1px solid;
     color:v.$searchform-gray;
-    background-color:v.$base-white;
-    background:url(../images/search-mark.png) no-repeat center left 15px;
 }

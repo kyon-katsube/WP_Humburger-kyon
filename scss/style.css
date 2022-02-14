@@ -1,4 +1,238 @@
 @charset "UTF-8";
+/*共通部分---------------*/
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "M PLUS 1p", sans-serif;
+  line-height: 1;
+  color: #707070;
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.c-button--search {
+  border-radius: 10px;
+  border: 1px solid;
+  color: #616161;
+}
+
+@media screen and (min-width:600px) {
+  .c-button--menu--sp {
+    font-size: 34px;
+  }
+}
+@media screen and (min-width:1025px) {
+  .c-button--menu--sp {
+    display: none;
+  }
+}
+.c-button--menu--sp:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width:1024px) {
+  .c-button--menu--pc {
+    display: none;
+  }
+}
+@media screen and (min-width:1025px) {
+  .c-button--menu--pc {
+    display: block;
+    font-size: 34px;
+    padding: 40px;
+  }
+}
+
+.c-button--cross.active {
+  content: "";
+  position: absolute;
+  z-index: 200;
+  top: 20px;
+  right: 40px;
+  width: 45px;
+  height: 45px;
+  transition: all 1.5s;
+}
+.c-button--cross.active span {
+  display: block;
+  position: absolute;
+  width: 45px;
+  height: 6px;
+  background-color: #707070;
+}
+.c-button--cross.active span:first-child {
+  transform: rotate(-45deg);
+}
+.c-button--cross.active span:last-child {
+  transform: rotate(45deg);
+}
+
+.c-input-box {
+  border-radius: 10px;
+  border: 1px solid;
+  color: #616161;
+  background-color: #fff;
+  background: url(../images/search-mark.png) no-repeat center left 15px;
+}
+
+.p-search-form {
+  margin: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width:1025px) {
+  .p-search-form {
+    margin: auto 20px;
+    position: relative;
+    width: 100%;
+    max-width: 542px;
+  }
+}
+
+.p-search-form__box {
+  width: 230px;
+  height: 46px;
+  margin-right: 10px;
+  padding-left: 40px;
+  background-size: 24px 24px;
+}
+@media screen and (min-width:600px) {
+  .p-search-form__box {
+    width: 100%;
+    min-width: 230px;
+    max-width: 542px;
+  }
+}
+@media screen and (min-width:1025px) {
+  .p-search-form__box {
+    margin-right: 146px;
+  }
+}
+
+.p-search-form__button {
+  height: 46px;
+  width: 78px;
+  background: linear-gradient(to bottom, #F2EDE9 0%, #DED8D3 100%);
+}
+@media screen and (min-width:600px) {
+  .p-search-form__button {
+    width: 136px;
+  }
+}
+@media screen and (min-width:1025px) {
+  .p-search-form__button {
+    position: absolute;
+    width: 136px;
+    bottom: 0;
+    right: 0;
+    margin-left: 10px;
+  }
+}
+
+header {
+  width: 100%;
+  height: 217px;
+  background-color: #FFF7EF;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+@media screen and (min-width:1025px) {
+  header {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-header {
+  text-align: right;
+  padding: 15px 20px;
+  font-size: 22px;
+  z-index: 3;
+}
+@media screen and (min-width:1025px) {
+  .p-header {
+    padding: 0;
+  }
+}
+
+.c-title {
+  font-size: 40px;
+  text-align: center;
+}
+@media screen and (min-width:1025px) {
+  .c-title {
+    display: flex;
+    align-items: center;
+    font-size: 64px;
+    margin: auto auto auto 40px;
+  }
+}
+
+@media screen and (min-width:1025px) {
+  aside {
+    grid-row: 1/3;
+    grid-column: 2/3;
+  }
+}
+
+.p-sidebar {
+  background-color: #F2EDE9;
+  position: absolute;
+  right: -120%;
+  top: 0;
+  width: 328px;
+  height: 100vh;
+  overflow-y: scroll;
+  z-index: 3;
+  transition: all 1s;
+}
+.p-sidebar.slideactive {
+  right: 0;
+}
+@media screen and (min-width:1025px) {
+  .p-sidebar {
+    position: static;
+    right: 0;
+    width: 367px;
+    height: auto;
+    overflow-y: inherit;
+    transition: inherit;
+  }
+}
+.p-sidebar .p-sidebar-list {
+  margin-top: 103px;
+  margin-left: 40px;
+}
+.p-sidebar .p-sidebar-list__contents {
+  margin-bottom: 40px;
+}
+.p-sidebar .p-sidebar-list__contents:hover {
+  cursor: pointer;
+}
+.p-sidebar .p-sidebar-list__contents h3 {
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.p-sidebar .p-sidebar-list__contents li {
+  list-style: none;
+  font-size: 20px;
+  line-height: 2.5em;
+  padding-left: 20px;
+}
+
 /*
 Theme Name: hamburger_site_WP
 Description: ハンバーガーサイト（最終課題）
@@ -11,4 +245,7 @@ License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: hamburger_site_WP
 */
+/* Project------------------------ */
+/* Component--------------------- */
+/* Utility----------------------- */
 /*# sourceMappingURL=style.css.map */

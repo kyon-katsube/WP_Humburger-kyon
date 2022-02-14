@@ -1,8 +1,7 @@
-@use "../scss/Foundation/mixin" as m;
-@use "../scss/Foundation/variables" as v;
-@charset "UTF-8";
+@use "../Foundation/mixin" as m;
+@use "../Foundation/variables" as v;
 
-@use "../Object/Project/p-btn--cross";   //×ボタン
+@use "../Object/Component/c-button";   //×ボタン
 
 
 //サイドバー

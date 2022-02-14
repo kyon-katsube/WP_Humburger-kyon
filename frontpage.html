@@ -8,22 +8,22 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
  <!--CSS-->
- <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">                                    <!--ress.cssの設定-->
- <link rel="stylesheet" href="css/front-page.css">                                                          <!--これから指定するCSS-->
- <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">          <!--リセットcssの設定-->
+ <link rel="stylesheet" href="scss/style.css">     <!--css/front-page.css  scss/style.cssに入れ替える-->    <!--参照するCSS-->
+ <link rel="preconnect" href="https://fonts.googleapis.com">                      <!--GoogleFontsの設定-->
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2? family=M+PLUS+1p:wght@400;500;700;800;900 &family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
  </head>
 
 <body>
    <!--front-page-->
-   <div class="p-container"> <!--pcgrid用-->
+   <div class="p-grid c-grid"> <!--pcgrid用-->
 
     <header>
-        <div class="p-header">    <!--sp/tab用メニューボタン-->
+        <div class="p-header-button">    <!--sp/tab用メニューボタン-->
           <button class="c-button--menu--sp">Menu</button>  <!--c-menu-buttonのクラス名追加-->
         </div>
-        <h1 class="c-title">Hamburger</h1>
+        <h1 class="p-top-title c-title--top">Hamburger</h1>
         <form action="#" method="get" class="p-search-form">
            <label for="search"></label>
            <input type="search" id="search" class="p-search-form__box c-input-box">
@@ -69,9 +69,9 @@
       </aside>
 
     <main class="p-contents">
-        <div class="c-main-visual">
+        <div class="p-main-visual">
           <img src="images/mainvisual-pc.jpg">
-          <h2>ダミーサイト</h2>
+          <h2 class="p-page-title c-title--page">ダミーサイト</h2>
         </div>
 
         <div class="p-branch-menu"> <!--TakeOut全体のくくり-->

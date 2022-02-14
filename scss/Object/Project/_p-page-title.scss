@@ -1,0 +1,12 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
+@use "../Component/c-title";
+
+
+.p-page-title{
+    color:v.$base-white;
+    font-size:v.$font-l;
+    top:50%;
+    left:20px;
+  }

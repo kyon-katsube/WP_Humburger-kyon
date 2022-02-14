@@ -3,14 +3,14 @@ $(function(){
     //sp版でMenuを押すとハンバーガーのナビメニューが出てくる実装
 
     $(".c-button--menu--sp").click(function () {//Menuボタンがクリックされたら
-        $(".c-cross-button").toggleClass('active');//×ボタンを activeクラスを付与して表示      
+        $(".c-button--cross").toggleClass('active');//×ボタンを activeクラスを付与して表示      
         $(".c-wrapper").toggleClass('backactive');//空要素のクラスにpanelactiveクラスを付与
         $(".p-sidebar").toggleClass('slideactive'); //サイドバーが出現
       });
       
       console.log('test'); 
 
-    $(".c-cross-button").click(function () {//×ボタンがクリックされたら
+    $(".c-button--cross").click(function () {//×ボタンがクリックされたら
         $(this).removeClass('active');//ボタンの activeクラスを除去し
         $(".c-wrapper").removeClass('backactive');//ナビゲーションのpanelactiveクラスも除去
         $(".p-sidebar").removeClass('slideactive');//サイドバーが右に隠れる

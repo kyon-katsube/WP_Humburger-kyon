@@ -1,6 +1,4 @@
 /*共通部分---------------*/
-@use "../scss/Foundation/mixin" as m;
-@use "../scss/Foundation/variables" as v;
 @charset "UTF-8";
 
 html {
@@ -8,9 +6,9 @@ html {
 }
 
 body {
-    font-family: v.$M1;
+    font-family:'M PLUS 1p',sans-serif;
     line-height: 1.0;
-    color:v.$base-gray;
+    color:#707070;
     overflow-x: hidden; //レスポンシブで通常は左側から飛び出す横のスクロールバーをかくしておくため//
     min-width:320px;
 }

@@ -1,0 +1,16 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+@charset "UTF-8";
+
+
+//基本スタイル・レスポンシブはc-buttonに
+
+.p-header-button {       //sp/tab時のMenuボタン位置
+    text-align: right;
+    padding:15px 20px;
+    font-size:v.$font-s;
+    z-index:3;
+    @include m.mq(pc) {
+        padding:0;
+    }
+}

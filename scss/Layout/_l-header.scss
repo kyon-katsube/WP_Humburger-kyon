@@ -1,9 +1,9 @@
-@use "../scss/Foundation/mixin" as m;
-@use "../scss/Foundation/variables" as v;
-@charset "UTF-8";
+@use "../Foundation/mixin" as m;
+@use "../Foundation/variables" as v;
 
-@use "../Object/Project/p-search-form";
-
+// @use "../Object/Project/p-search-form"; //検索窓
+// @use "../Object/Project/p-top-title";   //タイトル　Humburger
+// @use "../Object/Component/c-button";
 
 header {          //header全体
     width           :100%;
@@ -18,25 +18,3 @@ header {          //header全体
         justify-content: space-between;
         }
     }
-
-.p-header {       //sp/tab時のMenuボタンの位置
-    text-align: right;
-    padding:15px 20px;
-    font-size:v.$font-s;
-    z-index:3;
-    @include m.mq(pc) {
-        padding:0;
-    }
-}
-
-.c-title{        //header h1
-    font-size:v.$font-ll;
-    @include m.mq(pc) {
-    display: flex;  //不要？
-    align-items:center;   //不要？
-    font-size:v.$font-xl;
-    margin:auto auto auto 40px; //不要？
-    }
-}
-
-//検索窓はuseで呼び出し

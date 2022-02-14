@@ -1,0 +1,12 @@
+@use "../Foundation/mixin" as m;
+@use "../Foundation/variables" as v;
+
+@use "../Object/Project/p-search-form";
+
+
+@include m.mq(pc) {
+    grid-row:2/3;
+    grid-column:1/2 ;
+    }
+}
+

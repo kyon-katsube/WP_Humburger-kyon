@@ -1,0 +1,12 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
+@use "../Component/c-grid";
+
+
+.p-grid {
+    @include m.mq(pc) {
+        grid-template-rows:217px 1fr 150px;
+        grid-template-columns:1fr 367px ;
+        gap:0;
+}
