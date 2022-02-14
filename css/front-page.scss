@@ -95,7 +95,7 @@ header {    //l-headerへ
     width:230px;
     margin-right:10px;
     padding-left:40px;  //虫眼鏡マークより右から記入させるため
-    background-image:url(../images/search-mark.png) no-repeat center left 15px;
+    background:url(../images/search-mark.png) no-repeat center left 15px;
     background-size:24px 24px;
     background-color:v.$base-white;
     @include m.mq(tab){
@@ -135,7 +135,7 @@ header {    //l-headerへ
     }
 }
 
-main {            //l-mainへ
+.p-contents {            //main l-mainへ
     @include m.mq(pc) {
         grid-row:2/3;
         grid-column:1/2 ;

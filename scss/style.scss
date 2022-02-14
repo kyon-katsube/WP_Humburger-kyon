@@ -16,6 +16,7 @@ Text Domain: hamburger_site_WP
 @use "Foundation/base";
 @use "Foundation/mixin";
 @use "Foundation/variables";
+@use "Foundation/grid";
 
 //Layout
 @use "Layout/l-footer";
@@ -26,9 +27,16 @@ Text Domain: hamburger_site_WP
 //Object
 /* Project------------------------ */
 @use "Object/Project/p-search-form";
+@use "Object/Project/p-grid";
+@use "Object/Project/p-header-button";
+@use "Object/Project/p-main-visual";
+@use "Object/Project/p-page-title";
+@use "Object/Project/p-top-title";
 
 /* Component--------------------- */
 @use "Object/Component/c-button";
 @use "Object/Component/c-input-box";
+@use "Object/Component/c-grid";
+@use "Object/Component/c-title";
 
 /* Utility----------------------- */

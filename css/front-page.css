@@ -117,7 +117,7 @@ header {
   width: 230px;
   margin-right: 10px;
   padding-left: 40px;
-  background-image: url(../images/search-mark.png) no-repeat center left 15px;
+  background: url(../images/search-mark.png) no-repeat center left 15px;
   background-size: 24px 24px;
   background-color: #fff;
 }
@@ -168,7 +168,7 @@ header {
 }
 
 @media screen and (min-width:1025px) {
-  main {
+  .p-contents {
     grid-row: 2/3;
     grid-column: 1/2;
   }
