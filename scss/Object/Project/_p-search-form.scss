@@ -22,10 +22,7 @@
     width:230px;
     height:46px;
     margin-right:10px;
-    padding-left:40px;  //虫眼鏡マークより右から記入させるため
-    background-color:v.$base-white;   
-    background:url(../../../images/search-mark.png) no-repeat center left 15px;
-    background-size:24px 24px;
+    padding-left:50px;  //虫眼鏡マークより右から記入させるため
    
     @include m.mq(tab){
         width:100%;

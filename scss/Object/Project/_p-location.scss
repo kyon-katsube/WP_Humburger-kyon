@@ -1,0 +1,47 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
+
+.p-location {             //section全体
+    background-image: url("../images/front-page-map.png");
+    background-size: cover;
+    background-color:v.$map-background-dark;
+    height:50%;
+    margin-top:50px;
+    position:relative;
+    @include m.mq(tab){  //section上部のスペースはp-branch-menuにて指定
+        margin-top:0;
+    }
+    @include m.mq(pc){
+        height:auto;
+    }
+
+    &::after {                //重ねるグレー背景
+      content: '';
+      background-color:v.$map-background-light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 50%;
+      @include m.mq(tab){     //tabのときは薄グレーなし
+         bottom:0;
+      }
+      @include m.mq(pc) {      //pcのときは右から38％が薄グレー
+           right:38%;
+           bottom:0;
+      }
+    }    //::afterの閉じタグ
+    
+    .p-location__wrapper {          //見出しとテキスト
+      padding:50px 40px;
+      color:v.$base-white;
+      position:relative;
+      z-index:1;
+       p {
+         font-size:v.$font-xs;
+         line-height: 2.4;
+         margin:40px 0 0;
+        }
+    }//__wrapperの閉じタグ
+} //p-locationの閉じタグ

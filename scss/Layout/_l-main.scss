@@ -1,8 +1,11 @@
 @use "../Foundation/mixin" as m;
 @use "../Foundation/variables" as v;
 
+//Project/p-main-visual   
+//Project/p-branch-menu
+//Project/p-location
 
-.p-contents{
+.l-main{     //main
 @include m.mq(pc) {
     grid-row:2/3;
     grid-column:1/2 ;

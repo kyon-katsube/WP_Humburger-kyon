@@ -32,11 +32,14 @@ Text Domain: hamburger_site_WP
 @use "Object/Project/p-main-visual";
 @use "Object/Project/p-page-title";
 @use "Object/Project/p-top-title";
+@use "Object/Project/p-branch-menu";
+@use "Object/Project/p-location";
 
 /* Component--------------------- */
 @use "Object/Component/c-button";
 @use "Object/Component/c-input-box";
 @use "Object/Component/c-grid";
 @use "Object/Component/c-title";
+@use "Object/Component/c-wrapper";
 
 /* Utility----------------------- */

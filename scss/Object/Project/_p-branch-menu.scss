@@ -1,0 +1,50 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
+
+.p-branch-menu {     //tab/pcはtakeoutとeatinを横並び
+    @include m.mq(tab){
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    }
+}
+
+.p-branch-menu__contents-first{      //左側のTake Outの画像
+    background-image: url("../images/front-page-takeout-image.png");
+    @include m.mq(tab){
+        margin:50px 0 50px 10%;
+   }     
+}
+ .p-branch-menu__contents-second{     //右側のEat Inの画像
+    background-image: url("../images/front-page-Eatin-image.png");
+    @include m.mq(tab){
+        margin:50px 10% 50px 0;
+     }    
+}
+
+.p-branch-menu__contents-first,
+.p-branch-menu__contents-second {
+    min-height: 600px; //適当 高さが伸びない・・
+    margin:5% 5% 10px 5%;
+    position:relative;
+    display:flex;
+    flex-flow: column;        //spのみ
+    justify-content:flex-end;
+    background-size: cover;
+ }
+
+ .p-branch-menu__contents__wrapper {
+         margin:3%;
+         width:94%;
+         height:auto;
+      &__detail {
+           margin-top:10px;
+           background-color:v.$takeout-background-gray;
+           height:auto;
+
+        p {
+          padding:0 10px 30px 10px;
+          color:v.$takeout-font-color;
+        }
+       }  //__detail
+      }   //contents-wrapper
