@@ -35,7 +35,7 @@
     color:v.$takeout-font-color;
    }
 
-   .c-title--location {        //h2　見出しが入ります
+   .c-title--location {        //h2 見出しが入ります
     font-size:v.$font-m;
     margin-bottom:30px;
     &::after{                  //「見出しが入ります」の下の線
@@ -49,3 +49,5 @@
         left:40px;
      }
    } //h2の閉じタグ
+
+   

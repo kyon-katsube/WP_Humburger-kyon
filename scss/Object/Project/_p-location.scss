@@ -6,7 +6,7 @@
     background-image: url("../images/front-page-map.png");
     background-size: cover;
     background-color:v.$map-background-dark;
-    height:50%;
+    // height:50%;
     margin-top:50px;
     position:relative;
     @include m.mq(tab){  //section上部のスペースはp-branch-menuにて指定

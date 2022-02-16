@@ -9,29 +9,36 @@
     }
 }
 
-.p-branch-menu__contents-first{      //左側のTake Outの画像
-    background-image: url("../images/front-page-takeout-image.png");
-    @include m.mq(tab){
-        margin:50px 0 50px 10%;
-   }     
-}
- .p-branch-menu__contents-second{     //右側のEat Inの画像
-    background-image: url("../images/front-page-Eatin-image.png");
-    @include m.mq(tab){
-        margin:50px 10% 50px 0;
-     }    
-}
-
 .p-branch-menu__contents-first,
 .p-branch-menu__contents-second {
     min-height: 600px; //適当 高さが伸びない・・
-    margin:5% 5% 10px 5%;
+    margin:5%;
     position:relative;
     display:flex;
     flex-flow: column;        //spのみ
     justify-content:flex-end;
     background-size: cover;
  }
+
+ .p-branch-menu__contents-first{      //左側のTake Outの画像
+    background-image: url("../images/front-page-takeout-image.png");
+    @include m.mq(tab){
+        margin:50px 5% 50px 10%;
+   }     
+   @include m.mq(pc){
+    margin:50px 5% 50px 50px;
+   }    
+}
+ .p-branch-menu__contents-second{     //右側のEat Inの画像
+    background-image: url("../images/front-page-Eatin-image.png");
+    @include m.mq(tab){
+        margin:50px 10% 50px 5%;
+     }    
+     @include m.mq(pc){
+        margin:50px 50px 50px 5%;
+     }    
+}
+
 
  .p-branch-menu__contents__wrapper {
          margin:3%;

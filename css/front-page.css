@@ -196,7 +196,7 @@ img {
   .p-branch-menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 50px;
+    padding: 30px;
   }
 }
 
@@ -306,7 +306,7 @@ img {
   }
 }
 
-.p-sidebar {
+.l-sidebar {
   background-color: #F2EDE9;
   position: absolute;
   right: -120%;
@@ -317,11 +317,11 @@ img {
   z-index: 3;
   transition: all 1s;
 }
-.p-sidebar.slideactive {
+.l-sidebar.slideactive {
   right: 0;
 }
 @media screen and (min-width:1025px) {
-  .p-sidebar {
+  .l-sidebar {
     position: static;
     right: 0;
     width: 367px;
@@ -330,7 +330,7 @@ img {
     transition: inherit;
   }
 }
-.p-sidebar .c-button--cross.active {
+.l-sidebar .c-button--cross.active {
   content: "";
   position: absolute;
   z-index: 200;
@@ -340,47 +340,47 @@ img {
   height: 45px;
   transition: all 1.5s;
 }
-.p-sidebar .c-button--cross.active span {
+.l-sidebar .c-button--cross.active span {
   display: block;
   position: absolute;
   width: 45px;
   height: 6px;
   background-color: #707070;
 }
-.p-sidebar .c-button--cross.active span:first-child {
+.l-sidebar .c-button--cross.active span:first-child {
   transform: rotate(-45deg);
 }
-.p-sidebar .c-button--cross.active span:last-child {
+.l-sidebar .c-button--cross.active span:last-child {
   transform: rotate(45deg);
 }
 @media screen and (max-width:1024px) {
-  .p-sidebar .c-button--menu--pc {
+  .l-sidebar .c-button--menu--pc {
     display: none;
   }
 }
 @media screen and (min-width:1025px) {
-  .p-sidebar .c-button--menu--pc {
+  .l-sidebar .c-button--menu--pc {
     display: block;
     font-size: 34px;
     padding: 40px;
   }
 }
-.p-sidebar .p-sidebar-list {
+.l-sidebar .p-sidebar-list {
   margin-top: 103px;
   margin-left: 40px;
 }
-.p-sidebar .p-sidebar-list__contents {
+.l-sidebar .p-sidebar-list__contents {
   margin-bottom: 40px;
 }
-.p-sidebar .p-sidebar-list__contents:hover {
+.l-sidebar .p-sidebar-list__contents:hover {
   cursor: pointer;
 }
-.p-sidebar .p-sidebar-list__contents h3 {
+.l-sidebar .p-sidebar-list__contents .c-title--menu {
   font-size: 22px;
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.p-sidebar .p-sidebar-list__contents li {
+.l-sidebar .p-sidebar-list__contents li {
   list-style: none;
   font-size: 20px;
   line-height: 2.5em;
@@ -391,7 +391,6 @@ img {
   background-image: url("../images/front-page-map.png");
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.6);
-  height: 50%;
   margin-top: 50px;
   position: relative;
 }

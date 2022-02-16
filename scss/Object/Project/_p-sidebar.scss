@@ -1,0 +1,52 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
+//Component/c-button ×ボタン・Menuボタン
+
+
+.l-sidebar {     //pinkのサイドバーの設定//l-sidebarへ
+    background-color:v.$sidebar-background-gray;
+    position:absolute;
+    right:-120%;//menuボタンを押すまでは非表示 メインとサイドバーの割合
+    top:0; 
+    width:328px;
+    height:100vh;
+    overflow-y: scroll;
+    z-index:3;
+    transition:all 1s;
+    &.slideactive {
+        right:0;  
+    }
+    @include m.mq(pc) {
+        position:static;
+        right:0;
+        width:367px;
+        height:auto;
+        overflow-y:inherit;
+        transition:inherit;
+     }
+
+  .p-sidebar-list {     //nav menu
+        margin-top:103px; //217-Menuのfontsize-padding×2
+        margin-left:40px;
+
+    &__contents {       
+        margin-bottom:40px;
+        &:hover {
+            cursor:pointer;
+        }
+
+        .c-title--menu {        //h3
+            font-size: v.$font-s;
+            margin-top:40px;
+            margin-bottom:40px;
+        }
+        li {
+            list-style:none;
+            font-size: v.$font-ss;
+            line-height:2.5em;
+            padding-left:20px;
+        }
+   } //contentsの閉じタグ
+  } //listの閉じタグ
+}  //p-sidebarの閉じタグ 
