@@ -3,17 +3,18 @@
 
 
 .p-location {             //section全体
-    background-image: url("../images/front-page-map.png");
+    background-image: url("../images/frontpagemap-sp.png");
     background-size: cover;
     background-color:v.$map-background-dark;
-    // height:50%;
     margin-top:50px;
     position:relative;
     @include m.mq(tab){  //section上部のスペースはp-branch-menuにて指定
         margin-top:0;
+        background-image: url("../images/frontpagemap-tab.png");
     }
     @include m.mq(pc){
         height:auto;
+        background-image: url("../images/frontpagemap-pc.png");
     }
 
     &::after {                //重ねるグレー背景
@@ -34,14 +35,17 @@
     }    //::afterの閉じタグ
     
     .p-location__wrapper {          //見出しとテキスト
+      width:60%;
       padding:50px 40px;
       color:v.$base-white;
       position:relative;
       z-index:1;
+      @include m.mq(lesspc){    
+        width:100%;
+     }
        p {
          font-size:v.$font-xs;
          line-height: 2.4;
-         margin:40px 0 0;
         }
     }//__wrapperの閉じタグ
 } //p-locationの閉じタグ

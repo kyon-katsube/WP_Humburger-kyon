@@ -2,7 +2,7 @@
 @use "../../Foundation/variables" as v;
 
 .c-wrapper {     //Menuボタン押下時の薄グレー背景
-    display:none;
+    display:none; 
     background-color:v.$navmenu-wrapper-gray;
     position:fixed;
     top:0;

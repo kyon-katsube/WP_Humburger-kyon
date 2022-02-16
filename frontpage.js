@@ -12,9 +12,9 @@ $(function(){
 
     $(".c-button--cross").click(function () {//×ボタンがクリックされたら
         $(this).removeClass('active');//ボタンの activeクラスを除去し
-        $(".c-wrapper").removeClass('backactive');//ナビゲーションのpanelactiveクラスも除去
-        $(".l-sidebar").removeClass('slideactive');//サイドバーが右に隠れる
-      });
+        $(".c-wrapper").toggleClass('backactive');//ナビゲーションのpanelactiveクラスも除去
+        $(".l-sidebar").toggleClass('slideactive');//サイドバーが右に隠れる
+      });   //toggleにする
 
 //ナビメニューが出たら背景を固定する（SP/TAB版）
     //変数の設定

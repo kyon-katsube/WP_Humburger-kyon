@@ -196,8 +196,18 @@ img {
   .p-branch-menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 30px;
   }
+}
+
+.p-branch-menu__contents-first,
+.p-branch-menu__contents-second {
+  padding-top: 70%;
+  margin: 5%;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  background-size: cover;
 }
 
 .p-branch-menu__contents-first {
@@ -205,7 +215,12 @@ img {
 }
 @media screen and (min-width:600px) {
   .p-branch-menu__contents-first {
-    margin: 50px 0 50px 10%;
+    margin: 50px 5% 50px 10%;
+  }
+}
+@media screen and (min-width:1025px) {
+  .p-branch-menu__contents-first {
+    margin: 50px 5% 50px 50px;
   }
 }
 
@@ -214,30 +229,23 @@ img {
 }
 @media screen and (min-width:600px) {
   .p-branch-menu__contents-second {
-    margin: 50px 10% 50px 0;
+    margin: 50px 10% 50px 5%;
+  }
+}
+@media screen and (min-width:1025px) {
+  .p-branch-menu__contents-second {
+    margin: 50px 50px 50px 5%;
   }
 }
 
-.p-branch-menu__contents-first,
-.p-branch-menu__contents-second {
-  min-height: 600px;
-  margin: 5% 5% 10px 5%;
-  position: relative;
-  display: flex;
-  flex-flow: column;
-  justify-content: flex-end;
-  background-size: cover;
-}
-.p-branch-menu__contents-first .c-title--branchmenu-contents,
-.p-branch-menu__contents-second .c-title--branchmenu-contents {
+.c-title--branchmenu-contents {
   color: #fff;
   font-size: 40px;
   position: absolute;
   top: 20px;
   left: 12px;
 }
-.p-branch-menu__contents-first .c-title--branchmenu-contents::after,
-.p-branch-menu__contents-second .c-title--branchmenu-contents::after {
+.c-title--branchmenu-contents::after {
   content: "";
   display: block;
   width: 36px;
@@ -270,7 +278,7 @@ img {
 
 .c-wrapper {
   display: none;
-  background-color: rgba(112, 112, 112, 0.9);
+  background-color: rgba(112, 112, 112, 0.7);
   position: fixed;
   top: 0;
   width: 100%;
@@ -388,20 +396,22 @@ img {
 }
 
 .p-location {
-  background-image: url("../images/front-page-map.png");
+  background-image: url("../images/frontpagemap-sp.png");
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   margin-top: 50px;
   position: relative;
 }
 @media screen and (min-width:600px) {
   .p-location {
     margin-top: 0;
+    background-image: url("../images/frontpagemap-tab.png");
   }
 }
 @media screen and (min-width:1025px) {
   .p-location {
     height: auto;
+    background-image: url("../images/frontpagemap-pc.png");
   }
 }
 .p-location::after {

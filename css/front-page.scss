@@ -162,33 +162,40 @@ img {
     @include m.mq(tab){
     display:grid;
     grid-template-columns:1fr 1fr;
-    padding:30px;
     }
-}
-
-.p-branch-menu__contents-first{
-    background-image: url("../images/front-page-takeout-image.png");
-    @include m.mq(tab){
-        margin:50px 0 50px 10%;
-        }     
-}
- .p-branch-menu__contents-second{
-    background-image: url("../images/front-page-Eatin-image.png");
-    @include m.mq(tab){
-        margin:50px 10% 50px 0;
-        }    
 }
 
 .p-branch-menu__contents-first,
 .p-branch-menu__contents-second {
-    min-height: 600px; //適当
-    margin:5% 5% 10px 5%;
+    padding-top:70%;
+    margin:5%;
     position:relative;
     display:flex;
     flex-flow: column;        //spのみ
     justify-content:flex-end;
     background-size: cover;
-   
+}
+
+.p-branch-menu__contents-first{
+    background-image: url("../images/front-page-takeout-image.png");
+    @include m.mq(tab){
+        margin:50px 5% 50px 10%;
+        }     
+    @include m.mq(pc){
+        margin:50px 5% 50px 50px;
+        }    
+}
+ .p-branch-menu__contents-second{
+    background-image: url("../images/front-page-Eatin-image.png");
+    @include m.mq(tab){
+        margin:50px 10% 50px 5%;
+     }    
+     @include m.mq(pc){
+        margin:50px 50px 50px 5%;
+     }    
+}
+
+
     .c-title--branchmenu-contents {  //h2 TakeOut Eatinの白文字　　c-titleへ
         color:v.$base-white;
         font-size:v.$font-ll;
@@ -206,7 +213,6 @@ img {
         left:3px;
      }
    }
- }
 
  .p-branch-menu__contents__wrapper {
          margin:3%;
@@ -346,16 +352,18 @@ img {
 
   //グレーのMAP部分
       .p-location {
-          background-image: url("../images/front-page-map.png");
+          background-image: url("../images/frontpagemap-sp.png");
           background-size: cover;
           background-color:v.$map-background-dark;
           margin-top:50px;
           position:relative;
           @include m.mq(tab){  //section上部のスペースはp-branch-menuにて指定
               margin-top:0;
+              background-image: url("../images/frontpagemap-tab.png");
           }
           @include m.mq(pc){
               height:auto;
+              background-image: url("../images/frontpagemap-pc.png");
         }
 
           &::after {
