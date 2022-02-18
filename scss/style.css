@@ -10,6 +10,8 @@ body {
   color: #707070;
   overflow-x: hidden;
   min-width: 320px;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -138,6 +140,26 @@ footer .c-copyright {
   left: 40px;
 }
 
+.c-title--subheading {
+  font-size: 28px;
+}
+
+.c-title--card-img-caption {
+  font-size: 20px;
+  color: #fff;
+}
+
+.c-title--card-subtitle {
+  font-size: inherit;
+  color: #fff;
+  padding-top: 30px;
+}
+
+.c-button {
+  border-radius: 10px;
+  border: 1px solid;
+}
+
 .c-button--search {
   border-radius: 10px;
   border: 1px solid;
@@ -235,6 +257,27 @@ footer .c-copyright {
   }
 }
 
+.c-wrapper__main-visual {
+  background-color: rgba(0, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.c-text {
+  font-size: inherit;
+  padding-top: 30px;
+  line-height: 1.5;
+}
+
+.c-paging-back .c-paging-next li {
+  display: inline-block;
+  list-style: none;
+}
+
 .p-header-button {
   text-align: right;
   padding: 15px 20px;
@@ -319,11 +362,33 @@ footer .c-copyright {
      object-fit: cover;
 }
 
+.p-main-visual {
+  position: relative;
+}
+
+.p-main-visual__page-title {
+  position: absolute;
+  top: 40%;
+  left: 20px;
+}
+
 .p-page-title {
   color: #fff;
   font-size: 34px;
-  top: 50%;
-  left: 20px;
+  text-align: inherit;
+}
+
+.p-archive-title {
+  color: #fff;
+  font-size: 34px;
+}
+
+.p-subtitle {
+  color: #fff;
+  font-size: inherit;
+  text-align: left;
+  position: relative;
+  margin-top: 40px;
 }
 
 @media screen and (min-width:600px) {
@@ -387,6 +452,58 @@ footer .c-copyright {
   color: #3C2A10;
 }
 
+.p-subheading {
+  padding: 40px 20px 20px 20px;
+}
+
+.p-subheading__wrapper {
+  color: #3C2A10;
+  position: relative;
+}
+
+.p-card {
+  padding: 0 20px 20px 20px;
+}
+.p-card img {
+  vertical-align: bottom;
+}
+
+.p-archive-card {
+  background-color: #3C2B1C;
+  vertical-align: top;
+  padding-bottom: 40px;
+}
+.p-archive-card .p-card__wrapper {
+  padding: 40px 80px 40px 20px;
+}
+.p-archive-card .p-card__wrapper__text {
+  color: #fff;
+  padding-top: 20px;
+}
+
+.p-card__button {
+  border-radius: 50px;
+  border: none;
+  color: #707070;
+  font-weight: bold;
+  background-color: #fff;
+  width: 162px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.p-paging {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+.p-paging ul {
+  list-style: none;
+}
+
 .l-sidebar {
   background-color: #F2EDE9;
   position: absolute;
@@ -436,7 +553,7 @@ footer .c-copyright {
 .p-location {
   background-image: url("../images/frontpagemap-sp.png");
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   margin-top: 50px;
   position: relative;
 }

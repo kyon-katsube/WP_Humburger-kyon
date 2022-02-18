@@ -31,6 +31,9 @@ Text Domain: hamburger_site_WP
 @use "Object/Component/c-button";
 @use "Object/Component/c-input-box";
 @use "Object/Component/c-wrapper";
+@use "Object/Component/c-text";
+@use "Object/Component/c-paging";
+
 
 /* Project------------------------ */
 @use "Object/Project/p-grid";
@@ -40,6 +43,9 @@ Text Domain: hamburger_site_WP
 @use "Object/Project/p-main-visual";
 @use "Object/Project/p-page-title";
 @use "Object/Project/p-branch-menu";
+@use "Object/Project/p-subheading";
+@use "Object/Project/p-card";
+@use "Object/Project/p-paging";
 @use "Object/Project/p-sidebar";
 @use "Object/Project/p-location";
 

@@ -50,4 +50,18 @@
      }
    } //h2の閉じタグ
 
+   .c-title--subheading {        //archive h2 小見出しが入ります
+      font-size:v.$font-sm;
+    }
+
+    .c-title--card-img-caption {       //card内のimgキャプション
+      font-size:v.$font-ss;
+      color:v.$base-white;
+    }
+
+    .c-title--card-subtitle {
+        font-size:inherit;
+        color:v.$base-white;
+        padding-top:30px;
+      }
    

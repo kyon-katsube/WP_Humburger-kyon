@@ -1,12 +1,35 @@
 @use "../../Foundation/mixin" as m;
 @use "../../Foundation/variables" as v;
 
-@use "../Component/c-title";
+// @use "../Component/c-title";
+
+.p-main-visual{
+  position:relative;
+}
+
+.p-main-visual__page-title{
+  position:absolute;
+  top:40%;
+  left:20px;
+ }
 
 
-.p-page-title{
+.p-page-title{    //frontpage sp tabのMenu
     color:v.$base-white;
     font-size:v.$font-l;
-    top:50%;
-    left:20px;
+    text-align: inherit;
+  }
+
+  .p-archive-title{    //archiveのタイトル Menu
+    color:v.$base-white;
+    font-size:v.$font-l;
+  }
+
+
+  .p-subtitle{   //archiveのチーズバーガー
+    color:v.$base-white;
+    font-size:inherit; //16px デフォルト
+    text-align: left;
+    position:relative;
+    margin-top:40px;
   }

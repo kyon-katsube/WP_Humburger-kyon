@@ -11,6 +11,8 @@ body {
     color:#707070;
     overflow-x: hidden; //レスポンシブで通常は左側から飛び出す横のスクロールバーをかくしておくため//
     min-width:320px;
+    padding:0;
+    margin:0;
 }
 
 a {

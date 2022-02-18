@@ -1,0 +1,12 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
+
+.p-paging{
+   display: flex;
+   padding:20px;
+   justify-content: space-between;
+   ul {
+       list-style: none;
+   }
+}

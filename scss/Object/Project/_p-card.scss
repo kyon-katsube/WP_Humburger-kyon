@@ -1,0 +1,36 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
+
+.p-card{
+    padding:0 20px 20px 20px;
+    img{
+        vertical-align:bottom;
+    }
+}
+
+.p-archive-card {   //小見出×2・テキスト・ボタンのくくり　色と配置
+    background-color:v.$card-background-brown;
+    vertical-align: top;
+    padding-bottom:40px;
+    .p-card__wrapper{   //小見出し×2とテキスト
+        padding:40px 80px 40px 20px;       
+        &__text {
+            color:v.$base-white;
+            padding-top:20px;
+        } 
+     }
+}
+.p-card__button{
+    border-radius: 50px;
+    border:none;
+    color:v.$base-gray; 
+    font-weight: bold;
+    background-color:v.$base-white;
+    width:162px;
+    height:42px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+}
