@@ -43,6 +43,18 @@
       @include m.mq(lesspc){    
         width:100%;
      }
+     .c-title--underline {        //h2 見出しが入ります
+      font-size:v.$font-m;
+      margin-bottom:30px;
+      &::after{                  //「見出しが入ります」の下の線
+          width:60px;
+          height:2px;
+          position:absolute;
+          top:100px;
+          left:40px;
+       }
+     } //h2 見出しが入りますの閉じタグ
+
        p {
          font-size:v.$font-xs;
          line-height: 2.4;

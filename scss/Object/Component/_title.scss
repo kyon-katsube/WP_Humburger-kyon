@@ -1,0 +1,17 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
+.c-title {
+   color:v.$base-white;
+}
+
+.c-title--underline{
+  color:v.$base-white;
+  &::after{      //TakeOut・見出しが入りますの下の罫線
+    content:"";
+    display:block;
+    width:36px;
+    height:4px;
+    background-color:v.$base-white;
+  }
+}

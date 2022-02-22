@@ -2,7 +2,7 @@ $(function(){
 
     //sp版でMenuを押すとハンバーガーのナビメニューが出てくる実装
 
-    $(".c-button--menu--sp").click(function () {//Menuボタンがクリックされたら
+    $(".c-button--menu").click(function () {//Menuボタンがクリックされたら
         $(".c-button--cross").toggleClass('active');//×ボタンを activeクラスを付与して表示      
         $(".c-wrapper").toggleClass('backactive');//空要素のクラスにpanelactiveクラスを付与
         $(".l-sidebar").toggleClass('slideactive'); //サイドバーが出現
@@ -44,7 +44,7 @@ $(function(){
     }
 
     //モーダルのトリガーをクリックしたとき
-    $('.c-button--menu--sp').on('click', function() {
+    $('.c-button--menu').on('click', function() {
     bodyFixedOn();
     });
 

@@ -7,10 +7,9 @@
 
 .p-main-visual {  //メインの背景画像 画像自体はHTMLに
     position:relative;
-    img {
+    &__img {
         width:100%;
         height:285px;
         object-fit: cover;
     }
-}
-
+  }

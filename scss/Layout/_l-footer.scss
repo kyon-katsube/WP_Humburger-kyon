@@ -3,20 +3,22 @@
 
 //Project/Componentなし
 
-footer {
+.l-footer {
     background-color:v.$footer-background-brown;
     color:v.$base-white;
     font-family:v.$Roboto;
     height:150px;
     display:block;
-    .c-category-title {
+    .p-footer {
+      .c-title{
+        padding-top:45px;
         font-size:v.$font-ss;
         text-align:center;
-        padding-top:45px;
         &:hover{
             cursor:pointer;
         }
-    }
+      }   //c-footer
+     }    //p-footer
     .c-copyright {
         font-size:v.$font-xs;
         text-align:center;

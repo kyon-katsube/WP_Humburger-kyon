@@ -1,0 +1,27 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
+.p-subheading-card{  //小見出しとカードをくくったpadding設定
+    padding:40px 20px;
+    @include m.mq(tab){
+        padding:60px 40px;
+      }
+    @include m.mq(pc){
+    padding:60px;
+    }
+}
+
+.p-subheading__wrapper {        //小見出しとテキスト
+    color:v.$takeout-font-color;
+    position:relative;
+    @include m.mq(tab){
+       margin-bottom:40px;
+      }
+    .c-title{
+        font-size:v.$font-sm;
+        color:v.$takeout-font-color;
+        @include m.mq(tab){
+          font-size:v.$font-l;
+        }
+     }
+  }//__wrapperの閉じタグ

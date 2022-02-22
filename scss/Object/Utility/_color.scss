@@ -1,0 +1,8 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
+.u-color {
+    &--gray{
+        color:v.$base-gray;
+    }
+}

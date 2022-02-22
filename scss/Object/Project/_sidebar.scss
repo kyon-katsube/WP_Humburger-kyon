@@ -25,6 +25,19 @@
         overflow-y:inherit;
         transition:inherit;
      }
+ .p-sidebar-title{   //PC用の「Menu」表示    
+    .c-title{        //色はuで指定
+        font-size:v.$font-l;     
+    }
+      @include m.mq(lesspc) {
+        display:none;
+      }
+      @include m.mq(pc) {
+         display:block;
+         font-size:v.$font-l; 
+         padding:70px 0 0 40px;
+       }
+ }
 
   .p-sidebar-list {     //nav menu
         margin-top:103px; //217-Menuのfontsize-padding×2
@@ -35,8 +48,7 @@
         &:hover {
             cursor:pointer;
         }
-
-        .c-title--menu {        //h3
+        .c-title {        //h3  色はu
             font-size: v.$font-s;
             margin-top:40px;
             margin-bottom:40px;
@@ -47,6 +59,6 @@
             line-height:2.5em;
             padding-left:20px;
         }
-   } //contentsの閉じタグ
+    } //contentsの閉じタグ
   } //listの閉じタグ
 }  //p-sidebarの閉じタグ 

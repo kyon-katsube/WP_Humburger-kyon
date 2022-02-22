@@ -9,6 +9,22 @@
     }
 }
 
+.p-branch-menu__contents{  //h2 TakeOut Eatinの白文字
+   color:v.$base-white;
+   font-size:v.$font-ll;
+   position:absolute;
+   top:20px;
+   left:12px;
+   &.c-title--underline{
+     &::after{      //TakeOutの下の罫線
+       position:absolute;
+       top:60px;
+       left:3px;
+    }
+  }
+}
+
+
 .p-branch-menu__contents-first,
 .p-branch-menu__contents-second {
     padding-top:70%;
@@ -48,10 +64,14 @@
            margin-top:10px;
            background-color:v.$takeout-background-gray;
            height:auto;
-
-        p {
-          padding:0 10px 30px 10px;
-          color:v.$takeout-font-color;
-        }
-       }  //__detail
+         .c-title{
+            font-size:v.$font-s;
+            padding:30px 0 30px 10px;
+            color:v.$takeout-font-color;
+         }
+         p {
+            padding:0 10px 30px 10px;
+            color:v.$takeout-font-color;
+         }
+        }  //__detail
       }   //contents-wrapper

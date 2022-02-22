@@ -17,11 +17,13 @@
 
 <body>
    <!--archive-page-->
+   <div class="p-grid c-grid"> <!--pcgrid用-->
+
    <header class="l-header">           <!--frontpageと同じ-->
       <div class="p-header-button">    <!--sp/tab用メニューボタン-->
-         <button class="c-button--menu--sp">Menu</button>  <!--c-menu-buttonのクラス名追加-->
+         <button class="c-button--menu">Menu</button>  <!--c-menu-buttonのクラス名追加-->
       </div>
-      <p class="p-top-title c-title--top">Hamburger</p> <!--h1から変更-->
+      <p class="p-top-title c-title u-color--gray">Hamburger</p>
       <form action="#" method="get" class="p-search-form">
          <label for="search"></label>
          <input type="search" id="search" class="p-search-form__box c-input-box">
@@ -33,11 +35,10 @@
 
    <aside class="l-sidebar"> <!--Menuをタップして出てくるメニュー表示-->
    <button class="c-button--cross"><span></span><span></span></button> <!--×ボタン用-->
-   <h2 class="c-button--menu--pc">Menu</h2>  <!--PC時サイドバー上部に表示させる用-->
+   <h2 class="p-sidebar-title c-title u-color--gray">Menu</h2>  <!--PC時サイドバー上部に表示させる用-->
       <nav class="p-sidebar-list ">
-
       <ul class="p-sidebar-list__contents">
-         <h3 a href="#" class="c-title--menu">バーガー</h3>
+         <h3 a href="#" class="c-title u-color--gray">バーガー</h3>
          <li a href="#">ハンバーガー</li>
          <li a href="#">チーズバーガー</li>
          <li a href="#">テリヤキバーガー</li>
@@ -47,14 +48,14 @@
          <li a href="#">チキンバーガー</li>
       </ul>
       <ul class="p-sidebar-list__contents">
-         <h3 a href="#" class="c-title--menu">サイド</h3>
+         <h3 a href="#" class="c-title u-color--gray">サイド</h3>
             <li a href="#">ポテト</li>
             <li a href="#">サラダ</li>
             <li a href="#">ナゲット</li>
             <li a href="#">コーン</li>
          </ul>
          <ul class="p-sidebar-list__contents">
-         <h3 a href="#" class="c-title--menu">ドリンク</h3>
+         <h3 a href="#" class="c-title u-color--gray">ドリンク</h3>
             <li a href="#">コーラ</li>
             <li a href="#">ファンタ</li>
             <li a href="#">オレンジ</li>
@@ -68,83 +69,96 @@
 
    <main class="l-main">
       <div class="p-main-visual">     <!--メインビジュアル+薄グレー背景 c-wrapperを足す-->
-         <img src="images/archive-main.jpg" alt="Menu">
-         <div class="c-wrapper__main-visual"></div>
+         <img src="images/archive-main.jpg" alt="Menu" class="p-main-visual__img u-height--239">
+         <div class="c-wrapper__main-visual"></div>   <!--薄グレー-->
          <div class="p-main-visual__page-title">
-            <h1 class="p-archive-title c-title--page">Menu:</h1>
-            <h2 class="p-subtitle c-title--page">チーズバーガー</h2> <!--新登場 16px-->
+            <h1 class="p-main-visual__page-title__main c-title">Menu:</h1>
+            <h2 class="p-main-visual__page-title__sub c-title">チーズバーガー</h2> <!--新登場 16px-->
          </div>
       </div>
 
-      <article class="p-subheading">  <!--p-locationを転用-->
-         <div class="p-subheading__wrapper">
-            <h2 class="c-title--subheading">小見出しが入ります</h2>  <!--c-title--locationから転用-->
-            <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-         </div>
-      </article>
+      <div class="p-subheading-card">    <!--小見出しとカードのpadding用-->
+         <article class="p-subheading">  <!--p-locationを転用-->
+            <div class="p-subheading__wrapper">
+               <h2 class="c-title">小見出しが入ります</h2>  <!--c-title--locationから転用-->
+               <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            </div>
+         </article>
 
-      <section class="p-card"> <!--カード-->
-        <figure>
-          <img src="images/archive-card.png" alt="チーズバーガーイメージ">
-          <div class="p-archive-card">
-           <div class="p-card__wrapper"> 
-            <h3 class="c-title--card-img-caption">チーズバーガー</h3> <!--c-titleクラス名変える-->
-             <h4 class="c-title--card-subtitle">小見出しが入ります</h4>
-              <figcaption class="c-text p-card__wrapper__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-              </figcaption>    
-           </div>     <!--wrapper-->        
-          <button class="c-button p-card__button" a href="#">詳しく見る</button> 
-         </div>   <!--p-archive-card-->
-       </figure>       
-      </section>    
-
-      <section class="p-card"> <!--カード-->
-         <figure>
-           <img src="images/archive-card.png" alt="ダブルチーズバーガーイメージ">
-           <div class="p-archive-card">
-            <div class="p-card__wrapper"> 
-             <h3 class="c-title--card-img-caption">ダブルチーズバーガー</h3> <!--c-titleクラス名変える-->
-              <h4 class="c-title--card-subtitle">小見出しが入ります</h4>
+         <section> <!--カード-->
+         <figure class="p-card">
+            <img src="images/archive-card.png" alt="チーズバーガーイメージ" class="p-card-img">
+            <div class="p-archive-card">
+             <div class="p-card__wrapper"> 
+               <h3 class="c-title p-card__wrapper__img-caption">チーズバーガー</h3>
+               <h4 class="c-title p-card__wrapper__subtitle">小見出しが入ります</h4>
                <figcaption class="c-text p-card__wrapper__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                </figcaption>    
-            </div>     <!--wrapper-->        
-           <button class="c-button p-card__button" a href="#">詳しく見る</button> 
-          </div>   <!--p-archive-card-->
-        </figure>       
-       </section>   
+             </div>     <!--wrapper-->        
+             <button class="c-button p-card__button" a href="#">詳しく見る</button> 
+            </div>   <!--p-archive-card-->
+           </figure>       
 
-       <section class="p-card"> <!--カード-->
-         <figure>
-           <img src="images/archive-card.png" alt="スペシャルチーズバーガーイメージ">
-           <div class="p-archive-card">
-            <div class="p-card__wrapper"> 
-             <h3 class="c-title--card-img-caption">スペシャルチーズバーガー</h3> <!--c-titleクラス名変える-->
-              <h4 class="c-title--card-subtitle">小見出しが入ります</h4>
-               <figcaption class="c-text p-card__wrapper__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-               </figcaption>    
-            </div>     <!--wrapper-->        
-           <button class="c-button p-card__button" a href="#">詳しく見る</button> 
-          </div>   <!--p-archive-card-->
-        </figure>       
-      </section>   
-    
+          <figure class="p-card">
+            <img src="images/archive-card.png" alt="ダブルチーズバーガーイメージ" class="p-card-img">
+            <div class="p-archive-card">
+               <div class="p-card__wrapper"> 
+               <h3 class="c-title p-card__wrapper__img-caption">ダブルチーズバーガー</h3> <!--c-titleクラス名変える-->
+               <h4 class="c-title p-card__wrapper__subtitle">小見出しが入ります</h4>
+                  <figcaption class="c-text p-card__wrapper__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                  </figcaption>    
+               </div>     <!--wrapper-->        
+            <button class="c-button p-card__button" a href="#">詳しく見る</button> 
+            </div>   <!--p-archive-card-->
+           </figure>       
+
+          <figure class="p-card">
+            <img src="images/archive-card.png" alt="スペシャルチーズバーガーイメージ" class="p-card-img">
+            <div class="p-archive-card">
+               <div class="p-card__wrapper"> 
+               <h3 class="c-title p-card__wrapper__img-caption">スペシャルチーズバーガー</h3> <!--c-titleクラス名変える-->
+               <h4 class="c-title p-card__wrapper__subtitle">小見出しが入ります</h4>
+                  <figcaption class="c-text p-card__wrapper__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                  </figcaption>    
+               </div>     <!--wrapper-->        
+            <button class="c-button p-card__button" a href="#">詳しく見る</button> 
+            </div>   <!--p-archive-card-->
+           </figure>       
+         </section>   
+      </div>  <!--subheading-cardの閉じタグ-->
+
+      <div class="p-paging">     <!--ページング--sp-->
+         <ul class="c-paging-prev">
+            <li>＜＜前へ</li>
+         </ul> 
+         <ul class="c-paging-next">
+            <li>次へ＞＞</li>
+         </ul>
+       </div>   
+       
+       <div class="p-paging__tabpc">     <!--ページングtabpc-->
+          <a class="p-paging__tabpc__page-count">page 1/10</a>
+          <a class="p-paging__tabpc__prev" href="#"><<</a>
+          <span class="p-paging__tabpc__page-numbers">1</span>
+          <a class="p-paging__tabpc__page-numbers" href="#">2</a>
+          <a class="p-paging__tabpc__page-numbers" href="#">3</a>
+          <a class="p-paging__tabpc__page-numbers" href="#">4</a>
+          <a class="p-paging__tabpc__page-numbers" href="#">5</a>
+          <a class="p-paging__tabpc__page-numbers" href="#">6</a>
+          <a class="p-paging__tabpc__page-numbers" href="#">7</a>
+          <a class="p-paging__tabpc__page-numbers" href="#">8</a>
+          <a class="p-paging__tabpc__page-numbers" href="#">9</a>
+          <a class="p-paging__tabpc__next" href="#">>></a>
+       </div>    
+
    </main>    
    
-   <div class="p-paging">     <!--ページング-->
-     <ul class="c-paging-back">
-        <li>＜＜前へ</li>
-     </ul> 
-     <ul class="c-paging-next">
-        <li>次へ＞＞</li>
-     </ul>
-   </div>   
-
-    <footer>
-       <div class="p-footer">
-          <p class="c-category-title" a href="#">ショップ情報 ｜ ヒストリー</p>
-          <p class="c-copyright">copyright : RaiseTech</p>
-       </div>
-    </footer>
+   <footer class="l-footer">
+      <div class="p-footer">
+         <p class="c-title" a href="#">ショップ情報 ｜ ヒストリー</p>
+         <p class="c-copyright">copyright : RaiseTech</p>
+      </div>
+   </footer>
 
 
 <!--jQuery-->

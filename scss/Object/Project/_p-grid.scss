@@ -1,6 +1,7 @@
 @use "../../Foundation/mixin" as m;
 @use "../../Foundation/variables" as v;
 
+//グリッドの設定
 
 .p-grid {
     @include m.mq(pc) {

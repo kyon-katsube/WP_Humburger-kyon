@@ -1,10 +1,17 @@
 @use "../../Foundation/mixin" as m;
 @use "../../Foundation/variables" as v;
 
-// @use "../Component/c-title";
+//Humburgerのタイトルあしらい l-headerに持っていく
 
 
 .p-top-title {
+  text-align: center;
+  .c-title{
+    font-size:v.$font-ll;
+  }
+  @include m.mq(tab) {
+    font-size:40px;
+    }
   @include m.mq(pc) {
     display: flex;
     align-items:center;

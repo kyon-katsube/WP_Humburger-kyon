@@ -15,28 +15,12 @@
 
 //Menuボタン（sp/pc)・×ボタン　いったんすべてのスタイル転記
 
-.c-button--menu--sp{   //sp/tabのMenuボタン
-    @include m.mq(tab){
-        font-size:v.$font-l;
-    }
-    @include m.mq(pc){
-        display:none;
-    }
+.c-button--menu  { //sp/tabのMenuボタン
+    color:v.$searchform-gray; 
     &:hover {
     cursor:pointer;
     }
 }
-
-.c-button--menu--pc {    //PC用の「Menu」表示
-    @include m.mq(lesspc) {
-       display:none;
-     }
-     @include m.mq(pc) {
-        display:block;
-        font-size:v.$font-l;
-        padding:40px;
-      }
-  }
 
   .c-button--cross.active {     //c-btn p-btn--cross//l-sidebarへ
     content: "";
@@ -62,6 +46,3 @@
         transform:rotate(45deg);
     }
 } //c-btn--cross
-
-
-

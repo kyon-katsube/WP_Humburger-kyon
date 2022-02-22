@@ -27,26 +27,28 @@ Text Domain: hamburger_site_WP
 //Object
 /* Component--------------------- */
 @use "Object/Component/c-grid";
-@use "Object/Component/c-title";
-@use "Object/Component/c-button";
-@use "Object/Component/c-input-box";
-@use "Object/Component/c-wrapper";
-@use "Object/Component/c-text";
+@use "Object/Component/title";
+@use "Object/Component/button";
+@use "Object/Component/input-box";
+@use "Object/Component/wrapper";
+@use "Object/Component/text";
 @use "Object/Component/c-paging";
 
 
 /* Project------------------------ */
 @use "Object/Project/p-grid";
-@use "Object/Project/p-header-button";
-@use "Object/Project/p-top-title";
-@use "Object/Project/p-search-form";
-@use "Object/Project/p-main-visual";
-@use "Object/Project/p-page-title";
-@use "Object/Project/p-branch-menu";
-@use "Object/Project/p-subheading";
-@use "Object/Project/p-card";
+@use "Object/Project/header-button";
+@use "Object/Project/top-title";
+@use "Object/Project/search-form";
+@use "Object/Project/main-visual";
+@use "Object/Project/page-title";
+@use "Object/Project/branch-menu";
+@use "Object/Project/subheading";
+@use "Object/Project/card";
 @use "Object/Project/p-paging";
-@use "Object/Project/p-sidebar";
-@use "Object/Project/p-location";
+@use "Object/Project/sidebar";
+@use "Object/Project/location";
 
 /* Utility----------------------- */
+@use "Object/Utility/color";
+@use "Object/Utility/height";
