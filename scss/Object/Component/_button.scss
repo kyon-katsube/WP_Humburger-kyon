@@ -9,8 +9,7 @@
 
 .c-button--search{   //検索ボタンのベース
     border-radius: 10px;
-    border:1px solid;
-    color:v.$searchform-gray; 
+    border:1px solid v.$searchform-gray;
 }
 
 //Menuボタン（sp/pc)・×ボタン　いったんすべてのスタイル転記
