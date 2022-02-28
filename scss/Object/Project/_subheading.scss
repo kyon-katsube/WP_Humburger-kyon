@@ -1,7 +1,7 @@
 @use "../../Foundation/mixin" as m;
 @use "../../Foundation/variables" as v;
 
-.p-subheading-card{  //小見出しとカードをくくったpadding設定
+.p-subheading-card,.p-main-article{  //小見出し～footer手前までをくくったpadding設定
     padding:40px 20px;
     @include m.mq(tab){
         padding:60px 40px;
@@ -14,14 +14,52 @@
 .p-subheading__wrapper {        //小見出しとテキスト
     color:v.$takeout-font-color;
     position:relative;
+    padding-bottom:30px;
     @include m.mq(tab){
-       margin-bottom:40px;
+       padding-bottom:60px;
       }
-    .c-title{
-        font-size:v.$font-sm;
+  
+     .c-title{
         color:v.$takeout-font-color;
+        }//c-titleの閉じタグ 
+  
+  
+    &__h2{          //singlepageの見出しのフォントサイズ
+        font-size:28px;
         @include m.mq(tab){
-          font-size:v.$font-l;
+            font-size:36px;
         }
      }
+     &__h3{
+        padding-top:60px;
+        font-size:24px;
+        @include m.mq(tab){
+            font-size:28px;
+        }
+     }
+     &__h4,
+     &__h5,
+     &__h6{
+      padding-top:60px;
+      font-size:20px;
+     }  
+
+   .p-backquote {
+     background-color:v.$backquote-background-lightblue;
+     padding:0 20px 20px 20px;
+     margin-top:50px;
+     @include m.mq(pc){
+      padding:0 50px 50px 50px;
+     }
+     p{
+       padding-top:30px;
+       line-height:1.5rem;
+       @include m.mq(tab){
+         padding-top:50px;
+       }
+     }
+     a{
+       text-decoration:underline;
+     }
+   } //backquoteの閉じタグ
   }//__wrapperの閉じタグ

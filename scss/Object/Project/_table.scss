@@ -1,0 +1,22 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
+.p-table {
+    margin-top:40px;
+    width:100%;
+        td {
+        padding:20px 0 20px 20px;  
+        border:1px solid v.$base-gray;
+        }
+        td:nth-child(2){
+            border-left:0;  
+        }
+        td:nth-child(1),
+        td:nth-child(2) {
+            border-bottom:0;
+        }
+}
+
+.p-table tr:last-child{
+    border-bottom:1px;
+}

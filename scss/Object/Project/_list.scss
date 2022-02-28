@@ -1,0 +1,26 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
+.p-list{
+    padding-left:10px;
+    line-height: 1.3rem;
+    @include m.mq(tab){
+        padding-top:10px;
+        padding-left:50px;
+        line-height:1.5rem;
+    }
+    &__ul,&__ol{
+       padding-top:40px;
+       padding-left:10px;
+         }
+    &__ul {
+        margin-left:-30px;
+    }     
+    &__ul li {
+        list-style: none;
+    }        
+}
+.p-list__ol__pdg,
+.p-list__ul__pdg {
+    padding-bottom:20px;
+}

@@ -37,8 +37,7 @@ Text Domain: hamburger_site_WP
 
 /* Project------------------------ */
 @use "Object/Project/p-grid";
-@use "Object/Project/header-button";
-@use "Object/Project/top-title";
+@use "Object/Project/header";
 @use "Object/Project/search-form";
 @use "Object/Project/main-visual";
 @use "Object/Project/page-title";
@@ -46,9 +45,16 @@ Text Domain: hamburger_site_WP
 @use "Object/Project/subheading";
 @use "Object/Project/card";
 @use "Object/Project/p-paging";
+@use "Object/Project/list";
+@use "Object/Project/cord";
+@use "Object/Project/table";
+@use "Object/Project/single-button";
+@use "Object/Project/annotation";
 @use "Object/Project/sidebar";
 @use "Object/Project/location";
 
 /* Utility----------------------- */
 @use "Object/Utility/color";
 @use "Object/Utility/height";
+@use "Object/Utility/margin";
+@use "Object/Utility/border";

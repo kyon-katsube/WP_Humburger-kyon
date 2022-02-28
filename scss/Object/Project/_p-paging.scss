@@ -2,10 +2,12 @@
 @use "../../Foundation/variables" as v;
 
 
-.p-paging{
+.p-paging--sp{
    display: flex;
    padding:20px;
    justify-content: space-between;
+   text-decoration: none;
+   color:v.$base-gray;
    ul {
        list-style: none;
    }
@@ -20,7 +22,8 @@
     justify-content:center;
     background:v.$base-white;
     font-family: v.$Roboto;
-    list-style: none;
+    text-decoration: none;
+    color:v.$base-gray;
     &:hover{
         cursor:pointer;
     }

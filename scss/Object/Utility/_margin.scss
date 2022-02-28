@@ -1,0 +1,8 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
+.u-margin {
+    &--left{
+        margin-left:20px;
+    }
+}

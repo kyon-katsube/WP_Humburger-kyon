@@ -3,8 +3,8 @@
 
  <head>
  <meta charset="utf-8">
- <title>Hamburger</title>
- <meta name="description" content="ハンバーガーショップのサイトです">
+ <title>Hamburger-frontpage</title>
+ <meta name="description" content="ハンバーガーショップサイトのfrontpageです">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
  <!--CSS-->
@@ -19,21 +19,21 @@
    <!--front-page-->
    <div class="p-grid c-grid"> <!--pcgrid用-->
 
-    <header class="l-header">
-        <div class="p-header-button">    <!--sp/tab用メニューボタン-->
-          <button class="c-button--menu">Menu</button>  <!--c-menu-buttonのクラス名追加-->
-        </div>
-        <h1 class="p-top-title c-title u-color--gray">Hamburger</h1>
-        <form action="#" method="get" class="p-search-form">
-           <label for="search"></label>
-           <input type="search" id="search" class="p-search-form__box c-input-box">
-           <input type="submit" value="検索" class="p-search-form__button c-button--search">
+      <header class="l-header p-header">           <!--frontpageと同じ-->
+         <div class="p-header__menu">    <!--sp/tab用メニューボタン-->
+            <button class="c-button--menu">Menu</button>  <!--c-menu-buttonのクラス名追加-->
+         </div>
+         <p class="p-header__title c-title u-color--gray">Hamburger</p>
+         <form action="#" method="get" class="p-search-form">
+            <label for="search"></label>
+            <input type="search" id="search" class="p-search-form__box c-input-box">
+            <input type="submit" value="検索" class="p-search-form__button c-button--search">
          </form>
-    </header>   
+      </header>   
     
     <div class="c-wrapper"></div> <!--sp/tab時の薄グレー用-->
 
-    <aside class="l-sidebar"> <!--Menuをタップして出てくるメニュー表示-->
+    <aside class="l-sidebar p-sidebar"> <!--Menuをタップして出てくるメニュー表示-->
      <button class="c-button--cross"><span></span><span></span></button> <!--×ボタン用-->
       <h2 class="p-sidebar-title c-title u-color--gray">Menu</h2>  <!--PC時サイドバー上部に表示させる用-->
          <nav class="p-sidebar-list ">
@@ -67,7 +67,7 @@
        </nav>
       </aside>
 
-    <main class="l-main">
+    <main class="l-main p-main">
         <div class="p-main-visual">
           <img src="images/mainvisual-pc.jpg" class="p-main-visual__img">
           <h2 class="p-page-title c-title">ダミーサイト</h2>
