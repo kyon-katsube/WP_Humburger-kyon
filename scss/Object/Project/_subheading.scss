@@ -3,10 +3,10 @@
 
 .p-subheading-card,.p-main-article {  //小見出し～footer手前までをくくったpadding設定
     padding:40px 20px;
-    @include m.mq(tab){
+    @include m.mq(tab) {
         padding:60px 40px;
     }
-    @include m.mq(pc){
+    @include m.mq(pc) {
     padding:60px;
     }
 }
@@ -15,20 +15,20 @@
       color:v.$takeout-font-color;
       position:relative;
       padding-bottom:30px;
-      @include m.mq(tab){
+      @include m.mq(tab) {
         padding-bottom:60px;
       }
-      .c-title{
+      .c-title {
           color:v.$takeout-font-color;
-      }//c-titleの閉じタグ 
+      }  //c-titleの閉じタグ 
     
-      &__h2{          //singlepageの見出しのフォントサイズ
+      &__h2 {          //singlepageの見出しのフォントサイズ
           font-size:28px;
-          @include m.mq(tab){
+          @include m.mq(tab) {
               font-size:36px;
           }
       }
-      &__h3{
+      &__h3 {
           padding-top:60px;
           font-size:24px;
           @include m.mq(tab){
@@ -37,7 +37,7 @@
       }
       &__h4,
       &__h5,
-      &__h6{
+      &__h6 {
           padding-top:60px;
           font-size:20px;
       }  
@@ -46,19 +46,18 @@
       background-color:v.$backquote-background-lightblue;
       padding:0 20px 20px 20px;
       margin-top:50px;
-      @include m.mq(pc){
+      @include m.mq(pc) {
         padding:0 50px 50px 50px;
       }
       p{
         padding-top:30px;
         line-height:1.5rem;
-        @include m.mq(tab){
+        @include m.mq(tab) {
           padding-top:50px;
         }
       }
       a{
         text-decoration:underline;
       }
-    } //backquoteの閉じタグ
-    
-  }//__wrapperの閉じタグ
+    } //backquoteの閉じタグ    
+}//__wrapperの閉じタグ

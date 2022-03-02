@@ -9,7 +9,6 @@
     top:0; 
     width:328px;
     height:100vh;
-    overflow-y: scroll;
     z-index:3;
     &.slideactive {      //サイドバーが開く
         right:0; 
@@ -20,7 +19,10 @@
         right:0;
         width:367px;
         height:auto;
-     }
+    }
+    @include m.mq(lesspc) {
+        overflow-y: scroll;
+    }
 
     &-title {   //PC用の「Menu」表示    
         .c-title {        //色はuで指定
@@ -37,24 +39,24 @@
     }
 
     &-list {     //nav menu
-            margin-top:103px; //217-Menuのfontsize-padding×2
-            margin-left:40px;
-            &__contents {       
+        margin-top:103px; //217-Menuのfontsize-padding×2
+        margin-left:40px;
+        &__contents {       
+            margin-bottom:40px;
+            &:hover {
+                cursor:pointer;
+            }
+            .c-title {        //h3  色はu
+                font-size: v.$font-s;
+                margin-top:40px;
                 margin-bottom:40px;
-                &:hover {
-                    cursor:pointer;
-                }
-                .c-title {        //h3  色はu
-                    font-size: v.$font-s;
-                    margin-top:40px;
-                    margin-bottom:40px;
-                }
-                li {
-                    list-style:none;
-                    font-size: v.$font-ss;
-                    line-height:2.5em;
-                    padding-left:20px;
-                }
+            }
+            li {
+                list-style:none;
+                font-size: v.$font-ss;
+                line-height:2.5em;
+                padding-left:20px;
+            }
         } //contentsの閉じタグ
     } //listの閉じタグ
     

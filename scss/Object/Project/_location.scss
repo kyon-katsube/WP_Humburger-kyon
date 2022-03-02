@@ -41,7 +41,7 @@
       position:relative;
       z-index:1;
         @include m.mq(lesspc) {    
-          width:100%;
+            width:100%;
         }
         .c-title--underline {        //h2 見出しが入ります
             font-size:v.$font-m;

@@ -7,7 +7,7 @@
        border:1px solid;
 }
 
-.c-button--search{   //検索ボタンのベース
+.c-button--search {   //検索ボタンのベース
     border-radius: 10px;
     border:1px solid v.$searchform-gray;
 }
@@ -43,6 +43,5 @@
     }
     & span:last-child {
         transform:rotate(45deg);
-    }
-    
+    }   
 } //c-btn--cross

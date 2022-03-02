@@ -840,7 +840,6 @@ img {
   top: 0;
   width: 328px;
   height: 100vh;
-  overflow-y: scroll;
   z-index: 3;
 }
 .p-sidebar.slideactive {
@@ -853,6 +852,11 @@ img {
     right: 0;
     width: 367px;
     height: auto;
+  }
+}
+@media screen and (max-width:1024px) {
+  .p-sidebar {
+    overflow-y: scroll;
   }
 }
 .p-sidebar-title .c-title {

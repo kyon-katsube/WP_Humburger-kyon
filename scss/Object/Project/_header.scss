@@ -26,15 +26,15 @@
 .p-header__title {
     text-align: center;
     font-size:v.$font-ll;
-    .c-title{
+    .c-title {
     }
     @include m.mq(tab) {
       font-size:40px;
-      }
+    }
     @include m.mq(pc) {
       display: flex;
       align-items:center;
       font-size:v.$font-xl;
       margin:auto auto auto 40px;
-      }
-  }
+    }
+}

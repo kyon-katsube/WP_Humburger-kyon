@@ -17,8 +17,7 @@
             width:50%;
             left:0;
             object-fit:cover;
-        }
-    
+        } 
     }
 
     .p-archive-card {   //小見出×2・テキスト・ボタンのくくり　色と配置
@@ -52,7 +51,7 @@
                 color:v.$base-white;
                 padding-top:30px;
             }    
-         }  //__wrapperの閉じタグ
+        }  //__wrapperの閉じタグ
 
        .p-card__button {     //詳しく見るのボタン
             border-radius: 50px;
@@ -96,10 +95,10 @@
                 width:581px;
                 height:358px;
             }
-       } //img
-       &__text {
-           color:v.$takeout-font-color;
-           font-size:inherit;
-           padding-top:inherit;
-       }
-    }
+        } //img
+        &__text {
+            color:v.$takeout-font-color;
+            font-size:inherit;
+            padding-top:inherit;
+        }
+}

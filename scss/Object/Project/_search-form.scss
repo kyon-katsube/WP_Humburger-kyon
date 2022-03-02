@@ -34,14 +34,14 @@
      height:46px;
      width:78px;
      background:linear-gradient(to bottom,#F2EDE9 0%,#DED8D3 100%);
-     @include m.mq(tab){
+     @include m.mq(tab) {
         width:136px;
      }
-     @include m.mq(pc){
+     @include m.mq(pc) {
         position:absolute;
         width:136px;
         bottom:0;
         right:0;
         margin-left:10px;
-    }
+     }
 }

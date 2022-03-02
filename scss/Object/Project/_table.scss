@@ -10,18 +10,18 @@
         padding:20px 0 20px 20px;  
         border:0.5px solid v.$base-gray;
         }
-        td:first-child  {
+        td:first-child {
         width:calc(33vw - 1.5px);
         }
-        td:last-child  {
+        td:last-child {
         width:calc(66vw - 1.5px)
         }
-        @include m.mq(tab){
-            td:first-child  {
+        @include m.mq(tab) {
+            td:first-child {
                 width:calc(40vw - 1.5px);
-                }
-                td:last-child  {
+            }
+            td:last-child {
                 width:calc(6neb6vw - 1.5px)
-                }
+            }
         }
 }

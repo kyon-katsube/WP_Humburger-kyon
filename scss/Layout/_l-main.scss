@@ -5,11 +5,11 @@
 //Project/p-branch-menu
 //Project/p-location
 
-.l-main{     //main
+.l-main {     //main
     @include m.mq(pc) {
         grid-row:2/3;
         grid-column:1/2 ;
-        }
+    }
 }
 
 .p-main-article {    //single・pageの見出しの下の画像～footer上までのpadding

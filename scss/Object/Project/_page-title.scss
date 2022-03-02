@@ -8,12 +8,12 @@
   position:absolute;
   top:40%;
   left:20px;  
-    .c-title{
+    .c-title {
       font-size:v.$font-l;
     }
 }
 
-.p-main-visual__page-title{  //archiveページのタイトル Menu:
+.p-main-visual__page-title {  //archiveページのタイトル Menu:
     position:absolute;
     top:40%;
     left:20px;
@@ -25,15 +25,15 @@
       &__main{    //archiveのタイトル Menu
           font-size:v.$font-l;
           font-family: v.$Roboto;
-          @include m.mq(tab){
+          @include m.mq(tab) {
             font-size:60px;
           }
       }
-    &__sub {     //archiveのチーズバーガー
-        font-size:inherit; //16px デフォルト
-        margin-top:15px;
-        @include m.mq(tab){
-          margin:27px auto auto 20px;
-        }
-    } 
- }     //__page-title
+      &__sub {     //archiveのチーズバーガー
+          font-size:inherit; //16px デフォルト
+          margin-top:15px;
+          @include m.mq(tab) {
+            margin:27px auto auto 20px;
+          }
+      } 
+}     //__page-title

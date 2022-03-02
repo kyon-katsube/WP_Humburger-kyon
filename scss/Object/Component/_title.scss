@@ -7,7 +7,7 @@
 
 .c-title--underline {
   color:v.$base-white;
-  &::after{      //TakeOut・見出しが入りますの下の罫線
+  &::after {      //TakeOut・見出しが入りますの下の罫線
     content:"";
     display:block;
     width:36px;

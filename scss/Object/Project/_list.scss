@@ -1,7 +1,7 @@
 @use "../../Foundation/mixin" as m;
 @use "../../Foundation/variables" as v;
 
-.p-list{
+.p-list {
     padding-left:10px;
     line-height: 1.3rem;
     @include m.mq(tab) {
