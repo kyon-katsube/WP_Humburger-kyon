@@ -15,4 +15,4 @@ $breakpoints:(
     @media #{map-get($breakpoints, $breakpoint)} {
       @content;
     }
-  }
+}

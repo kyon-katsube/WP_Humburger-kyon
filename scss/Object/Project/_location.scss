@@ -8,11 +8,11 @@
     background-color:v.$map-background-dark;
     margin-top:50px;
     position:relative;
-    @include m.mq(tab){  //section上部のスペースはp-branch-menuにて指定
+    @include m.mq(tab) {  //section上部のスペースはp-branch-menuにて指定
         margin-top:0;
         background-image: url("../images/frontpagemap-tab.png");
     }
-    @include m.mq(pc){
+    @include m.mq(pc) {
         height:auto;
         background-image: url("../images/frontpagemap-pc.png");
     }
@@ -25,7 +25,7 @@
       right: 0;
       top: 0;
       bottom: 50%;
-      @include m.mq(tab){     //tabのときは薄グレーなし
+      @include m.mq(tab) {     //tabのときは薄グレーなし
          bottom:0;
       }
       @include m.mq(pc) {      //pcのときは右から38％が薄グレー
@@ -40,24 +40,23 @@
       color:v.$base-white;
       position:relative;
       z-index:1;
-      @include m.mq(lesspc){    
-        width:100%;
-     }
-     .c-title--underline {        //h2 見出しが入ります
-      font-size:v.$font-m;
-      margin-bottom:30px;
-      &::after{                  //「見出しが入ります」の下の線
-          width:60px;
-          height:2px;
-          position:absolute;
-          top:100px;
-          left:40px;
-       }
-     } //h2 見出しが入りますの閉じタグ
-
-       p {
-         font-size:v.$font-xs;
-         line-height: 2.4;
+        @include m.mq(lesspc) {    
+          width:100%;
         }
+        .c-title--underline {        //h2 見出しが入ります
+            font-size:v.$font-m;
+            margin-bottom:30px;
+            &::after {                  //「見出しが入ります」の下の線
+                width:60px;
+                height:2px;
+                position:absolute;
+                top:100px;
+                left:40px;
+            }
+        } 
+      p {
+        font-size:v.$font-xs;
+        line-height: 2.4;
+      }
     }//__wrapperの閉じタグ
 } //p-locationの閉じタグ

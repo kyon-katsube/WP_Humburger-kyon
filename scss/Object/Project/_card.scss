@@ -2,39 +2,39 @@
 @use "../../Foundation/variables" as v;
 
 
-.p-card{
+.p-card {
     margin-top:20px;
     line-height:1.5rem;
-    @include m.mq(tab){
+    @include m.mq(tab) {
         display:flex;
         justify-content:space-between;
         gap:0;
-      }
-    .p-card-img{
+    }
+    .p-card-img {
         vertical-align:bottom;
         height:auto;
-        @include m.mq(tab){
+        @include m.mq(tab) {
             width:50%;
             left:0;
             object-fit:cover;
-       }
+        }
     
-     }
+    }
 
     .p-archive-card {   //小見出×2・テキスト・ボタンのくくり　色と配置
         background-color:v.$card-background-brown;
         vertical-align: top;
         padding-bottom:40px;
-        @include m.mq(tab){
+        @include m.mq(tab) {
             width:50%;
             position:relative;
         }
-        .p-card__wrapper{   //小見出し×2とテキスト
+        .p-card__wrapper {   //小見出し×2とテキスト
             padding:40px 80px 40px 20px;    
-            @include m.mq(tab){
+            @include m.mq(tab) {
                 padding:40px 60px 40px 40px;
             }   
-            @include m.mq(pc){
+            @include m.mq(pc) {
                 padding:60px;
             }   
 
@@ -43,18 +43,18 @@
                 padding-top:20px;
                 padding-bottom:20px;
             } 
-            .p-card__wrapper__img-caption{  //imgのキャプション
+            .p-card__wrapper__img-caption {  //imgのキャプション
                 font-size:v.$font-ss;
                 color:v.$base-white;
             }       
-            .p-card__wrapper__subtitle{      //小見出し
+            .p-card__wrapper__subtitle {      //小見出し
                 font-size:inherit;   
                 color:v.$base-white;
                 padding-top:30px;
             }    
          }  //__wrapperの閉じタグ
 
-       .p-card__button{     //詳しく見るのボタン
+       .p-card__button {     //詳しく見るのボタン
             border-radius: 50px;
             border:none;
             color:v.$base-gray; 
@@ -66,7 +66,7 @@
             align-items: center;
             justify-content: center;
             margin:0 auto;
-            @include m.mq(tab){
+            @include m.mq(tab) {
                 position:absolute;
                 bottom:40px;
                 justify-content: center;
@@ -76,28 +76,28 @@
     }  //archive-cardの閉じタグ
 }
 
-.p-card--single{    //singleページ用のカード
+.p-card--single {    //singleページ用のカード
     display:flex;
     justify-content:space-between;
     gap:20px;
     margin-top:20px;
-    @include m.mq(pc){
+    @include m.mq(pc) {
         gap:40px;
     }
-        &__img{
-        object-fit: cover;
-        width:144px;
-        height:89px;
-        @include m.mq(tab){
-            width:306px;
-            height:189px;
-        }
-        @include m.mq(pc){
-            width:581px;
-            height:358px;
-        }
+        &__img {
+            object-fit: cover;
+            width:144px;
+            height:89px;
+            @include m.mq(tab) {
+                width:306px;
+                height:189px;
+            }
+            @include m.mq(pc) {
+                width:581px;
+                height:358px;
+            }
        } //img
-       &__text{
+       &__text {
            color:v.$takeout-font-color;
            font-size:inherit;
            padding-top:inherit;

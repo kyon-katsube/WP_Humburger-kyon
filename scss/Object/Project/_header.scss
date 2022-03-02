@@ -7,18 +7,16 @@
 .p-header__menu { 
     text-align: right;
     padding:15px 20px;
-    .c-button--menu{      //sp/tab時のMenuボタン位置
-        // border-radius: inherit;
-        // border:inherit;
+    .c-button--menu {      //sp/tab時のMenuボタン位置
         font-size:v.$font-s;
         z-index:3;
         &:hover {
             cursor:pointer;
         }
-        @include m.mq(tab){
+        @include m.mq(tab) {
             font-size:v.$font-l;
         }
-        @include m.mq(pc){
+        @include m.mq(pc) {
             display:none;
         }
     } 

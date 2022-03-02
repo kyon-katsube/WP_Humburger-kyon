@@ -9,22 +9,22 @@
     width:100%;
     height:100vh;
     z-index:2;  //上へ持ってくる
-    &.backactive{  //jsでアクティブクラスがついたら表示させる    
+    &.backactive {  //jsでアクティブクラスがついたら表示させる    
         display: block;
         animation:0.5s fadeIn forwards;
-        @keyframes fadeIn{
+        @keyframes fadeIn {
             from{opacity:0}
             to  {opacity:1}
             }
      }  //&__cover.backactive  //activeが外れたときの動き方も記述する
-   } //c-wrapper
+ } //c-wrapper
 
-   .c-wrapper__main-visual{  //archiveのmain-visualの薄グレー
-        background-color:v.$map-background-light;
-        content:"";      
-        position:absolute;
-        top:0;
-        right:0;
-        bottom:0;
-        left:0;
-        }
+.c-wrapper__main-visual {  //archiveのmain-visualの薄グレー
+    background-color:v.$map-background-light;
+    content:"";      
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+}

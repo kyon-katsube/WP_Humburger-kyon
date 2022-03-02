@@ -16,7 +16,6 @@ Text Domain: hamburger_site_WP
 @use "Foundation/base";
 @use "Foundation/variables";
 @use "Foundation/mixin";
-@use "Foundation/grid";
 
 //Layout
 @use "Layout/l-header";
@@ -26,17 +25,15 @@ Text Domain: hamburger_site_WP
 
 //Object
 /* Component--------------------- */
-@use "Object/Component/c-grid";
 @use "Object/Component/title";
 @use "Object/Component/button";
 @use "Object/Component/input-box";
 @use "Object/Component/wrapper";
 @use "Object/Component/text";
-@use "Object/Component/c-paging";
 
 
 /* Project------------------------ */
-@use "Object/Project/p-grid";
+@use "Object/Project/grid";
 @use "Object/Project/header";
 @use "Object/Project/search-form";
 @use "Object/Project/main-visual";
@@ -44,7 +41,7 @@ Text Domain: hamburger_site_WP
 @use "Object/Project/branch-menu";
 @use "Object/Project/subheading";
 @use "Object/Project/card";
-@use "Object/Project/p-paging";
+@use "Object/Project/paging";
 @use "Object/Project/list";
 @use "Object/Project/cord";
 @use "Object/Project/table";
@@ -57,4 +54,3 @@ Text Domain: hamburger_site_WP
 @use "Object/Utility/color";
 @use "Object/Utility/height";
 @use "Object/Utility/margin";
-@use "Object/Utility/border";

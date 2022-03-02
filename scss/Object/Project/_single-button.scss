@@ -1,7 +1,7 @@
 @use "../../Foundation/mixin" as m;
 @use "../../Foundation/variables" as v;
 
-.p-single-button{   //p-search-formから改変
+.p-single-button {   //p-search-formのボタンから改変
      width:335px;
      height:81px;
      background:linear-gradient(to bottom,#F2EDE9 0%,#DED8D3 100%);

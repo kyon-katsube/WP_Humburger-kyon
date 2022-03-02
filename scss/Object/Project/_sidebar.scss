@@ -1,10 +1,8 @@
 @use "../../Foundation/mixin" as m;
 @use "../../Foundation/variables" as v;
 
-//Component/c-button ×ボタン・Menuボタン
 
-
-.l-sidebar {     //pinkのサイドバーの設定//l-sidebarへ
+.p-sidebar {     //pinkのサイドバーの設定
     background-color:v.$sidebar-background-gray;
     position:absolute;
     right:-120%;//menuボタンを押すまでは非表示 メインとサイドバーの割合
@@ -13,52 +11,51 @@
     height:100vh;
     overflow-y: scroll;
     z-index:3;
-    transition:all 0.5s;
-    &.slideactive {
-        right:0;  
+    &.slideactive {      //サイドバーが開く
+        right:0; 
+        transition:all 0.8s;
     }
     @include m.mq(pc) {
         position:static;
         right:0;
         width:367px;
         height:auto;
-        overflow-y:inherit;
-        transition:inherit;
      }
- .p-sidebar-title{   //PC用の「Menu」表示    
-    .c-title{        //色はuで指定
-        font-size:v.$font-l;     
+
+    &-title {   //PC用の「Menu」表示    
+        .c-title {        //色はuで指定
+            font-size:v.$font-l;     
+        }
+        @include m.mq(lesspc) {
+            display:none;
+        }
+        @include m.mq(pc) {
+            display:block;
+            font-size:v.$font-l; 
+            padding:70px 0 0 40px;
+        }
     }
-      @include m.mq(lesspc) {
-        display:none;
-      }
-      @include m.mq(pc) {
-         display:block;
-         font-size:v.$font-l; 
-         padding:70px 0 0 40px;
-       }
- }
 
-  .p-sidebar-list {     //nav menu
-        margin-top:103px; //217-Menuのfontsize-padding×2
-        margin-left:40px;
-
-    &__contents {       
-        margin-bottom:40px;
-        &:hover {
-            cursor:pointer;
-        }
-        .c-title {        //h3  色はu
-            font-size: v.$font-s;
-            margin-top:40px;
-            margin-bottom:40px;
-        }
-        li {
-            list-style:none;
-            font-size: v.$font-ss;
-            line-height:2.5em;
-            padding-left:20px;
-        }
-    } //contentsの閉じタグ
-  } //listの閉じタグ
+    &-list {     //nav menu
+            margin-top:103px; //217-Menuのfontsize-padding×2
+            margin-left:40px;
+            &__contents {       
+                margin-bottom:40px;
+                &:hover {
+                    cursor:pointer;
+                }
+                .c-title {        //h3  色はu
+                    font-size: v.$font-s;
+                    margin-top:40px;
+                    margin-bottom:40px;
+                }
+                li {
+                    list-style:none;
+                    font-size: v.$font-ss;
+                    line-height:2.5em;
+                    padding-left:20px;
+                }
+        } //contentsの閉じタグ
+    } //listの閉じタグ
+    
 }  //p-sidebarの閉じタグ 

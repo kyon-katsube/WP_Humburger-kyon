@@ -5,7 +5,7 @@
    color:v.$base-white;
 }
 
-.c-title--underline{
+.c-title--underline {
   color:v.$base-white;
   &::after{      //TakeOut・見出しが入りますの下の罫線
     content:"";

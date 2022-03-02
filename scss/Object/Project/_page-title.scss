@@ -3,37 +3,37 @@
 
 // @use "../Component/c-title";
 
-.p-page-title{    //frontpage sp tabのMenu frontpageのダミーサイト
+.p-page-title {    //frontpage sp tabのMenu frontpageのダミーサイト
   text-align:center;
   position:absolute;
   top:40%;
   left:20px;  
-     .c-title{
+    .c-title{
       font-size:v.$font-l;
-  }
+    }
 }
 
 .p-main-visual__page-title{  //archiveページのタイトル Menu:
-  position:absolute;
-  top:40%;
-  left:20px;
-  @include m.mq(tab){
-    display:flex;
-    top:calc(50% - 30px); //真ん中-文字の大きさの半分上
-    left:60px;
-}
-  .p-main-visual__page-title__main{    //archiveのタイトル Menu
-      font-size:v.$font-l;
-      font-family: v.$Roboto;
-      @include m.mq(tab){
-        font-size:60px;
+    position:absolute;
+    top:40%;
+    left:20px;
+      @include m.mq(tab) {
+        display:flex;
+        top:calc(50% - 30px); //真ん中-文字の大きさの半分上
+        left:60px;
       }
-    }
-  .p-main-visual__page-title__sub{     //archiveのチーズバーガー
-      font-size:inherit; //16px デフォルト
-      margin-top:15px;
-      @include m.mq(tab){
-        margin:27px auto auto 20px;
+      &__main{    //archiveのタイトル Menu
+          font-size:v.$font-l;
+          font-family: v.$Roboto;
+          @include m.mq(tab){
+            font-size:60px;
+          }
       }
+    &__sub {     //archiveのチーズバーガー
+        font-size:inherit; //16px デフォルト
+        margin-top:15px;
+        @include m.mq(tab){
+          margin:27px auto auto 20px;
+        }
     } 
  }     //__page-title

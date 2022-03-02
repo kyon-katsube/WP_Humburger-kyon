@@ -9,23 +9,25 @@
     font-family:v.$Roboto;
     height:150px;
     display:block;
-    .p-footer {
-      .c-title{
-        padding-top:45px;
-        font-size:v.$font-ss;
-        text-align:center;
-        &:hover{
-            cursor:pointer;
-        }
-      }   //c-footer
-     }    //p-footer
-    .c-copyright {
-        font-size:v.$font-xs;
-        text-align:center;
-        padding-top:35px;
-    }
-    @include m.mq(pc) {
-      grid-row:3/4;
-      grid-column:1/3 ;
+      .p-footer {
+        .c-title{
+            padding-top:45px;
+            font-size:v.$font-ss;
+            text-align:center;
+            &:hover {
+                cursor:pointer;
+            }
+         }   //c-footer
+      }    //p-footer
+
+      .c-copyright {
+          font-size:v.$font-xs;
+          text-align:center;
+          padding-top:35px;
       }
-  }//footerの閉じタグ
+      @include m.mq(pc) {
+        grid-row:3/4;
+        grid-column:1/3 ;
+      }
+
+ }//footerの閉じタグ

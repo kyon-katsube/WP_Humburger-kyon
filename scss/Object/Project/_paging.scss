@@ -2,21 +2,19 @@
 @use "../../Foundation/variables" as v;
 
 
-.p-paging--sp{
+.p-paging--sp {
    display: flex;
    padding:20px;
    justify-content: space-between;
    text-decoration: none;
    color:v.$base-gray;
-   ul {
-       list-style: none;
-   }
+   list-style:none; 
    @include m.mq(tab){
        display:none;
    }
 }
 
-.p-paging__tabpc{
+.p-paging__tabpc {
     padding:20px;
     display:flex;
     justify-content:center;
@@ -24,6 +22,7 @@
     font-family: v.$Roboto;
     text-decoration: none;
     color:v.$base-gray;
+    list-style:none; 
     &:hover{
         cursor:pointer;
     }
@@ -36,7 +35,7 @@
         font-size:14px;
         font-weight:bold;
         border:1px solid v.$base-gray;      
-      }
+    }
     &__prev,
     &__next {
         width:35px;
@@ -58,9 +57,8 @@
     span {
         background:v.$takeout-font-color;
         color:v.$base-white;
-      }
-        
+    }  
     @include m.mq(lesstab){
         display:none;
     }
- }
+}

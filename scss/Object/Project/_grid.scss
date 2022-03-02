@@ -5,6 +5,7 @@
 
 .p-grid {
     @include m.mq(pc) {
+        display:grid;
         grid-template-rows:217px 1fr 150px;
         grid-template-columns:1fr 367px ;
         gap:0;
@@ -12,27 +13,19 @@
 }
 
 .p-grid--img {
+    display:grid;
     grid-template-columns: 1fr;
     margin-top:30px;
     gap:20px;
-    @include m.mq(tab){
+    @include m.mq(tab) {
         grid-template-columns: 1fr 1fr;
         gap:20px;
         margin-bottom:10px;    //上下のスペースが左右より若干大きいのでmarginをプラス
         margin-top:140px;
     }
-    @include m.mq(pc){
+    @include m.mq(pc) {
         grid-template-columns: 1fr 1fr 1fr;
         gap:20px;
         margin-top:20px;
     }
 }
-
-.p-grid--table {
-    grid-template-columns:1fr 2fr;
-    gap:0;
-    @include m.mq(tab){
-        grid-template-columns: 2fr 3fr;
-    }
-}
-

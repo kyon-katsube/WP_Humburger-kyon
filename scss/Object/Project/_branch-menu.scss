@@ -9,13 +9,13 @@
     }
 }
 
-.p-branch-menu__contents{  //h2 TakeOut Eatinの白文字
+.p-branch-menu__contents {  //h2 TakeOut Eatinの白文字
    color:v.$base-white;
    font-size:v.$font-ll;
    position:absolute;
    top:20px;
    left:12px;
-   &.c-title--underline{
+   &.c-title--underline {
      &::after{      //TakeOutの下の罫線
        position:absolute;
        top:60px;
@@ -36,42 +36,42 @@
     background-size: cover;
  }
 
- .p-branch-menu__contents-first{      //左側のTake Outの画像
+ .p-branch-menu__contents-first {      //左側のTake Outの画像
     background-image: url("../images/front-page-takeout-image.png");
     @include m.mq(tab){
         margin:50px 5% 50px 10%;
-   }     
-   @include m.mq(pc){
-    margin:50px 5% 50px 50px;
-   }    
-}
- .p-branch-menu__contents-second{     //右側のEat Inの画像
+    }     
+    @include m.mq(pc){
+        margin:50px 5% 50px 50px;
+    }    
+ }
+ .p-branch-menu__contents-second {     //右側のEat Inの画像
     background-image: url("../images/front-page-Eatin-image.png");
     @include m.mq(tab){
         margin:50px 10% 50px 5%;
-     }    
-     @include m.mq(pc){
+    }    
+    @include m.mq(pc){
         margin:50px 50px 50px 5%;
-     }    
-}
-
+    }    
+ }
 
  .p-branch-menu__contents__wrapper {
          margin:3%;
          width:94%;
          height:auto;
-      &__detail {
-           margin-top:10px;
-           background-color:v.$takeout-background-gray;
-           height:auto;
-         .c-title{
-            font-size:v.$font-s;
-            padding:30px 0 30px 10px;
-            color:v.$takeout-font-color;
-         }
-         p {
-            padding:0 10px 30px 10px;
-            color:v.$takeout-font-color;
-         }
+         &__detail {
+            margin-top:10px;
+            background-color:v.$takeout-background-gray;
+            height:auto;
+            .c-title{
+               font-size:v.$font-s;
+               padding:30px 0 30px 10px;
+               color:v.$takeout-font-color;
+            }
+            p {
+               padding:0 10px 30px 10px;
+               color:v.$takeout-font-color;
+               line-height: 1.5rem;
+            }
         }  //__detail
-      }   //contents-wrapper
+ }   //contents-wrapper

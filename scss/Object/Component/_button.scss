@@ -21,7 +21,7 @@
     }
 }
 
-  .c-button--cross.active {     //c-btn p-btn--cross//l-sidebarへ
+.c-button--cross.active {     //c-btn p-btn--cross//l-sidebarへ
     content: "";
     position:absolute;
     z-index:200; //ボタン最前面に
@@ -38,10 +38,11 @@
         background-color:v.$base-gray;
     }
 
-    & span:first-child{
+    & span:first-child {
         transform:rotate(-45deg);
-        }
-    & span:last-child{
+    }
+    & span:last-child {
         transform:rotate(45deg);
     }
+    
 } //c-btn--cross

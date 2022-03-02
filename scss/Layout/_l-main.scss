@@ -6,17 +6,18 @@
 //Project/p-location
 
 .l-main{     //main
-@include m.mq(pc) {
-    grid-row:2/3;
-    grid-column:1/2 ;
-    }
+    @include m.mq(pc) {
+        grid-row:2/3;
+        grid-column:1/2 ;
+        }
 }
+
 .p-main-article {    //single・pageの見出しの下の画像～footer上までのpadding
     padding:20px;
-    @include m.mq(tab){
+    @include m.mq(tab) {
         padding:40px;
     }
-    @include m.mq(pc){
+    @include m.mq(pc) {
         padding:60px;
     }
 }

@@ -6,14 +6,22 @@
     width:100%;
     border-collapse: collapse;
     border:1px solid v.$base-gray;
-    border-top:0;       //重なってるborderを1つ消して補足する  
         td {
         padding:20px 0 20px 20px;  
         border:0.5px solid v.$base-gray;
-        border-left:0;  
-        border-bottom:0;
         }
-        td:nth-child(2){
-        border-right:0;    
+        td:first-child  {
+        width:calc(33vw - 1.5px);
+        }
+        td:last-child  {
+        width:calc(66vw - 1.5px)
+        }
+        @include m.mq(tab){
+            td:first-child  {
+                width:calc(40vw - 1.5px);
+                }
+                td:last-child  {
+                width:calc(6neb6vw - 1.5px)
+                }
         }
 }
