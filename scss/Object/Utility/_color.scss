@@ -3,6 +3,6 @@
 
 .u-color {
     &--gray{
-        color:v.$base-gray;
+        color:v.$base-gray !important ;
     }
 }

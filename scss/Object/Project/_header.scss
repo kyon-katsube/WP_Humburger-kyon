@@ -26,6 +26,10 @@
 .p-header__title {
     text-align: center;
     font-size:v.$font-ll;
+    text-decoration:none;
+    & a {
+        color: v.$base-gray;
+    }
     .c-title {
     }
     @include m.mq(tab) {

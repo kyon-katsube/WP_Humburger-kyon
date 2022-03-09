@@ -33,38 +33,6 @@
     
       <div class="c-wrapper"></div>   <!--sp/tab時の薄グレー用-->
 
-      <aside class="l-sidebar p-sidebar">   <!--Menuをタップして出てくるメニュー表示-->
-          <button class="c-button--cross"><span></span><span></span></button>   <!--×ボタン用-->
-          <h2 class="p-sidebar-title c-title u-color--gray">Menu</h2>   <!--PC時サイドバー上部に表示させる用-->
-          <nav class="p-sidebar-list ">
-            <ul class="p-sidebar-list__contents">
-               <h3 a href="#" class="c-title u-color--gray">バーガー</h3>           
-               <li class="p-sidebar-list__contents__list" a href="#">ハンバーガー</li>
-               <li class="p-sidebar-list__contents__list" a href="#">チーズバーガー</li>
-               <li class="p-sidebar-list__contents__list" a href="#">テリヤキバーガー</li>
-               <li class="p-sidebar-list__contents__list" a href="#">アボカドバーガー</li>
-               <li class="p-sidebar-list__contents__list" a href="#">フィッシュバーガー</li>
-               <li class="p-sidebar-list__contents__list" a href="#">ベーコンバーガー</li>
-               <li class="p-sidebar-list__contents__list" a href="#">チキンバーガー</li>
-            </ul>
-            <ul class="p-sidebar-list__contents">
-               <h3 a href="#" class="c-title u-color--gray">サイド</h3>
-               <li class="p-sidebar-list__contents__list" a href="#">ポテト</li>
-               <li class="p-sidebar-list__contents__list" a href="#">サラダ</li>
-               <li class="p-sidebar-list__contents__list" a href="#">ナゲット</li>
-               <li class="p-sidebar-list__contents__list" a href="#">コーン</li>
-            </ul>
-            <ul class="p-sidebar-list__contents">
-               <h3 a href="#" class="c-title u-color--gray">ドリンク</h3>
-               <li class="p-sidebar-list__contents__list" a href="#">コーラ</li>
-               <li class="p-sidebar-list__contents__list" a href="#">ファンタ</li>
-               <li class="p-sidebar-list__contents__list" a href="#">オレンジ</li>
-               <li class="p-sidebar-list__contents__list" a href="#">アップル</li>
-               <li class="p-sidebar-list__contents__list" a href="#">紅茶（ice/Hot)</li>
-               <li class="p-sidebar-list__contents__list" a href="#">コーヒー(Ice/Hot)</li>
-            </ul>
-         </nav>
-      </aside>
 
       <main class="l-main p-main">
 

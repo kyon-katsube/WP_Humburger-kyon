@@ -261,10 +261,6 @@ img {
 .p-header__title {
   text-align: center;
   font-size: 40px;
-  text-decoration: none;
-}
-.p-header__title a {
-  color: #707070;
 }
 @media screen and (min-width:600px) {
   .p-header__title {
@@ -888,16 +884,16 @@ img {
 .p-sidebar-list__contents:hover {
   cursor: pointer;
 }
-.p-sidebar-list__contents___list {
+.p-sidebar-list__contents .c-title {
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.p-sidebar-list__contents li {
   list-style: none;
   font-size: 20px;
   line-height: 2.5em;
   padding-left: 20px;
-}
-.p-sidebar-list__contents .c-title {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 22px;
 }
 
 .p-location {
@@ -968,7 +964,7 @@ img {
 }
 
 .u-color--gray {
-  color: #707070 !important;
+  color: #707070;
 }
 
 @media screen and (min-width:1025px) {
