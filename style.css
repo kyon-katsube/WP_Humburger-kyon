@@ -261,6 +261,10 @@ img {
 .p-header__title {
   text-align: center;
   font-size: 40px;
+  text-decoration: none;
+}
+.p-header__title a {
+  color: #707070;
 }
 @media screen and (min-width:600px) {
   .p-header__title {
@@ -277,7 +281,7 @@ img {
 }
 
 .p-search-form {
-  margin: 40px 20px;
+  margin: 15px 20px;
   display: flex;
   justify-content: center;
 }
@@ -451,7 +455,7 @@ img {
 }
 
 .p-branch-menu__contents-first {
-  background-image: url("../images/front-page-takeout-image.png");
+  background-image: url("images/front-page-takeout-image.png");
 }
 @media screen and (min-width:600px) {
   .p-branch-menu__contents-first {
@@ -465,7 +469,7 @@ img {
 }
 
 .p-branch-menu__contents-second {
-  background-image: url("../images/front-page-Eatin-image.png");
+  background-image: url("images/front-page-Eatin-image.png");
 }
 @media screen and (min-width:600px) {
   .p-branch-menu__contents-second {
@@ -884,20 +888,21 @@ img {
 .p-sidebar-list__contents:hover {
   cursor: pointer;
 }
-.p-sidebar-list__contents .c-title {
-  font-size: 22px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-.p-sidebar-list__contents li {
+.p-sidebar-list__contents___list {
   list-style: none;
   font-size: 20px;
   line-height: 2.5em;
   padding-left: 20px;
 }
+.p-sidebar-list__contents .c-title {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 22px;
+  color: #707070;
+}
 
 .p-location {
-  background-image: url("../images/frontpagemap-sp.png");
+  background-image: url("images/frontpagemap-sp.png");
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.7);
   margin-top: 50px;
@@ -906,13 +911,13 @@ img {
 @media screen and (min-width:600px) {
   .p-location {
     margin-top: 0;
-    background-image: url("../images/frontpagemap-tab.png");
+    background-image: url("images/frontpagemap-tab.png");
   }
 }
 @media screen and (min-width:1025px) {
   .p-location {
     height: auto;
-    background-image: url("../images/frontpagemap-pc.png");
+    background-image: url("images/frontpagemap-pc.png");
   }
 }
 .p-location::after {
@@ -964,7 +969,7 @@ img {
 }
 
 .u-color--gray {
-  color: #707070;
+  color: #707070 !important;
 }
 
 @media screen and (min-width:1025px) {

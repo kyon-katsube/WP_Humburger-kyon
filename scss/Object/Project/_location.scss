@@ -3,18 +3,18 @@
 
 
 .p-location {             //section全体
-    background-image: url("../images/frontpagemap-sp.png");
+    background-image: url("images/frontpagemap-sp.png");
     background-size: cover;
     background-color:v.$map-background-dark;
     margin-top:50px;
     position:relative;
     @include m.mq(tab) {  //section上部のスペースはp-branch-menuにて指定
         margin-top:0;
-        background-image: url("../images/frontpagemap-tab.png");
+        background-image: url("images/frontpagemap-tab.png");
     }
     @include m.mq(pc) {
         height:auto;
-        background-image: url("../images/frontpagemap-pc.png");
+        background-image: url("images/frontpagemap-pc.png");
     }
 
     &::after {                //重ねるグレー背景
@@ -25,7 +25,7 @@
       right: 0;
       top: 0;
       bottom: 50%;
-      @include m.mq(tab) {     //tabのときは薄グレーなし
+      @include m.mq(tab) {     //tabのときは薄グレーなし 
          bottom:0;
       }
       @include m.mq(pc) {      //pcのときは右から38％が薄グレー

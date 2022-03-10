@@ -62,27 +62,43 @@ class custom_walker_sidebar extends Walker_Nav_Menu {
     function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
  
         $classes = empty( $item->classes ) ? array() : (array) $item->classes;
-        $classes[] = 'menu-item-' . $item->ID;
-        $id = 'menu-item-' . $item->ID;
-        $css_classes = '';
+        $classes[] = '' . $item->ID;
+        $id = '' . $item->ID;
+        $css_classes = 'c-title u-color--gray';
         foreach ($classes as $class){
             $css_classes .= $class.' ';
         }
  
         if($depth == 0){ //第一階層のときにh3タグを付ける
-            $output .= '<li id="'.$id.'" class="'.$css_classes.'"><h3><a href="'.$item->url.'">'.$item->title.'</a></h4>';
+            $output .= '<h3 class="'.$css_classes.'"><a href="'.$item->url.'">'.$item->title.'</a></h3>';
         }else{ //第一階層以外は通常通り
-            $output .= '<li id="'.$id.'" class="'.$css_classes.'"><a href="'.$item->url.'">'.$item->title.'</a>';
+            $output .= '<li class="'.$css_classes.'"><a href="'.$item->url.'">'.$item->title.'</a>';
         }
      }
 }
 
 
-// wp_nav_menuのliにclass追加
-    function add_additional_class_on_li($classes, $item, $args){
-            if (isset($args->add_li_class)) {
-                $classes['class'] = $args->add_li_class;
-            }
-            return $classes;
-            }
-    add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+    
+// ナビメニューに勝手につくID を削除する 
+    function removeId( $id ){ 
+        return $id = array(); 
+    }
+    add_filter('nav_menu_item_id', 'removeId', 10);
+
+
+//ナビメニューの不要なclassを削除する
+    function removeClass($classes){ 
+        return $classes = array();
+    }
+    add_filter('nav_menu_css_class', 'removeClass', 10);
+
+
+
+// // wp_nav_menuのliにclass追加
+//     function add_additional_class_on_li($classes, $item, $args){
+//             if (isset($args->add_li_class)) {
+//                 $classes['class'] = $args->add_li_class;
+//             }
+//             return $classes;
+//             }
+//     add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
