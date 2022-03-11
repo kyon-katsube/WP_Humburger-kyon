@@ -455,7 +455,7 @@ img {
 }
 
 .p-branch-menu__contents-first {
-  background-image: url("images/front-page-takeout-image.png");
+  background-image: url("../images/front-page-takeout-image.png");
 }
 @media screen and (min-width:600px) {
   .p-branch-menu__contents-first {
@@ -469,7 +469,7 @@ img {
 }
 
 .p-branch-menu__contents-second {
-  background-image: url("images/front-page-Eatin-image.png");
+  background-image: url("../images/front-page-Eatin-image.png");
 }
 @media screen and (min-width:600px) {
   .p-branch-menu__contents-second {
@@ -884,25 +884,37 @@ img {
 }
 .p-sidebar-list__contents {
   margin-bottom: 40px;
+  list-style: none;
 }
 .p-sidebar-list__contents:hover {
   cursor: pointer;
 }
-.p-sidebar-list__contents___list {
+.p-sidebar-list__contents___list a {
   list-style: none;
   font-size: 20px;
   line-height: 2.5em;
   padding-left: 20px;
+  color: #707070;
 }
-.p-sidebar-list__contents .c-title {
+.p-sidebar-list__contents .c-title a {
   margin-top: 40px;
   margin-bottom: 40px;
   font-size: 22px;
   color: #707070;
 }
+.p-sidebar .sub-menu {
+  list-style: none;
+  font-size: 20px;
+  line-height: 2.5em;
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+.p-sidebar .sub-menu li a {
+  color: #707070;
+}
 
 .p-location {
-  background-image: url("images/frontpagemap-sp.png");
+  background-image: url("../images/frontpagemap-sp.png");
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.7);
   margin-top: 50px;
@@ -911,13 +923,13 @@ img {
 @media screen and (min-width:600px) {
   .p-location {
     margin-top: 0;
-    background-image: url("images/frontpagemap-tab.png");
+    background-image: url("../images/frontpagemap-tab.png");
   }
 }
 @media screen and (min-width:1025px) {
   .p-location {
     height: auto;
-    background-image: url("images/frontpagemap-pc.png");
+    background-image: url("../images/frontpagemap-pc.png");
   }
 }
 .p-location::after {

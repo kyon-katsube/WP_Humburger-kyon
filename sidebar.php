@@ -3,24 +3,26 @@
          <h2 class="p-sidebar-title c-title u-color--gray">Menu</h2>   <!--PC時サイドバー上部に表示させる用-->
                   
 
-         <!--navを表示する--> 
+   <!--navを表示する--> 
          <?php
              wp_nav_menu(array(
                 'menu'=>'sidebar',  //管理画面で作成したメニュー名
                 'container' => 'nav',   //一番外枠のdivタグをnavタグに divタグ全部を消すときはfalse
-                'container_class' => 'p-sidebar-list' , //navのclass名
-             
-                'menu_id' =>  false,
-                'menu_class' => 'p-sidebar-list__contents', //ulタグのclass名
+                'container_class' => 'p-sidebar-list' , //navのclass名             
+               //  'menu_id' =>  false,
+               //  'menu_class' => 'p-sidebar-list__contents', //ulタグのclass名　functionsで記述
+                'items_wrap' =>  '<ul class="p-sidebar-list__contents">%3$s</ul>',
                 'theme_location' => 'sidebar' ,//テーマの中で使われる位置 register_nav_menuが必要
-                'add_li_class' =>  'p-sidebar-list__contents__list',  //liのclass名追加(functionも記述あり)
                 'walker'  => new custom_walker_sidebar, //h3追加(functionsも記述あり)
             ));
          ?>
-<!--          
-         <nav class="p-sidebar-list ">
-               <ul class="p-sidebar-list__contents">
-                  <h3 a href="#" class="c-title u-color--gray">バーガー</h3>           
+
+
+
+         <!-- <nav class="p-sidebar-list "> //ulに
+               <ul class="p-sidebar-list__contents"> //liに
+                  <h3 a href="#" class="c-title u-color--gray">バーガー</h3>    //h3を付与
+                  //もう一度ulが自動で入る p-sidebar-list__contents => sub-menuにcss記述追加   
                   <li class="p-sidebar-list__contents__list" a href="#">ハンバーガー</li>
                   <li class="p-sidebar-list__contents__list" a href="#">チーズバーガー</li>
                   <li class="p-sidebar-list__contents__list" a href="#">テリヤキバーガー</li>
@@ -45,5 +47,5 @@
                   <li class="p-sidebar-list__contents__list" a href="#">紅茶（ice/Hot)</li>
                   <li class="p-sidebar-list__contents__list" a href="#">コーヒー(Ice/Hot)</li>
                </ul>
-         </nav> -->
+         </nav> --> 
 </aside>

@@ -43,16 +43,18 @@
         margin-left:40px;
         &__contents {       
             margin-bottom:40px;
+            list-style: none;
              &:hover {
                 cursor:pointer;
             }
-            &___list  {
+            &___list a {  //WP化したら効かない・・
                 list-style:none;
                 font-size: v.$font-ss;
                 line-height:2.5em;
                 padding-left:20px;
+                color:v.$base-gray;
             }
-            .c-title {        //h3  色はu              
+            .c-title a {        //h3  色はu              
                 margin-top:40px;
                 margin-bottom:40px;
                 font-size: v.$font-s;
@@ -60,5 +62,15 @@
             }
         } //contentsの閉じタグ
     } //listの閉じタグ
+  .sub-menu {          //WP化で出てきたulクラス名
+    list-style:none;
+    font-size: v.$font-ss;
+    line-height:2.5em;
+    padding-left:20px;
+    margin-bottom:40px;
+    li a {
+        color:v.$base-gray
+    }
     
+  }  
 }  //p-sidebarの閉じタグ 

@@ -1,9 +1,8 @@
 <?php get_header(); ?>
     
-      <div class="c-wrapper"></div>   <!--sp/tab時の薄グレー用-->
-
 <?php get_sidebar(); ?>
 
+<div class="c-wrapper"></div>   <!--sp/tab時の薄グレー用-->
       <main class="l-main p-main">
 
          <div class="p-main-visual">   <!--メインビジュアル-->

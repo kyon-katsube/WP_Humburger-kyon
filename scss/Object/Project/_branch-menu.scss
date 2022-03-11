@@ -37,7 +37,7 @@
 }
 
 .p-branch-menu__contents-first {      //左側のTake Outの画像
-    background-image: url("images/front-page-takeout-image.png");
+    background-image: url("../images/front-page-takeout-image.png");
     @include m.mq(tab) {
         margin:50px 5% 50px 10%;
     }     
@@ -46,7 +46,7 @@
     }    
 }
 .p-branch-menu__contents-second {     //右側のEat Inの画像
-    background-image: url("images/front-page-Eatin-image.png");
+    background-image: url("../images/front-page-Eatin-image.png");
     @include m.mq(tab) {
         margin:50px 10% 50px 5%;
     }    
