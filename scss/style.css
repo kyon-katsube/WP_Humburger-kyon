@@ -530,6 +530,7 @@ img {
 .p-subheading__wrapper .c-title {
   color: #3C2A10;
 }
+
 .p-subheading__wrapper__h2 {
   font-size: 28px;
 }
@@ -627,8 +628,9 @@ img {
   padding-bottom: 20px;
 }
 .p-card .p-archive-card .p-card__wrapper .p-card__wrapper__img-caption {
-  font-size: 20px;
+  font-size: 36px;
   color: #fff;
+  margin-bottom: 20px;
 }
 .p-card .p-archive-card .p-card__wrapper .p-card__wrapper__subtitle {
   font-size: inherit;
@@ -704,6 +706,9 @@ img {
   .p-paging--sp {
     display: none;
   }
+}
+.p-paging--sp__back, .p-paging--sp__next {
+  list-style: none;
 }
 
 .p-paging__tabpc {

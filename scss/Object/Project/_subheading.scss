@@ -21,7 +21,10 @@
       .c-title {
           color:v.$takeout-font-color;
       }  //c-titleの閉じタグ 
-    
+  }
+
+  .p-subheading__wrapper{
+     
       &__h2 {          //singlepageの見出しのフォントサイズ
           font-size:28px;
           @include m.mq(tab) {

@@ -6,12 +6,12 @@
 
    <main class="l-main p-main">  <!--singlepage-->
 
-      <div class="p-main-visual"><!--メインビジュアル薄グレーなし-->
+      <!-- <div class="p-main-visual">メインビジュアル薄グレーなし -->
 
       <?php if( have_posts() ) : ?>
       <?php while( have_posts() ) : the_post(); ?>  <!--投稿があればある間以下の処理-->
 
-                <div class="p-main-visual">   <!--メインビジュアル部分-->
+                <div class="p-main-visual">   <!--メインビジュアル部分 -->
                    <?php the_post_thumbnail('full',array('class' =>"p-main-visual__img__singleheight"));?>  <!--メインビジュアルの呼び出し-->
                    <div class="p-main-visual__page-title">
                      <h1 class="p-main-visual__page-title__main c-title"><?php the_title(); ?></h1>

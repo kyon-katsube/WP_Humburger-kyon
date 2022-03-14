@@ -12,6 +12,10 @@
    @include m.mq(tab){
        display:none;
    }
+   &__back,
+   &__next {
+    list-style:none;  
+   }
 }
 
 .p-paging__tabpc {
