@@ -10,7 +10,7 @@
                 'container' => 'nav',   //一番外枠のdivタグをnavタグに divタグ全部を消すときはfalse
                 'container_class' => 'p-sidebar-list' , //navのclass名             
                //  'menu_id' =>  false,
-               //  'menu_class' => 'p-sidebar-list__contents', //ulタグのclass名　functionsで記述
+               //  'menu_class' => 'p-sidebar-list__contents', //ulタグのclass名 functionsで記述
                 'items_wrap' =>  '<ul class="p-sidebar-list__contents">%3$s</ul>',
                 'theme_location' => 'sidebar' ,//テーマの中で使われる位置 register_nav_menuが必要
                 'walker'  => new custom_walker_sidebar, //h3追加(functionsも記述あり)

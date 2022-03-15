@@ -1,7 +1,7 @@
 @use "../../Foundation/mixin" as m;
 @use "../../Foundation/variables" as v;
 
-
+//sp版 phpのみで表示
 .p-paging--sp {
    display: flex;
    padding:20px;
@@ -15,54 +15,46 @@
    &__back,
    &__next {
     list-style:none;  
+    color:v.$base-gray;
    }
 }
 
-.p-paging__tabpc {
+
+//tab/pc版 プラグインで表示 あてがわれたクラスに書き換え
+.p-paging__tabpc {   /* 全体 */
     padding:20px;
-    display:flex;
-    justify-content:center;
     background:v.$base-white;
     font-family: v.$Roboto;
-    text-decoration: none;
     color:v.$base-gray;
-    list-style:none; 
-    &:hover{
-        cursor:pointer;
+    display:flex;
+    justify-content:center;
+    @include m.mq(lesstab){
+        display:none;
     }
-    &__page-numbers {
-        width:35px;
-        height:35px;
-        margin:5px;
-        line-height:35px;
-        text-align:center;
-        font-size:14px;
-        font-weight:bold;
-        border:1px solid v.$base-gray;      
+    &__list li {   
+    text-align:center; 
+    color:v.$base-gray;
+    list-style: none;
     }
-    &__prev,
-    &__next {
-        width:35px;
-        height:35px;
-        margin:5px;
-        line-height:35px;
-        text-align:center;
-        font-size:35px;
-        font-weight:normal;
-        color:v.$base-gray;    
-    }
-    &__page-count {
-        font-size:inherit;
-        font-weight:bold;
-        margin:5px;
-        line-height:35px;
-        align-items: center;
-    }
-    span {
+}
+
+.page { 
+    display: block;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    width:35px;
+    height:35px;
+    margin:5px;
+    line-height:35px;
+    text-align:center;
+    &:hover {     /* ホバーしたら色変える */
         background:v.$takeout-font-color;
         color:v.$base-white;
-    }  
-    @include m.mq(lesstab) {
-        display:none;
+        cursor:pointer;
+    } 
+    &.current {  //現在いるページ 色変える
+        background:v.$takeout-font-color;
+        color:v.$base-white;
     }
 }

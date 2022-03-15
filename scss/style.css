@@ -626,16 +626,18 @@ img {
   color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
+  font-size: 22px;
 }
 .p-card .p-archive-card .p-card__wrapper .p-card__wrapper__img-caption {
   font-size: 36px;
   color: #fff;
   margin-bottom: 20px;
+  line-height: 3rem;
 }
 .p-card .p-archive-card .p-card__wrapper .p-card__wrapper__subtitle {
   font-size: inherit;
   color: #fff;
-  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .p-card .p-archive-card .p-card__button {
   border-radius: 50px;
@@ -709,56 +711,49 @@ img {
 }
 .p-paging--sp__back, .p-paging--sp__next {
   list-style: none;
+  color: #707070;
 }
 
 .p-paging__tabpc {
+  /* 全体 */
   padding: 20px;
-  display: flex;
-  justify-content: center;
   background: #fff;
   font-family: "Roboto", sans-serif;
-  text-decoration: none;
   color: #707070;
-  list-style: none;
-}
-.p-paging__tabpc:hover {
-  cursor: pointer;
-}
-.p-paging__tabpc__page-numbers {
-  width: 35px;
-  height: 35px;
-  margin: 5px;
-  line-height: 35px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  border: 1px solid #707070;
-}
-.p-paging__tabpc__prev, .p-paging__tabpc__next {
-  width: 35px;
-  height: 35px;
-  margin: 5px;
-  line-height: 35px;
-  text-align: center;
-  font-size: 35px;
-  font-weight: normal;
-  color: #707070;
-}
-.p-paging__tabpc__page-count {
-  font-size: inherit;
-  font-weight: bold;
-  margin: 5px;
-  line-height: 35px;
-  align-items: center;
-}
-.p-paging__tabpc span {
-  background: #3C2A10;
-  color: #fff;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (max-width:600px) {
   .p-paging__tabpc {
     display: none;
   }
+}
+.p-paging__tabpc__list li {
+  text-align: center;
+  color: #707070;
+  list-style: none;
+}
+
+.page {
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  line-height: 35px;
+  text-align: center;
+}
+.page:hover {
+  /* ホバーしたら色変える */
+  background: #3C2A10;
+  color: #fff;
+  cursor: pointer;
+}
+.page.current {
+  background: #3C2A10;
+  color: #fff;
 }
 
 .p-list {

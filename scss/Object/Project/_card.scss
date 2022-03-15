@@ -41,16 +41,18 @@
                 color:v.$base-white;
                 padding-top:20px;
                 padding-bottom:20px;
+                font-size:v.$font-s;
             } 
             .p-card__wrapper__img-caption {  //imgのキャプション
                 font-size:v.$font-l;
                 color:v.$base-white;
                 margin-bottom:20px;
+                line-height: 3rem;
             }       
             .p-card__wrapper__subtitle {      //小見出し
                 font-size:inherit;   
                 color:v.$base-white;
-                padding-top:30px;
+                padding-bottom:30px;
             }    
         }  //__wrapperの閉じタグ
 

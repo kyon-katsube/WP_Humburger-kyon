@@ -34,19 +34,24 @@
             ?>
             <section>   <!--カード-->
                <figure class="p-card">
-                  <div class="p-card-img">
-                  <?php the_post_thumbnail('full',array('class' =>"p-card-img")); ?>
-                  </div>
+                  <?php the_post_thumbnail('card-thumb',array('class' =>"p-card-img")); ?>
+
                   <div class="p-archive-card">
                      <div class="p-card__wrapper"> 
-                        <h3 class="c-title p-card__wrapper__img-caption"><?php the_title();?></h3>
-                        <!-- <h4 class="c-title p-card__wrapper__subtitle"></h4> -->
-                        <figcaption class="c-text p-card__wrapper__text"><?php the_content(); ?>
+                        <h3 class="c-title p-card__wrapper__img-caption"><?php the_title();?></h3>                 
+                        <figcaption>
+                            <?php 
+                            $card_subtitle_text = get_the_content();
+                            $card_subtitle_text = str_replace('<h3','<h3 class="c-text p-card__wrapper__text" ',$card_subtitle_text);
+                            $card_subtitle_text = str_replace('<p','<p class="c-title p-card__wrapper__subtitle" ',$card_subtitle_text);
+                            echo  $card_subtitle_text;
+                            ?>
                         </figcaption>
                      </div>     <!--wrapper-->        
                    
                      <button class="c-button p-card__button" a href="<?php the_permalink(); ?>">詳しく見る</button> 
                   </div>   <!--p-archive-card-->
+
                </figure>     
             </section> 
             <?php endwhile;
@@ -54,8 +59,13 @@
          
          </div>  <!--subheading-cardの閉じタグ-->
 
-         <!--paging-->
-         <div class="p-paging--sp">   <!--ページング--sp-->
+      <!--paging-->
+
+         <!--ページング--tabpc版 プラグインで実装-->
+         <?php my_pagenavi(); ?>  <!--functionsに入れた内容で実行-->
+
+         <!--ページング--sp版 phpのみで実装-->
+         <div class="p-paging--sp">   
             <?php 
                $link = get_previous_posts_link('&lt;&lt; 前へ');
                if($link) {
@@ -65,22 +75,16 @@
             ?>
             
             <?php 
-               $link = get_next_posts_link('次へ &lt;&lt;');
+               $link = get_next_posts_link('次へ &gt;&gt;');
                if($link) {
                $link = str_replace('<a', '<a class="p-paging--sp__next"',$link);
                echo $link ;
                }
             ?>
-            <!-- <ul>
-               <li a class="p-paging--sp__back" href="#">＜＜前へ</li>
-            </ul> 
-            <ul>
-               <li a class="p-paging--sp__next" href="#">次へ＞＞</li>
-            </ul> -->
          </div>   
-         
+<!--          
          <div class="p-paging__tabpc">   <!--ページングtabpc-->
-            <a class="p-paging__tabpc__page-count">page 1/10</a>
+            <!-- <a class="p-paging__tabpc__page-count">page 1/10</a>
             <a class="p-paging__tabpc__prev" href="#"><<</a>
             <span class="p-paging__tabpc__page-numbers">1</span>
             <a class="p-paging__tabpc__page-numbers" href="#">2</a>
@@ -92,7 +96,7 @@
             <a class="p-paging__tabpc__page-numbers" href="#">8</a>
             <a class="p-paging__tabpc__page-numbers" href="#">9</a>
             <a class="p-paging__tabpc__next" href="#">>></a>
-         </div>    
+         </div>     -->
 
       </main>    
 

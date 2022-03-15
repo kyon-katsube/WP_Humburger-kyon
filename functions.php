@@ -23,7 +23,8 @@
 //テーマをサポート（使えるように）する
 add_action('init', function(){     
     add_theme_support('title-tag');        
-    add_theme_support('post-thumbnails');  
+    add_theme_support('post-thumbnails'); 
+  
 
 //複数のナビゲーションメニューを登録する これを使うとadd_theme_support('menus')は不要
     register_nav_menus([
@@ -99,4 +100,17 @@ class custom_walker_sidebar extends Walker_Nav_Menu {
                 echo  $matches[0][$i];
             }
         }     
+    }
+
+//wp-pagenaviの構成を変える&クラス名付与
+    function my_pagenavi($args=array()) {
+        if( !function_exists('wp_pagenavi')) return;
+        $defaults = array(
+            'before' => '<nav class="p-paging__tabpc">',
+            'after' => '</nav>',
+            'wrapper_tag' => 'ul',
+            'wrapper_class' => 'p-paging__tabpc__list'
+        );
+        $args = is_array($args) ? array_merge($defaults, $args) :$args;
+        wp_pagenavi($args);
     }
