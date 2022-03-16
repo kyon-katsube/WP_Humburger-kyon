@@ -31,15 +31,19 @@
     @include m.mq(lesstab){
         display:none;
     }
-    &__list li {   
-    text-align:center; 
-    color:v.$base-gray;
-    list-style: none;
-    }
-}
 
-.page { 
-    display: block;
+    &__list {   //ulタグ
+        text-align:center; 
+        color:v.$base-gray;
+        list-style: none;
+        li {
+            display:inline-block;
+        }
+    }
+}   
+
+.page {  //ページの数字部分のスタイリング
+    display:inline-block;
     text-decoration:none;
     font-size:20px;
     font-weight:bold;
@@ -48,13 +52,38 @@
     margin:5px;
     line-height:35px;
     text-align:center;
-    &:hover {     /* ホバーしたら色変える */
+    border:solid 1px #707070;
+    color:v.$base-gray;
+    &:hover {     //ホバーしたら色変える 
         background:v.$takeout-font-color;
         color:v.$base-white;
         cursor:pointer;
     } 
-    &.current {  //現在いるページ 色変える
-        background:v.$takeout-font-color;
-        color:v.$base-white;
+}
+
+.current {  //現在いるページ 色変える
+    background:v.$takeout-font-color;
+    color:v.$base-white;
+    display:inline-block;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    width:35px;
+    height:35px;
+    margin:5px;
+    line-height:35px;
+    text-align:center;
+}
+.previouspostslink,
+.nextpostslink {
+    font-size:35px;
+    font-weight:lighter;
+    width:35px;
+    height:35px;
+    margin:15px;
+    line-height:35px;
+    text-align:center;
+    li {
+        color:v.$base-gray;
     }
 }

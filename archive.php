@@ -62,7 +62,7 @@
       <!--paging-->
 
          <!--ページング--tabpc版 プラグインで実装-->
-         <?php my_pagenavi(); ?>  <!--functionsに入れた内容で実行-->
+         <?php wp_pagenavi(); ?>  <!--functionsに入れた内容で実行-->
 
          <!--ページング--sp版 phpのみで実装-->
          <div class="p-paging--sp">   
@@ -82,21 +82,6 @@
                }
             ?>
          </div>   
-<!--          
-         <div class="p-paging__tabpc">   <!--ページングtabpc-->
-            <!-- <a class="p-paging__tabpc__page-count">page 1/10</a>
-            <a class="p-paging__tabpc__prev" href="#"><<</a>
-            <span class="p-paging__tabpc__page-numbers">1</span>
-            <a class="p-paging__tabpc__page-numbers" href="#">2</a>
-            <a class="p-paging__tabpc__page-numbers" href="#">3</a>
-            <a class="p-paging__tabpc__page-numbers" href="#">4</a>
-            <a class="p-paging__tabpc__page-numbers" href="#">5</a>
-            <a class="p-paging__tabpc__page-numbers" href="#">6</a>
-            <a class="p-paging__tabpc__page-numbers" href="#">7</a>
-            <a class="p-paging__tabpc__page-numbers" href="#">8</a>
-            <a class="p-paging__tabpc__page-numbers" href="#">9</a>
-            <a class="p-paging__tabpc__next" href="#">>></a>
-         </div>     -->
 
       </main>    
 

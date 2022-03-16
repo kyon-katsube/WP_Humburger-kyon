@@ -102,15 +102,17 @@ class custom_walker_sidebar extends Walker_Nav_Menu {
         }     
     }
 
-//wp-pagenaviの構成を変える&クラス名付与
-    function my_pagenavi($args=array()) {
-        if( !function_exists('wp_pagenavi')) return;
-        $defaults = array(
-            'before' => '<nav class="p-paging__tabpc">',
-            'after' => '</nav>',
-            'wrapper_tag' => 'ul',
-            'wrapper_class' => 'p-paging__tabpc__list'
-        );
-        $args = is_array($args) ? array_merge($defaults, $args) :$args;
-        wp_pagenavi($args);
-    }
+ //wp-pagenaviの設定
+
+ function custom_wp_pagenavi( $html ) {
+    $out = '';
+    $out = str_replace( "<div", "", $html );
+    $out = str_replace( "class='wp-pagenavi'>", "", $out );
+    $out = str_replace( "<a", "<li><a", $out );
+    $out = str_replace( "</a>", "</a></li>", $out );
+    $out = str_replace( "<span", "<li><span", $out );
+    $out = str_replace( "</span>", "</span></li>", $out );
+    $out = str_replace( "</div>", "", $out );
+    return '<nav class="p-paging__tabpc"><ul class="p-paging__tabpc__list"' . $out . '</ul></nav>';
+  }
+  add_filter( 'wp_pagenavi', 'custom_wp_pagenavi' );
