@@ -24,7 +24,11 @@
   }
 
   .p-subheading__wrapper{
-     
+    
+      &__subtitle {
+        padding-bottom:50px;
+      }
+
       &__h2 {          //singlepageの見出しのフォントサイズ
           font-size:28px;
           @include m.mq(tab) {
@@ -32,7 +36,6 @@
           }
       }
       &__h3 {
-          padding-top:60px;
           font-size:24px;
           @include m.mq(tab){
               font-size:28px;
@@ -64,3 +67,8 @@
       }
     } //backquoteの閉じタグ    
 }//__wrapperの閉じタグ
+
+.more-link {
+  color:v.$base-white;
+  text-decoration: none;
+}

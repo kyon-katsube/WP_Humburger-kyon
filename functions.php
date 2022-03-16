@@ -21,16 +21,14 @@
 
 
 //テーマをサポート（使えるように）する
-add_action('init', function(){     
-    add_theme_support('title-tag');        
-    add_theme_support('post-thumbnails'); 
-  
+add_theme_support('title-tag'); //タイトルタグサポートの許可
+add_theme_support( 'post-thumbnails' ); //アイキャッチ画の取り扱い許可 
 
 //複数のナビゲーションメニューを登録する これを使うとadd_theme_support('menus')は不要
-    register_nav_menus([
-        'sidebar' => 'サイドバー',
-    ]);
-});
+function register_my_menu() {
+    register_nav_menu( 'sidebar','サイドメニュー');
+  }
+  add_action( 'after_setup_theme', 'register_my_menu' );
 
 
 //各ページのタイトル取得
@@ -49,13 +47,6 @@ add_action('init', function(){
     add_action( 'init', 'my_add_pages_categories' ) ; 
     function my_add_pages_categories() {
         register_taxonomy_for_object_type( 'category', 'page' ) ;
-    }
-
-    add_action( 'pre_get_posts', 'my_set_page_categories' ) ;
-    function my_set_page_categories( $query ) {
-        if ( $query->is_category== true && $query->is_main_query()){
-            $query->set( 'post_type', array( 'post', 'page', 'nav_menu_item' )) ;
-        }
     }
 
 
@@ -116,3 +107,15 @@ class custom_walker_sidebar extends Walker_Nav_Menu {
     return '<nav class="p-paging__tabpc"><ul class="p-paging__tabpc__list"' . $out . '</ul></nav>';
   }
   add_filter( 'wp_pagenavi', 'custom_wp_pagenavi' );
+
+
+//  //タブのタイトルの読み込み
+//     function wphamburgerkyon_title( $title ) {
+//         if ( is_front_page() && is_home() ) {           //front-page
+//             $title = get_bloginfo( 'name', 'display' );
+//         } elseif ( is_singular() ) {                    //single
+//             $title = single_post_title( '', false );
+//         }
+//             return $title;
+//         }
+//     add_filter( 'pre_get_document_title', 'hamburgersitewp_title' );

@@ -19,18 +19,20 @@
                 </div>
 
          <div class="p-main-article">   <!--見出し～footer前までのpadding用-->      
-            <article class="p-subheading">  <!--archiveページ転用-->
+            <article class="p-subheading"> 
                <div class="p-subheading__wrapper">
-                  <h2 class="p-subheading__wrapper__h2 c-title "><?php the_content();?></h2> 
-                  <p class="c-text"><?php the_content();?></p>
-                  <h3 class="p-subheading__wrapper__h3 c-title ">見出しh3</h3> 
-                  <h4 class="p-subheading__wrapper__h4 c-title ">見出しh4</h4> 
-                  <h5 class="p-subheading__wrapper__h5 c-title ">見出しh5</h5> 
-                  <h6 class="p-subheading__wrapper__h6 c-title ">見出しh6</h6>
-                  <blockquote class="p-backquote" cite="#">
-                     <p>Blockquote 引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ</p>
-                     <p>出典元 : <cite><a href="#">〇〇〇〇〇〇</a></cite></P>
-                  </blockquote>  
+                   <?php 
+                     $subheading__wrapper__text = get_the_content();
+                     $subheading__wrapper__text = str_replace('<h2','<h2 class="p-subheading__wrapper__h2 c-title" ',$subheading__wrapper__text);
+                     $subheading__wrapper__text = str_replace('<p','<p class="c-text" ',$subheading__wrapper__text);
+                     $subheading__wrapper__text = str_replace('<h3','<h3 class="p-subheading__wrapper__h3 c-title" ',$subheading__wrapper__text);
+                     $subheading__wrapper__text = str_replace('<h4','<h4 class="p-subheading__wrapper__h4 c-title" ',$subheading__wrapper__text);
+                     $subheading__wrapper__text = str_replace('<h5','<h2 class="p-subheading__wrapper__h5 c-title" ',$subheading__wrapper__text);
+                     $subheading__wrapper__text = str_replace('<h6','<h2 class="p-subheading__wrapper__h6 c-title" ',$subheading__wrapper__text);
+                     $subheading__wrapper__text = str_replace('<blockquote','<blockquote class="p-backquote" ',$subheading__wrapper__text);
+
+                     echo  $subheading__wrapper__text;
+                  ?>
                </div>
             </article>
 

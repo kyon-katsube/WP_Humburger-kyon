@@ -38,14 +38,16 @@
 
                   <div class="p-archive-card">
                      <div class="p-card__wrapper"> 
-                        <h3 class="c-title p-card__wrapper__img-caption"><?php the_title();?></h3>                 
+                        <h2 class="c-title p-card__wrapper__img-caption"><?php the_title();?></h3>                 
                         <figcaption>
                             <?php 
-                            $card_subtitle_text = get_the_content();
-                            $card_subtitle_text = str_replace('<h3','<h3 class="c-text p-card__wrapper__text" ',$card_subtitle_text);
-                            $card_subtitle_text = str_replace('<p','<p class="c-title p-card__wrapper__subtitle" ',$card_subtitle_text);
-                            echo  $card_subtitle_text;
+                                 $card_wrapper_text = get_the_content();
+                                 $card_wrapper_text = str_replace('<h2','<h2 class="c-text p-card__wrapper__text" ',$card_wrapper_text);
+                                 $card_wrapper_text = str_replace('<p','<p class="c-title p-card__wrapper__subtitle" ',$card_wrapper_text);
+                                 echo  $card_wrapper_text;
                             ?>
+      
+                         
                         </figcaption>
                      </div>     <!--wrapper-->        
                    

@@ -531,6 +531,9 @@ img {
   color: #3C2A10;
 }
 
+.p-subheading__wrapper__subtitle {
+  padding-bottom: 50px;
+}
 .p-subheading__wrapper__h2 {
   font-size: 28px;
 }
@@ -540,7 +543,6 @@ img {
   }
 }
 .p-subheading__wrapper__h3 {
-  padding-top: 60px;
   font-size: 24px;
 }
 @media screen and (min-width:600px) {
@@ -573,6 +575,11 @@ img {
 }
 .p-subheading__wrapper .p-backquote a {
   text-decoration: underline;
+}
+
+.more-link {
+  color: #fff;
+  text-decoration: none;
 }
 
 .p-card {
@@ -732,6 +739,7 @@ img {
   text-align: center;
   color: #707070;
   list-style: none;
+  margin-right: 30px;
 }
 .p-paging__tabpc__list li {
   display: inline-block;
