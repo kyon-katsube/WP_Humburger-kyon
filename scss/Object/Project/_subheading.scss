@@ -36,6 +36,7 @@
           }
       }
       &__h3 {
+          padding-top:50px;
           font-size:24px;
           @include m.mq(tab){
               font-size:28px;
@@ -51,7 +52,7 @@
     .p-backquote {
       background-color:v.$backquote-background-lightblue;
       padding:0 20px 20px 20px;
-      margin-top:50px;
+      margin:50px 0;
       @include m.mq(pc) {
         padding:0 50px 50px 50px;
       }

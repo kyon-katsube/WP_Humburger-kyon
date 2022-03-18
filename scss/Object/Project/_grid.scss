@@ -12,20 +12,27 @@
     }
 }
 
-.p-grid--img {
+.wp-block-gallery {  //.p-grid--imgをWPのクラスに変更
     display:grid;
     grid-template-columns: 1fr;
-    margin-top:30px;
     gap:20px;
+    margin-top:30px;
+    grid-column:auto;
+    grid-row:auto;
+
     @include m.mq(tab) {
-        grid-template-columns: 1fr 1fr;
-        gap:20px;
+        grid-template-columns: repeat(2,1fr);
         margin-bottom:10px;    //上下のスペースが左右より若干大きいのでmarginをプラス
         margin-top:140px;
     }
     @include m.mq(pc) {
-        grid-template-columns: 1fr 1fr 1fr;
-        gap:20px;
+        grid-template-columns: repeat(3,1fr);
         margin-top:20px;
+        
     }
-}
+    .gallary-grid {  //wp-block-gallaryに管理画面からクラス名追加 子要素img         
+            object-fit: cover;  
+            width:100%; 
+            height:auto;    
+    }
+  }

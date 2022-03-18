@@ -1,13 +1,16 @@
 @use "../../Foundation/mixin" as m;
 @use "../../Foundation/variables" as v;
 
-.p-single-button {   //p-search-formのボタンから改変
-     width:335px;
-     height:81px;
-     background:linear-gradient(to bottom,#F2EDE9 0%,#DED8D3 100%);
-     font-weight: bold;
-     border-radius: 20px;
-     margin:40px 0 40px 0;
+.wp-block-button__link {   //p-single-buttonのボタンから改変
+    border-radius: 10px;
+    border:1px solid;
+    align-items: center;
+    width:335px;
+    height:81px;
+    background:linear-gradient(to bottom,#F2EDE9 0%,#DED8D3 100%);
+    font-weight: bold;
+    border-radius: 20px;
+    margin:40px 0 40px 0;
         @include m.mq(tab){
             width:429px;
             height:104px;

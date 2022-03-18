@@ -78,30 +78,40 @@
     }  //archive-cardの閉じタグ
 }
 
-.p-card--single {    //singleページ用のカード
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    margin-top:20px;
-    @include m.mq(pc) {
-        gap:40px;
-    }
-        &__img {
-            object-fit: cover;
-            width:144px;
-            height:89px;
-            @include m.mq(tab) {
-                width:306px;
-                height:189px;
-            }
-            @include m.mq(pc) {
-                width:581px;
-                height:358px;
-            }
-        } //img
-        &__text {
-            color:v.$takeout-font-color;
-            font-size:inherit;
-            padding-top:inherit;
+.wp-block-media-text__media {    //singleページ用のカード p-card--singleからWPのクラス名に変更
+        display:flex;
+        justify-content:space-between;
+        // display:grid;
+        // grid-template-columns: 50% 1fr;
+        // grid-template-rows: auto;
+        gap:20px;
+        margin-top:50px;
+        @include m.mq(pc) {
+            gap:40px;
+        }
+        @include m.mq(lesstab){
+            display:block;
         }
 }
+
+ .wp-image-227 {       //p-card--single__img
+        object-fit: cover;
+        width:144px;
+        height:89px;
+        margin-top:20px;
+        @include m.mq(tab) {
+            width:306px;
+            height:189px;
+        }
+        @include m.mq(pc) {
+            width:581px;
+            height:358px;
+        }
+    } //img
+
+//         &__text {
+//             color:v.$takeout-font-color;
+//             font-size:inherit;
+//             padding-top:inherit;
+//         }
+// }

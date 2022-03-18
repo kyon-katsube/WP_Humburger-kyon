@@ -13,28 +13,20 @@
             height:235px;     //sp時の高さ
             @include m.mq(tab) {
                 height:500px;
+                width:100%;
             }
         } 
-        &__singlesubheight {    //singleサブ画像の高さ
-            object-fit: cover;
-            height:124px;     //sp時の高さ
-            @include m.mq(tab){
-                height:264px;
-            }
-            @include m.mq(pc){
-                height:500px;
-            }
-        }
-        &__singleinsert {
-                display:block;
-                margin:0 auto;
-                width:100%;
-                height:100%;
-                padding:30px 30px 0 30px;
-                object-fit: cover;
-                @include m.mq(tab){
-                height:358px;
-                }
-        }
     }
 }   //p-main-visual
+
+.singleinsert{   //__singleinsert  真ん中の1枚画像 wp-block-imageに管理画面からクラス名追加S
+        display:block;
+        margin:0 auto;
+        width:100%;
+        height:100%;
+        padding:30px 30px 0 30px;
+        object-fit: cover;
+        @include m.mq(tab){
+        height:358px;
+        }
+}

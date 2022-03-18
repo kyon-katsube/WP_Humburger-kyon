@@ -109,13 +109,3 @@ class custom_walker_sidebar extends Walker_Nav_Menu {
   add_filter( 'wp_pagenavi', 'custom_wp_pagenavi' );
 
 
-//  //タブのタイトルの読み込み
-//     function wphamburgerkyon_title( $title ) {
-//         if ( is_front_page() && is_home() ) {           //front-page
-//             $title = get_bloginfo( 'name', 'display' );
-//         } elseif ( is_singular() ) {                    //single
-//             $title = single_post_title( '', false );
-//         }
-//             return $title;
-//         }
-//     add_filter( 'pre_get_document_title', 'hamburgersitewp_title' );

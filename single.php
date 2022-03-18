@@ -22,39 +22,36 @@
             <article class="p-subheading"> 
                <div class="p-subheading__wrapper">
                    <?php 
-                     $subheading__wrapper__text = get_the_content();
-                     $subheading__wrapper__text = str_replace('<h2','<h2 class="p-subheading__wrapper__h2 c-title" ',$subheading__wrapper__text);
-                     $subheading__wrapper__text = str_replace('<p','<p class="c-text" ',$subheading__wrapper__text);
-                     $subheading__wrapper__text = str_replace('<h3','<h3 class="p-subheading__wrapper__h3 c-title" ',$subheading__wrapper__text);
-                     $subheading__wrapper__text = str_replace('<h4','<h4 class="p-subheading__wrapper__h4 c-title" ',$subheading__wrapper__text);
-                     $subheading__wrapper__text = str_replace('<h5','<h2 class="p-subheading__wrapper__h5 c-title" ',$subheading__wrapper__text);
-                     $subheading__wrapper__text = str_replace('<h6','<h2 class="p-subheading__wrapper__h6 c-title" ',$subheading__wrapper__text);
-                     $subheading__wrapper__text = str_replace('<blockquote','<blockquote class="p-backquote" ',$subheading__wrapper__text);
-
-                     echo  $subheading__wrapper__text;
+                     $subheading__wrapper = get_the_content();
+                     $subheading__wrapper = str_replace('<h2','<h2 class="p-subheading__wrapper__h2 c-title" ',$subheading__wrapper);
+                     $subheading__wrapper = str_replace('<p','<p class="c-text" ',$subheading__wrapper);
+                     $subheading__wrapper = str_replace('<h3','<h3 class="p-subheading__wrapper__h3 c-title" ',$subheading__wrapper);
+                     $subheading__wrapper = str_replace('<h4','<h4 class="p-subheading__wrapper__h4 c-title" ',$subheading__wrapper);
+                     $subheading__wrapper = str_replace('<h5','<h2 class="p-subheading__wrapper__h5 c-title" ',$subheading__wrapper);
+                     $subheading__wrapper = str_replace('<h6','<h2 class="p-subheading__wrapper__h6 c-title" ',$subheading__wrapper);
+                     $subheading__wrapper = str_replace('<blockquote','<blockquote class="p-backquote" ',$subheading__wrapper);
+                     echo  $subheading__wrapper;
                   ?>
                </div>
             </article>
 
-         <div class="p-main-visual">   <!--single/pageの中段の画像-->
-            <img src="images/single-sublarge-.jpg" alt="ハンバーガーイメージ" class="p-main-visual__img__singlesubheight">
-
-         <section>   <!--画像＆テキストのカード 横並び-->
-            <figure class="p-card--single">
-               <img src="images/single-sublarge-.jpg" alt="ハンバーガーイメージ" class="p-card--single__img">
-               <figcaption class="c-text p-card--single__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-               </figcaption>    
-            </figure>       
-            <figure class="p-card--single">
-               <figcaption class="c-text p-card--single__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-               </figcaption>    
-               <img src="images/single-subsmall-.jpg" alt="ハンバーガーイメージ" class="p-card--single__img">
-            </figure>  
-         </section>  
+           <!-- <section>   <!--画像＆テキストのカード 横並び-->
+               <!-- <figure class="p-card--single">
+                  <img src="images/single-sublarge-.jpg" alt="ハンバーガーイメージ" class="p-card--single__img">
+                  <figcaption class="c-text p-card--single__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                  </figcaption>    
+               </figure>       
+               <figure class="p-card--single">
+                  <figcaption class="c-text p-card--single__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                  </figcaption>    
+                  <img src="images/single-subsmall-.jpg" alt="ハンバーガーイメージ" class="p-card--single__img">
+               </figure>  
+         </section>   -->
          
-         <img src="images/single-sublarge-.jpg" alt="ハンバーガーイメージ" class="p-main-visual__img__singleinsert">
+         <!-- <img src="images/single-sublarge-.jpg" alt="ハンバーガーイメージ" class="p-main-visual__img__singleinsert"> -->
 
-         <div class="p-grid--img">   <!--画像のgrid-->
+         <!-- <div class="p-grid--img">   <!--画像のgrid-->
+            <!-- <img src="images/single-subsmall-.jpg" class="p-grid--img__item">
             <img src="images/single-subsmall-.jpg" class="p-grid--img__item">
             <img src="images/single-subsmall-.jpg" class="p-grid--img__item">
             <img src="images/single-subsmall-.jpg" class="p-grid--img__item">
@@ -63,11 +60,10 @@
             <img src="images/single-subsmall-.jpg" class="p-grid--img__item">
             <img src="images/single-subsmall-.jpg" class="p-grid--img__item">
             <img src="images/single-subsmall-.jpg" class="p-grid--img__item">
-            <img src="images/single-subsmall-.jpg" class="p-grid--img__item">
-         </div>
+         </div> -->
          
-         <div class="p-list">      <!--リスト-->
-            <div class="p-list__ol">
+         <!-- <div class="p-list">      <!--リスト-->
+            <!-- <div class="p-list__ol">
               <div class="p-list__ol__pdg">
                 <ol>
                   <li>リストリストリスト</li>
@@ -86,9 +82,9 @@
                   <li>リストリストリスト</li>
                 </ol>
               </div>  
-            </div>      
+            </div>       -->
 
-            <div class="p-list__ul">
+            <!-- <div class="p-list__ul">
               <div class="p-list__ul__pdg">
                  <ul>
                   <li>リストリストリスト</li>
@@ -107,20 +103,20 @@
                   <li>リストリストリスト</li>
                </ul>
               </div>
-            </div>   <!--p-list__ul-->
-         </div>  <!--p-list-->
+            </div>   p-list__ul -->
+         <!-- </div>  p-list
 
          <div class="p-cord">     <!--コード-->
-            <p>&lt;html&gt;</p>
+            <!-- <p>&lt;html&gt;</p>
             <p class="u-margin--left">&lt;head&gt;</p>
             <p class="u-margin--left">&lt;/head&gt;</p>
             <p class="u-margin--left">&lt;body&gt;</p>
             <p class="u-margin--left">&lt;/body&gt;</p>
             <p>&lt;/html&gt;</p>
-         </div>
+         </div> -->
  
-         <table class="p-table">   <!--表-->
-             <tr>
+         <!-- <table class="p-table">   表 -->
+             <!-- <tr>
                 <td>テーブル</td>
                 <td>テーブル</td>
              </tr>
@@ -136,14 +132,14 @@
               <td>テーブル</td>
               <td>テーブル</td>
            </tr>
-         </table>
+         </table> -->
 
-         <button class="p-single-button c-button--search">ボタン</button>
+         <!-- <button class="p-single-button c-button--search">ボタン</button>
        
          <p class="p-annotation">boldboldboldboldboldboldboldbold</p>
 
-        </div>  <!--p-main-articleの閉じタグ-->
-      </main>   
+        </div>  p-main-articleの閉じタグ -->
+      <!-- </main>    -->
 
       <?php endwhile; ?>
       <?php endif; ?>     <!--single.phpは記事がないケースがない＆WPで制御があるのでエラーメッセージは入力しなくてもよい-->
