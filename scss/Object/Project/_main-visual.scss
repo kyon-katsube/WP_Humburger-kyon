@@ -19,7 +19,8 @@
     }
 }   //p-main-visual
 
-.singleinsert{   //__singleinsert  真ん中の1枚画像 wp-block-imageに管理画面からクラス名追加S
+.wp-block-image img ,
+.aligncenter img {   //__singleinsert  真ん中の1枚画像 wp-block-imageに管理画面からクラス名追加S
         display:block;
         margin:0 auto;
         width:100%;

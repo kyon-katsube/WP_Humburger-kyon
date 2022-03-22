@@ -1,0 +1,32 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
+
+//single.phpのギャラリーの余白等
+.wp-block-gallery .has-nested-images{   //全体
+	width: 100%;
+	margin-bottom: 20px ; 
+    overflow: hidden;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: column;  //デベロッパーツールでは適用できる
+    align-content: center;   //同上
+    .wp-block-image .size-large{  //画像を囲んだ部分
+        padding:0;
+        margin:0;
+        width: 100%;
+        @include m.mq(tab){
+            width: 48%;
+        }   
+        @include m.mq(pc){
+            width: 31.33333%;
+        }
+        img {
+            width: 100%;
+            height: auto; 
+            padding:0;  //30pxが適用されてしまい上書きできない
+            margin:0; 
+            flex-grow:0;
+        }
+    }
+}

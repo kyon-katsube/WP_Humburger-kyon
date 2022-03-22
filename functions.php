@@ -109,3 +109,5 @@ class custom_walker_sidebar extends Walker_Nav_Menu {
   add_filter( 'wp_pagenavi', 'custom_wp_pagenavi' );
 
 
+  //single.phpのギャラリーでWordpress側のCSSを使わない設定
+  add_filter( 'use_default_gallery_style', '__return_false' );
