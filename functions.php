@@ -5,16 +5,16 @@
     function wphumburgerkyon_script() {
             //cssとfont
             wp_enqueue_style( 'reset', '//unpkg.com/ress/dist/ress.min.css');
-            wp_enqueue_style( 'style', get_template_directory_uri(). '/scss/style.css',array(),'1,0,0' );
             wp_enqueue_style( 'mplus1p', '//fonts.googleapis.com/css2? family=M+PLUS+1p:wght@400;500;700;800;900&display=swap', array(),'' );
             wp_enqueue_style( 'Roboto', '//fonts.googleapis.com/css2? family=Roboto:wght@400;500;700;900&display=swap', array(),'' );
+            wp_enqueue_style( 'style', get_template_directory_uri(). '/scss/style.css',array(),'1,0,0' );
         
             // WordPressのjQueryの読み込みを解除
             wp_deregister_script('jquery');
+
             //js読み込み
-            wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), false, true );  //footerで読み込む
             wp_enqueue_script('script', get_template_directory_uri().'/script.js', array(), false, true );   //footerで読み込む
-            wp_enqueue_script('jquery',get_template_directory_uri().'/js/jquery-3.6.0.min.js',array(),'3.6.0',true);
+            wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), false, true );  //footerで読み込む
             }  
 
         add_action('wp_enqueue_scripts', 'wphumburgerkyon_script');
@@ -106,8 +106,8 @@ class custom_walker_sidebar extends Walker_Nav_Menu {
     $out = str_replace( "</div>", "", $out );
     return '<nav class="p-paging__tabpc"><ul class="p-paging__tabpc__list"' . $out . '</ul></nav>';
   }
-  add_filter( 'wp_pagenavi', 'custom_wp_pagenavi' );
+add_filter( 'wp_pagenavi', 'custom_wp_pagenavi' );
 
 
-  //single.phpのギャラリーでWordpress側のCSSを使わない設定
-  add_filter( 'use_default_gallery_style', '__return_false' );
+  //single.phpのギャラリーでWordpress側のCSSを止める設定
+add_filter( 'use_default_gallery_style', '__return_false' );

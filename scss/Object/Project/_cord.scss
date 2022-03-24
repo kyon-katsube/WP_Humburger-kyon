@@ -1,10 +1,17 @@
 @use "../../Foundation/mixin" as m;
 @use "../../Foundation/variables" as v;
 
-.p-cord {
-    background-color:v.$backquote-background-lightblue;
-    color:v.$takeout-font-color;
-    line-height: 1.5rem;
-    padding:50px 40px;
-    margin-top:50px;
+.wp-block-group {
+    .wp-block-columns {
+        .wp-block-column {
+            .p-cord{
+                background-color:v.$backquote-background-lightblue;
+                color:v.$takeout-font-color;
+                line-height: 0.8rem;
+                padding:30px 0 30px 30px;
+                margin:30px 0 30px 0;
+            }
+        }
+    }
+   
 }

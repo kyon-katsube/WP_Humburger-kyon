@@ -1,27 +1,32 @@
 @use "../../Foundation/mixin" as m;
 @use "../../Foundation/variables" as v;
 
-.p-list {
+.wp-block-group ol,
+.wp-block-group ul {
     padding-left:10px;
+    padding-top:40px;
+    margin-left:-30px;
     line-height: 1.3rem;
     @include m.mq(tab) {
         padding-top:10px;
         padding-left:50px;
         line-height:1.5rem;
     }
-    &__ul,&__ol {
-       padding-top:40px;
-       padding-left:10px;
-    }
-    &__ul {
-        margin-left:-30px;
-    }     
-    &__ul li {
-        list-style: none;
-    }        
 }
 
-.p-list__ol__pdg,
-.p-list__ul__pdg {
-    padding-bottom:20px;
+.wp-block-group ul {
+        margin-left:-30px;
+        li {
+        list-style-type: none;
+            li:last-child {
+            padding-bottom:20px;
+            }    
+        }        
+}
+
+.wp-block-group ol {
+    margin-left:-30px;
+        li:nth-child(2) {
+        padding-bottom:20px;
+        }        
 }

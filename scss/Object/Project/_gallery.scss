@@ -11,22 +11,38 @@
     flex-wrap:wrap;
     flex-direction: column;  //デベロッパーツールでは適用できる
     align-content: center;   //同上
-    .wp-block-image .size-large{  //画像を囲んだ部分
+        img{
+        display:block;        //縦1つずつ
+        width:100%;
+        @include m.mq(tab) {  //2カラム
+            display:flex;
+            width:50%
+        }
+        @include m.mq(pc) {  //3カラム
+            display:flex;
+            width:33%
+        }
+    }
+}
+   
+  
+    .wp-block-image .size-full{  //ギャラリーの個々の画像を囲んだ部分
         padding:0;
         margin:0;
         width: 100%;
-        @include m.mq(tab){
-            width: 48%;
-        }   
-        @include m.mq(pc){
-            width: 31.33333%;
-        }
+        // @include m.mq(tab){
+        //     width: 48%;
+        // }   
+        // @include m.mq(pc){
+        //     width: 31.33333%;
+        // }
         img {
             width: 100%;
             height: auto; 
-            padding:0;  //30pxが適用されてしまい上書きできない
+            padding:0;  
             margin:0; 
             flex-grow:0;
         }
     }
-}
+
+
