@@ -1,7 +1,6 @@
 @use "../Foundation/mixin" as m;
 @use "../Foundation/variables" as v;
 
-//Project/Componentなし
 
 .l-footer {
     background-color:v.$footer-background-brown;
@@ -10,24 +9,34 @@
     height:150px;
     display:block;
       .p-footer {
-        .c-title {
-            padding-top:45px;
+            padding-top:25px;
             font-size:v.$font-ss;
             text-align:center;
+           
             &:hover {
                 cursor:pointer;
             }
-        }   //c-footer
-      }    //p-footer
+            .c-footer li{
+              display:inline-block;
+              justify-content: center;  
+                & a{
+                    color:v.$base-white; 
+                }     
+            }
+            .c-footer li:not(:first-child)::before {
+                content: " ｜ ";
+            }
+        }   //p-footer
 
       .c-copyright {
           font-size:v.$font-xs;
           text-align:center;
-          padding-top:35px;
+          padding-top:30px;
       }
+      
       @include m.mq(pc) {
         grid-row:3/4;
         grid-column:1/3 ;
       }
 
- }//footerの閉じタグ
+ }//l-footerの閉じタグ

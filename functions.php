@@ -1,7 +1,7 @@
 <?php 
     
       
-//CSS,js 読み込み  WPが生成したページにCSSを追加する
+//CSS,js 読み込み  WPが生成したページにCSSを追加する  get_template～～は読み込むファイルの後に記述
     function wphumburgerkyon_script() {
             //cssとfont
             wp_enqueue_style( 'reset', '//unpkg.com/ress/dist/ress.min.css');
@@ -21,26 +21,16 @@
 
 
 //テーマをサポート（使えるように）する
-add_theme_support('title-tag'); //タイトルタグサポートの許可
-add_theme_support( 'post-thumbnails' ); //アイキャッチ画の取り扱い許可 
+    add_theme_support('title-tag'); //タイトルタグサポートの許可
+    add_theme_support( 'post-thumbnails' ); //アイキャッチ画の取り扱い許可 
+
 
 //複数のナビゲーションメニューを登録する これを使うとadd_theme_support('menus')は不要
-function register_my_menu() {
-    register_nav_menu( 'sidebar','サイドメニュー');
-  }
-  add_action( 'after_setup_theme', 'register_my_menu' );
-
-
-//各ページのタイトル取得
-    function wphumburgerkyon_title($title){
-            if ( is_front_page() && is_home() ) { 
-                $title = get_bloginfo( 'name', 'display' );
-            } elseif ( is_singular() ) {
-                $title = single_post_title( '', false );
-            }
-              return $title;
-            }
-    add_filter( 'pre_get_document_title', 'wphumburgerkyon_title' );
+    function register_my_menu() {
+        register_nav_menu( 'sidebar','サイドバー');
+        register_nav_menu( 'footermenu','フッターメニュー');
+    }
+    add_action( 'after_setup_theme', 'register_my_menu' );
 
 
 //固定ページにカテゴリを追加する
@@ -93,21 +83,31 @@ class custom_walker_sidebar extends Walker_Nav_Menu {
         }     
     }
 
- //wp-pagenaviの設定
 
- function custom_wp_pagenavi( $html ) {
-    $out = '';
-    $out = str_replace( "<div", "", $html );
-    $out = str_replace( "class='wp-pagenavi'>", "", $out );
-    $out = str_replace( "<a", "<li><a", $out );
-    $out = str_replace( "</a>", "</a></li>", $out );
-    $out = str_replace( "<span", "<li><span", $out );
-    $out = str_replace( "</span>", "</span></li>", $out );
-    $out = str_replace( "</div>", "", $out );
-    return '<nav class="p-paging__tabpc"><ul class="p-paging__tabpc__list"' . $out . '</ul></nav>';
-  }
-add_filter( 'wp_pagenavi', 'custom_wp_pagenavi' );
+ //wp-pagenavi（ページネーション）の設定
+    function custom_wp_pagenavi( $html ) {
+        $out = '';
+        $out = str_replace( "<div", "", $html );
+        $out = str_replace( "class='wp-pagenavi'>", "", $out );
+        $out = str_replace( "<a", "<li><a", $out );
+        $out = str_replace( "</a>", "</a></li>", $out );
+        $out = str_replace( "<span", "<li><span", $out );
+        $out = str_replace( "</span>", "</span></li>", $out );
+        $out = str_replace( "</div>", "", $out );
+        return '<nav class="p-paging__tabpc"><ul class="p-paging__tabpc__list"' . $out . '</ul></nav>';
+    }
+    add_filter( 'wp_pagenavi', 'custom_wp_pagenavi' );
 
 
-  //single.phpのギャラリーでWordpress側のCSSを止める設定
-add_filter( 'use_default_gallery_style', '__return_false' );
+//single.phpのギャラリーでWordpress側のCSSを止める設定 動いていない？
+    add_filter( 'use_default_gallery_style', '__return_false' );
+
+
+//page.phpのbodyに自動でついてくるpageというクラスを削除する
+    add_filter('body_class', 'remove_body_class'); 
+    function remove_body_class($wp_classes) {
+    foreach($wp_classes as $key => $value) {
+    if ($value == 'page') unset($wp_classes[$key]);
+    }
+    return $wp_classes;
+    }

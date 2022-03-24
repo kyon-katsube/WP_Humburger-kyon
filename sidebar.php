@@ -9,43 +9,9 @@
                 'menu'=>'sidebar',  //管理画面で作成したメニュー名
                 'container' => 'nav',   //一番外枠のdivタグをnavタグに divタグ全部を消すときはfalse
                 'container_class' => 'p-sidebar-list' , //navのclass名             
-               //  'menu_id' =>  false,
-               //  'menu_class' => 'p-sidebar-list__contents', //ulタグのclass名 functionsで記述
                 'items_wrap' =>  '<ul class="p-sidebar-list__contents">%3$s</ul>',
                 'theme_location' => 'sidebar' ,//テーマの中で使われる位置 register_nav_menuが必要
                 'walker'  => new custom_walker_sidebar, //h3追加(functionsも記述あり)
             ));
          ?>
-
-
-
-         <!-- <nav class="p-sidebar-list "> //ulに
-               <ul class="p-sidebar-list__contents"> //liに
-                  <h3 a href="#" class="c-title u-color--gray">バーガー</h3>    //h3を付与
-                  //もう一度ulが自動で入る p-sidebar-list__contents => sub-menuにcss記述追加   
-                  <li class="p-sidebar-list__contents__list" a href="#">ハンバーガー</li>
-                  <li class="p-sidebar-list__contents__list" a href="#">チーズバーガー</li>
-                  <li class="p-sidebar-list__contents__list" a href="#">テリヤキバーガー</li>
-                  <li class="p-sidebar-list__contents__list" a href="#">アボカドバーガー</li>
-                  <li class="p-sidebar-list__contents__list" a href="#">フィッシュバーガー</li>
-                  <li class="p-sidebar-list__contents__list" a href="#">ベーコンバーガー</li>
-                  <li class="p-sidebar-list__contents__list" a href="#">チキンバーガー</li>
-               </ul>
-               <ul class="p-sidebar-list__contents">
-                  <h3 a href="#" class="c-title u-color--gray">サイド</h3>
-                  <li class="p-sidebar-list__contents__list" a href="#">ポテト</li>
-                  <li class="p-sidebar-list__contents__list" a href="#">サラダ</li>
-                  <li class="p-sidebar-list__contents__list" a href="#">ナゲット</li>
-                  <li class="p-sidebar-list__contents__list" a href="#">コーン</li>
-               </ul>
-               <ul class="p-sidebar-list__contents">
-                  <h3 a href="#" class="c-title u-color--gray">ドリンク</h3>
-                  <li class="p-sidebar-list__contents__list" a href="#">コーラ</li>
-                  <li class="p-sidebar-list__contents__list" a href="#">ファンタ</li>
-                  <li class="p-sidebar-list__contents__list" a href="#">オレンジ</li>
-                  <li class="p-sidebar-list__contents__list" a href="#">アップル</li>
-                  <li class="p-sidebar-list__contents__list" a href="#">紅茶（ice/Hot)</li>
-                  <li class="p-sidebar-list__contents__list" a href="#">コーヒー(Ice/Hot)</li>
-               </ul>
-         </nav> --> 
 </aside>

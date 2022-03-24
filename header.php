@@ -3,7 +3,33 @@
 
 <head>
 <meta charset="utf-8">
-<title><?php bloginfo('name');?></title>
+<title><?php       //タブのタイトルを表示しているページのタイトルにする
+         global $page, $paged;
+         if(is_front_page()) : 
+            bloginfo('name');
+         elseif(is_home()) :   
+            wp_title('|', true, 'right');
+            bloginfo('name');
+         elseif(is_single()) : 
+            wp_title('');
+         elseif(is_page()) : 
+            wp_title('|', true, 'right');
+            bloginfo('name');
+         elseif(is_archive()) : 
+            wp_title('|', true, 'right');
+            bloginfo('name');
+         elseif(is_search()) : 
+            wp_title('');
+         elseif(is_404()): 
+            echo '404|';
+            bloginfo('name');
+         endif;
+         if($paged >= 2 || $page >= 2) : //２ページ目以降の場合
+            echo '-' . sprintf('%sページ',
+            max($paged,$page));
+         endif;
+         ?>
+</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content=<?php bloginfo('description');?>>                          
 <meta name="keywords" content="WordPress, Theme, development, Hamburger"> 
