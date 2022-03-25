@@ -8,7 +8,7 @@
    <main class="l-main p-main">
 
          <div class="p-main-visual">   <!--メインビジュアル+薄グレー背景-->
-            <img src="<?php echo get_template_directory_uri(); ?>/images/archive-main.jpg" alt="Menu" class="p-main-visual__img u-height--239">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/archive-main.jpg" alt="Menu" class="p-main-visual__img u-height--239">
             <div class="c-wrapper__main-visual"></div>   <!--薄グレー-->
             <div class="p-main-visual__page-title">
                <h1 class="p-main-visual__page-title__main c-title">Menu:</h1>
@@ -45,17 +45,19 @@
                                  $card_wrapper_text = str_replace('<h2','<h2 class="c-text p-card__wrapper__text" ',$card_wrapper_text);
                                  $card_wrapper_text = str_replace('<p','<p class="c-title p-card__wrapper__subtitle" ',$card_wrapper_text);
                                  echo  $card_wrapper_text;
-                            ?>
-      
-                         
+                            ?>             
                         </figcaption>
                      </div>     <!--wrapper-->        
                    
-                     <button class="c-button p-card__button" a href="<?php the_permalink(); ?>">詳しく見る</button> 
-                  </div>   <!--p-archive-card-->
+                     <form action="<?php the_permalink(); ?>"> 
+                            <button class="c-button p-card__button" type="submit">詳しく見る</button>
 
+                  </div>   <!--p-archive-card-->
                </figure>     
             </section> 
+
+            <?php wp_link_pages(); ?> <!--テーマチェックが出たのでとりあえず記入-->
+            
             <?php endwhile;
                endif; ?>   
          

@@ -6,7 +6,7 @@
       <main class="l-main p-main">
 
          <div class="p-main-visual">   <!--メインビジュアル-->
-            <img src="<?php echo get_template_directory_uri(); ?>/images/mainvisual-pc.jpg" class="p-main-visual__img">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/mainvisual-pc.jpg" class="p-main-visual__img">
             <h2 class="p-page-title c-title">ダミーサイト</h2>
          </div>
 

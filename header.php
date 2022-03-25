@@ -11,7 +11,8 @@
             wp_title('|', true, 'right');
             bloginfo('name');
          elseif(is_single()) : 
-            wp_title('');
+            wp_title('|', true, 'right');
+            bloginfo('name');
          elseif(is_page()) : 
             wp_title('|', true, 'right');
             bloginfo('name');
@@ -19,7 +20,8 @@
             wp_title('|', true, 'right');
             bloginfo('name');
          elseif(is_search()) : 
-            wp_title('');
+            wp_title('|', true, 'right');
+            bloginfo('name');
          elseif(is_404()): 
             echo '404|';
             bloginfo('name');
@@ -33,7 +35,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content=<?php bloginfo('description');?>>                          
 <meta name="keywords" content="WordPress, Theme, development, Hamburger"> 
-<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/fabicon-hamburger.png">
+<link rel="icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/images/fabicon-hamburger.png">
 
 <?php wp_head(); ?>
 

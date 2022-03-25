@@ -52,7 +52,7 @@
     .p-backquote {
       background-color:v.$backquote-background-lightblue;
       padding:0 20px 20px 20px;
-      margin:50px 0;
+      margin:50px 0 30px 0 ;
       @include m.mq(pc) {
         padding:0 50px 50px 50px;
       }

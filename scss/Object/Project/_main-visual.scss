@@ -2,6 +2,8 @@
 @use "../../Foundation/variables" as v;
 
 
+//各ページ一番上にあるメイン画像
+
 .p-main-visual {  //メインの背景画像 画像自体はHTMLに
     position:relative;
     &__img {
@@ -18,27 +20,3 @@
         } 
     }
 }   //p-main-visual
-
-// .wp-block-image img ,
-.aligncenter img {   //__singleinsert  真ん中の1枚画像 wp-block-imageに管理画面からクラス名追加
-        display:block;
-        margin:0 auto;
-        width:100%;
-        height:100%;
-        // padding:30px 30px 0 30px;
-        object-fit: cover;
-        @include m.mq(tab){
-        height:358px;
-        }
-}
-
-.wp-block-image .size-large {  //引用元下の1枚画像
-    display:block;
-    margin:0 auto;
-    width:100%;
-    height:100%;
-    object-fit: cover;
-    @include m.mq(tab){
-    height:358px;
-    }
-}

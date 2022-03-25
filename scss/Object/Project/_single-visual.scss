@@ -1,0 +1,76 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variables" as v;
+
+
+//singleページの引用以下の画像レイアウト
+//ギャラリー部分はgallery.scssに記述
+
+
+//引用元下の1枚画像
+.wp-block-image .size-large { 
+    display:block;
+    margin-bottom:50px;
+    padding:0;
+    width:100%;
+    height:auto;
+    text-align:center;
+    object-fit: cover;
+    img {
+        width:100%;
+        height:auto;
+    }
+    @include m.mq(tab){
+    height:358px;
+    }
+}
+
+
+//「メディアとテキスト」で配置した画像とテキスト
+.wp-block-group .alignwide {
+    margin-top:50px;
+    .wp-block-media-text {
+        gap:20px;
+        @include m.mq(pc) {
+            gap:40px;
+        }
+        @include m.mq(lesstab){
+            display:block;
+       }
+    }
+}
+//     // &__media img {          //wp-img-227
+//     //     object-fit: cover;
+//     //     width:144px;
+//     //     height:89px;
+//     //     margin-top:20px;
+//     //     @include m.mq(tab) {
+//     //         width:306px;
+//     //         height:189px;
+//     //     }
+//     //     @include m.mq(pc) {
+//     //         width:581px;
+//     //         height:358px;
+//     //     }
+//     // }
+
+
+
+//「メディアとテキスト」の下の1枚画像 wp-block-imageに管理画面からクラス名追加
+.wp-block-image {
+    .is-resized {   
+        display:block;
+        margin:0 auto;
+        object-fit: cover;
+        text-align:center;
+        padding:50px 0 0 0 ;
+        img{
+            display:block;
+            width: 60%;
+            height:auto;
+            margin:0 20% 0 20%;
+        }
+        @include m.mq(tab){
+            height:358px;
+        }
+    }
+}

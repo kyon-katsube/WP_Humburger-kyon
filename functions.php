@@ -23,6 +23,7 @@
 //テーマをサポート（使えるように）する
     add_theme_support('title-tag'); //タイトルタグサポートの許可
     add_theme_support( 'post-thumbnails' ); //アイキャッチ画の取り扱い許可 
+    add_theme_support('automatic-feed-links');  //テーマチェックで入れろと指摘あり
 
 
 //複数のナビゲーションメニューを登録する これを使うとadd_theme_support('menus')は不要

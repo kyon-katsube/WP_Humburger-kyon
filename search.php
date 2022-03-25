@@ -8,7 +8,7 @@
    <main class="l-main p-main">
 
          <div class="p-main-visual">   <!--メインビジュアル+薄グレー背景-->
-            <img src="<?php echo get_template_directory_uri(); ?>/images/archive-main.jpg" alt="Search" class="p-main-visual__img u-height--239">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/archive-main.jpg" alt="Search" class="p-main-visual__img u-height--239">
             <div class="c-wrapper__main-visual"></div>   <!--薄グレー-->
             <div class="p-main-visual__page-title">
                <h1 class="p-main-visual__page-title__main c-title">Search:</h1>
@@ -17,45 +17,42 @@
          </div>
 
          <div class="p-subheading-card">   <!--小見出し~カードのくくり padding用-->
-            <article class="p-subheading">   <!--小見出しとテキスト-->
+            <article class="p-subheading">   <!--小見出し 〇件検索されましたの文-->
                <div class="p-subheading__wrapper">
                  <?php if(get_search_query()): ?>
                    <h2 class="c-title p-subheading__wrapper__h2"> <?php echo $wp_query->found_posts; ?>件の記事が見つかりました。</h2>
-                 <?php endif; ?>
-
-                  <div class="c-text">  
-                     <?php if(have_posts() && get_search_query()):
-                           while (have_posts(  )):the_post(  ); ?>               
-                     <?php the_excerpt(); ?>  <!--投稿詳細ページ・固定ページの抜粋も表示できるように-->
-                     <?php endif; ?>
-                  </div>
+                 <?php endif; ?>                 
                </div>
             </article>
 
             <?php if(have_posts() && get_search_query()):
                while (have_posts(  )):the_post(  ); ?>    
-            <section>   <!--カード-->
-               <figure class="p-card">
-                  <?php the_post_thumbnail('card-thumb',array('class' =>"p-card-img")); ?>
+               <section>   <!--カード-->
+                  <figure class="p-card">
+                     <?php the_post_thumbnail('card-thumb',array('class' =>"p-card-img")); ?>
 
-                  <div class="p-archive-card">
-                     <div class="p-card__wrapper"> 
-                        <h2 class="c-title p-card__wrapper__img-caption"><?php the_title();?></h3>                 
-                        <figcaption>
-                            <?php 
-                                 $card_wrapper_text = get_the_content();
-                                 $card_wrapper_text = str_replace('<h2','<h2 class="c-text p-card__wrapper__text" ',$card_wrapper_text);
-                                 $card_wrapper_text = str_replace('<p','<p class="c-title p-card__wrapper__subtitle" ',$card_wrapper_text);
-                                 echo  $card_wrapper_text;
-                            ?>                      
-                        </figcaption>
-                     </div>     <!--wrapper-->        
-                   
-                     <button class="c-button p-card__button" a href="<?php the_permalink(); ?>">詳しく見る</button> 
-                  </div>   <!--p-archive-card-->
+                     <div class="p-archive-card">
+                        <div class="p-card__wrapper"> 
+                           <h2 class="c-title p-card__wrapper__img-caption"><?php the_title();?></h3>                 
+                           <figcaption>
+                              <?php 
+                                    $card_wrapper_text = get_the_content();
+                                    $card_wrapper_text = str_replace('<h2','<h2 class="c-text p-card__wrapper__text" ',$card_wrapper_text);
+                                    $card_wrapper_text = str_replace('<p','<p class="c-title p-card__wrapper__subtitle" ',$card_wrapper_text);
+                                    echo  $card_wrapper_text;
+                              ?>                      
+                           </figcaption>
+                        </div>     <!--wrapper-->        
+                     
+                        <!-- <button class="c-button p-card__button" type="button" onclick ="location.href='<?php the_permalink(); ?>'">詳しく見る</button>  -->
+                        <form action="<?php the_permalink(); ?>"> 
+                            <button class="c-button p-card__button" type="submit">詳しく見る</button>
 
-               </figure>     
-            </section> 
+                    </form>
+                     </div>   <!--p-archive-card-->
+
+                  </figure>     
+               </section> 
             <?php endwhile;?>
 
             <?php elseif(! get_search_query()): ?>
