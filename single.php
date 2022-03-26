@@ -23,7 +23,7 @@
                    <?php 
                      $subheading__wrapper = get_the_content();
                      $subheading__wrapper = str_replace('<h2','<h2 class="p-subheading__wrapper__h2 c-title" ',$subheading__wrapper);
-                     $subheading__wrapper = str_replace('<p','<p class="c-text" ',$subheading__wrapper);
+                     $subheading__wrapper = str_replace('<p>','<p class="c-text">',$subheading__wrapper);
                      $subheading__wrapper = str_replace('<h3','<h3 class="p-subheading__wrapper__h3 c-title" ',$subheading__wrapper);
                      $subheading__wrapper = str_replace('<h4','<h4 class="p-subheading__wrapper__h4 c-title" ',$subheading__wrapper);
                      $subheading__wrapper = str_replace('<h5','<h2 class="p-subheading__wrapper__h5 c-title" ',$subheading__wrapper);

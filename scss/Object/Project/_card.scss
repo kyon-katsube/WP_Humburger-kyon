@@ -55,6 +55,9 @@
                 color:v.$base-white;
                 padding-bottom:30px;
             }    
+            .more-link {  //自動で出てくる「さらに・・」
+                display:none;
+            }
         }  //__wrapperの閉じタグ
 
        .p-card__button {     //詳しく見るのボタン

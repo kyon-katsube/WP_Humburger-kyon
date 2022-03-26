@@ -347,9 +347,12 @@ img {
   position: absolute;
   top: 40%;
   left: 20px;
-}
-.p-page-title .c-title {
   font-size: 36px;
+}
+@media screen and (min-width:600px) {
+  .p-page-title {
+    font-size: 40px;
+  }
 }
 
 .p-main-visual__page-title {
@@ -548,14 +551,14 @@ img {
   margin-bottom: 50px;
   padding: 0;
   width: 100%;
-  height: auto;
   text-align: center;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .wp-block-image .size-large img {
   width: 100%;
-  height: auto;
+  max-height: 500px;
+  vertical-align: bottom;
 }
 @media screen and (min-width:600px) {
   .wp-block-image .size-large {
@@ -563,24 +566,44 @@ img {
   }
 }
 
-.wp-block-group .alignwide {
-  margin-top: 50px;
+.alignwide {
+  margin: 50px 0 0 0;
 }
-.wp-block-group .alignwide .wp-block-media-text {
-  gap: 20px;
+
+.wp-block-media-text {
+  display: block;
+  padding: 0;
+}
+@media screen and (min-width:600px) {
+  .wp-block-media-text {
+    display: grid;
+    gap: 20px;
+  }
 }
 @media screen and (min-width:1025px) {
-  .wp-block-group .alignwide .wp-block-media-text {
+  .wp-block-media-text {
+    display: grid;
     gap: 40px;
   }
 }
-@media screen and (max-width:600px) {
-  .wp-block-group .alignwide .wp-block-media-text {
-    display: block;
+.wp-block-media-text__content {
+  line-height: 1.2rem;
+  padding: 0;
+}
+.wp-block-media-text__content p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media screen and (min-width:600px) {
+  .wp-block-media-text__content p {
+    padding-top: 0;
   }
 }
+.wp-block-media-textimg {
+  vertical-align: bottom;
+}
 
-.wp-block-image .is-resized {
+.aligncenter {
   display: block;
   margin: 0 auto;
   -o-object-fit: cover;
@@ -588,15 +611,21 @@ img {
   text-align: center;
   padding: 50px 0 0 0;
 }
-.wp-block-image .is-resized img {
-  display: block;
+.aligncenter img {
   width: 60%;
   height: auto;
-  margin: 0 20% 0 20%;
+  text-align: center;
+  vertical-align: bottom;
 }
 @media screen and (min-width:600px) {
-  .wp-block-image .is-resized {
+  .aligncenter {
     height: 358px;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .wp-block-spacer {
+    display: none;
   }
 }
 
@@ -663,6 +692,9 @@ img {
   font-size: inherit;
   color: #fff;
   padding-bottom: 30px;
+}
+.p-card .p-archive-card .p-card__wrapper .more-link {
+  display: none;
 }
 .p-card .p-archive-card .p-card__button {
   border-radius: 50px;
@@ -776,49 +808,33 @@ img {
   color: #707070;
 }
 
-.wp-block-group ol,
-.wp-block-group ul {
-  padding-left: 10px;
-  padding-top: 40px;
-  margin-left: -30px;
+.wp-block-group {
+  margin: 30px auto 20px 20px;
+}
+.wp-block-group ol, .wp-block-group ul {
+  padding-top: 10px;
   line-height: 1.3rem;
 }
 @media screen and (min-width:600px) {
-  .wp-block-group ol,
-.wp-block-group ul {
-    padding-top: 10px;
-    padding-left: 50px;
-    line-height: 1.5rem;
+  .wp-block-group ol, .wp-block-group ul {
+    padding-top: 20px;
   }
-}
-
-.wp-block-group ol {
-  margin-left: -30px;
-}
-.wp-block-group ol li:nth-child(2) {
-  padding-bottom: 30px;
-}
-
-.wp-block-group ul {
-  padding-left: -30px;
 }
 .wp-block-group ul li {
   list-style-type: none;
-}
-.wp-block-group ul li li:last-child {
-  padding-bottom: 30px;
+  text-indent: -1em;
 }
 
-.wp-block-group .wp-block-columns .wp-block-column .p-cord {
+.wp-block-code {
   background-color: #F5F5F5;
   color: #3C2A10;
-  line-height: 0.8rem;
+  line-height: 1.2rem;
   padding: 30px 0 30px 30px;
-  margin: 30px 0 30px 0;
+  margin: 50px 0 30px 0;
 }
 
 .wp-block-table table {
-  margin-top: 40px;
+  margin: 40px 0;
   width: 100%;
   border-collapse: collapse;
   border: 1px solid #707070;
@@ -842,7 +858,10 @@ img {
   }
 }
 
-.wp-block-button__link {
+.wp-block-buttons {
+  margin: 40px 0 40px 0;
+}
+.wp-block-buttons .wp-block-button__link {
   border-radius: 10px;
   border: 1px solid #707070;
   width: 335px;
@@ -850,13 +869,12 @@ img {
   background: linear-gradient(to bottom, #F2EDE9 0%, #DED8D3 100%);
   font-weight: bold;
   border-radius: 20px;
-  margin: 40px 0 40px 0;
   color: #3C2A10;
   display: table-cell;
   vertical-align: middle;
 }
 @media screen and (min-width:600px) {
-  .wp-block-button__link {
+  .wp-block-buttons .wp-block-button__link {
     width: 429px;
     height: 104px;
   }

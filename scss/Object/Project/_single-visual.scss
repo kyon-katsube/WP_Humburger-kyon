@@ -11,13 +11,13 @@
     display:block;
     margin-bottom:50px;
     padding:0;
-    width:100%;
-    height:auto;
+    width:100%; 
     text-align:center;
     object-fit: cover;
     img {
         width:100%;
-        height:auto;
+        max-height:500px;
+        vertical-align: bottom;
     }
     @include m.mq(tab){
     height:358px;
@@ -26,18 +26,36 @@
 
 
 //「メディアとテキスト」で配置した画像とテキスト
-.wp-block-group .alignwide {
-    margin-top:50px;
-    .wp-block-media-text {
-        gap:20px;
-        @include m.mq(pc) {
-            gap:40px;
+.alignwide { 
+    margin:50px 0 0 0 ;
+}
+.wp-block-media-text {  //メディア＆テキストのグループ gridになっている
+    display:block;
+    padding:0;
+    @include m.mq(tab){
+        display:grid;
+        gap:20px;   
+    }
+    @include m.mq(pc) {
+        display:grid;
+        gap:40px;
+    }  
+    &__content {
+        line-height: 1.2rem;
+        padding:0;  //8%が自動付与　消せない
+        p {
+            padding-top:20px;
+            padding-bottom:20px; //タイトルpと本文pの行間
+            @include m.mq(tab){
+               padding-top:0; 
+            }
         }
-        @include m.mq(lesstab){
-            display:block;
-       }
+    }
+    &img {
+        vertical-align: bottom;
     }
 }
+
 //     // &__media img {          //wp-img-227
 //     //     object-fit: cover;
 //     //     width:144px;
@@ -55,22 +73,26 @@
 
 
 
-//「メディアとテキスト」の下の1枚画像 wp-block-imageに管理画面からクラス名追加
-.wp-block-image {
-    .is-resized {   
-        display:block;
-        margin:0 auto;
-        object-fit: cover;
+//「メディアとテキスト」の下の1枚画像
+.aligncenter {   //figure
+    display:block;
+    margin:0 auto;
+    object-fit: cover;
+    text-align:center;
+    padding:50px 0 0 0 ;
+    img{
+        width: 60%;
+        height:auto;
         text-align:center;
-        padding:50px 0 0 0 ;
-        img{
-            display:block;
-            width: 60%;
-            height:auto;
-            margin:0 20% 0 20%;
-        }
-        @include m.mq(tab){
-            height:358px;
-        }
+        vertical-align: bottom;
+    }
+    @include m.mq(tab){
+        height:358px;
+    }
+}
+
+.wp-block-spacer {  //管理画面から追加したスペーサー pcのみに適用
+    @include m.mq(lesspc){
+        display:none;
     }
 }

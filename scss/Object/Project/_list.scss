@@ -2,34 +2,18 @@
 @use "../../Foundation/variables" as v;
 
 
-//singleページのリスト欄
-.wp-block-group ol,
-.wp-block-group ul {
-    padding-left:10px;
-    padding-top:40px;
-    margin-left:-30px;
-    line-height: 1.3rem;
-    @include m.mq(tab) {
+//singleページのリスト欄 ol,ulの2つめのインデントはグループ化しただけで自動で下がった
+.wp-block-group {     //他のwp-block-groupが被る箇所は管理画面から追加クラス名付与
+    margin:30px auto 20px 20px;
+    ol,ul {
         padding-top:10px;
-        padding-left:50px;
-        line-height:1.5rem;
+        line-height: 1.3rem;
+        @include m.mq(tab) {
+            padding-top:20px;
+        }
     }
-}
-
-
-.wp-block-group ol {
-    margin-left:-30px;
-    li:nth-child(2) {
-        padding-bottom:30px;
-        }        
-}
-
-.wp-block-group ul {
-    padding-left:-30px;
-    li {
+    ul li {
         list-style-type: none;
-        li:last-child {
-            padding-bottom:30px;
-        }    
-    }        
+        text-indent:-1em;  //リストの黒丸分だけ字上げする
+    }  
 }
