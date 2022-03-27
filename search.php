@@ -19,18 +19,26 @@
          <div class="p-subheading-card">   <!--小見出し~カードのくくり padding用-->
             <article class="p-subheading">   <!--小見出し 〇件検索されましたの文-->
                <div class="p-subheading__wrapper">
-                 <?php if(get_search_query()): ?>
-                   <h2 class="c-title p-subheading__wrapper__h2"> <?php echo $wp_query->found_posts; ?>件の記事が見つかりました。</h2>
-                 <?php endif; ?>                 
+                  <!--検索件数についての定義-->
+                  <?php
+                        global $wp_query;
+                        $total_results = $wp_query->found_posts;
+                        $search_query = get_search_query();
+                        ?>
+                        
+                  <?php if( $total_results >1 ): ?>
+                   <h2 class="c-title p-subheading__wrapper__h2"> <?php echo $total_results; ?>件の記事が見つかりました。</h2>
+                  <?php else:?>
+                   <h2 class="c-title p-subheading__wrapper__h2">お探しのページが見つかりません。</h2>
+                  <?php endif; ?>                 
                </div>
             </article>
-
-            <?php if(have_posts() && get_search_query()):
+            
+            <?php if(have_posts()):
                while (have_posts(  )):the_post(  ); ?>    
                <section>   <!--カード-->
                   <figure class="p-card">
                      <?php the_post_thumbnail('card-thumb',array('class' =>"p-card-img")); ?>
-
                      <div class="p-archive-card">
                         <div class="p-card__wrapper"> 
                            <h2 class="c-title p-card__wrapper__img-caption"><?php the_title();?></h3>                 
@@ -55,8 +63,8 @@
                </section> 
             <?php endwhile;?>
 
-            <?php elseif(! get_search_query()): ?>
-               <h2 class="c-title p-subheading__wrapper__h2">検索ワードが入力されていません。</h2>
+            <?php elseif( empty($search_query)): ?>
+               <h2 class="c-title p-subheading__wrapper__h2">検索ワードが入力されていません。</h2> 
             <?php else:?>
                <h2 class="c-title p-subheading__wrapper__h2">お探しのページが見つかりません。</h2>
             <?php endif;?>

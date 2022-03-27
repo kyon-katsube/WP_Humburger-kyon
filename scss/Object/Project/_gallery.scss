@@ -3,46 +3,17 @@
 
 
 //single.phpのギャラリーの余白等
-.wp-block-gallery .has-nested-images{   //全体
-	width: 100%;
-	margin-bottom: 20px ; 
-    overflow: hidden;
-    display:flex;
-    flex-wrap:wrap;
-    flex-direction: column;  //デベロッパーツールでは適用できる
-    align-content: center;   //同上
-        img{
-        display:block;        //縦1つずつ
+.wp-block-gallery {   //全体
+	margin: 50px 0 20px ; 
+    .wp-block-image {
         width:100%;
-        @include m.mq(tab) {  //2カラム
-            display:flex;
-            width:50%
-        }
-        @include m.mq(pc) {  //3カラム
-            display:flex;
-            width:33%
-        }
+        flex-grow: 0;
+//         @include m.mq(tab) {  
+//             width:48%
+//         }
+//         @include m.mq(tab) {  
+//             width:32%
+//         }
+
     }
 }
-   
-  
-    .wp-block-image .size-full{  //ギャラリーの個々の画像を囲んだ部分
-        padding:0;
-        margin:0;
-        width: 100%;
-        // @include m.mq(tab){
-        //     width: 48%;
-        // }   
-        // @include m.mq(pc){
-        //     width: 31.33333%;
-        // }
-        img {
-            width: 100%;
-            height: auto; 
-            padding:0;  
-            margin:0; 
-            flex-grow:0;
-        }
-    }
-
-

@@ -3,7 +3,7 @@
 
 
 //singleページのリスト欄 ol,ulの2つめのインデントはグループ化しただけで自動で下がった
-.wp-block-group {     //他のwp-block-groupが被る箇所は管理画面から追加クラス名付与
+.wp-block-group {     //他のwp-block-groupが被る箇所(メディアとテキスト)は追加クラス名付与
     margin:30px auto 20px 20px;
     ol,ul {
         padding-top:10px;
