@@ -5,15 +5,23 @@
 //single.phpのギャラリーの余白等
 .wp-block-gallery {   //全体
 	margin: 50px 0 20px ; 
-    .wp-block-image {
-        width:100%;
-        flex-grow: 0;
-//         @include m.mq(tab) {  
-//             width:48%
-//         }
-//         @include m.mq(tab) {  
-//             width:32%
-//         }
+}
 
+//sp時のwidth 1カラム
+.wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image) {
+    @include m.mq(lesstab){
+    width:100%;
     }
 }
+
+//tab 2カラム pc 3カラム
+.wp-block-gallery.has-nested-images.columns-default figure.wp-block-image:not(#individual-image) {
+    @include m.mq(tab){
+         width: calc(50% - var(--gallery-block--gutter-size, 16px)/2);
+    }
+    @include m.mq(pc){
+         width: calc(33.33% - var(--gallery-block--gutter-size, 16px)*0.66667);
+    }
+}
+
+//flex-growは1のまま

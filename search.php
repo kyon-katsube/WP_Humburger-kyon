@@ -29,7 +29,7 @@
                   <?php if( $total_results >1 ): ?>
                    <h2 class="c-title p-subheading__wrapper__h2"> <?php echo $total_results; ?>件の記事が見つかりました。</h2>
                   <?php else:?>
-                   <h2 class="c-title p-subheading__wrapper__h2">お探しのページが見つかりません。</h2>
+                   <h2 class="c-title p-subheading__wrapper__h2">お探しのページが見つかりませんでした。</h2>
                   <?php endif; ?>                 
                </div>
             </article>
@@ -66,7 +66,7 @@
             <?php elseif( empty($search_query)): ?>
                <h2 class="c-title p-subheading__wrapper__h2">検索ワードが入力されていません。</h2> 
             <?php else:?>
-               <h2 class="c-title p-subheading__wrapper__h2">お探しのページが見つかりません。</h2>
+               <h2 class="c-title p-subheading__wrapper__h2">お探しのページが見つかりませんでした。</h2>
             <?php endif;?>
     
          </div>  <!--subheading-cardの閉じタグ-->
