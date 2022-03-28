@@ -1,6 +1,7 @@
-$(function(){
+jQuery(function ($) {
 
-    //sp版でMenuを押すとハンバーガーのナビメニューが出てくる実装
+
+//sp版でMenuを押すとハンバーガーのナビメニューが出てくる実装
 
     $(".c-button--menu").click(function () {   //Menuボタンがクリックされたら
         $(".c-button--cross").toggleClass('active');   //×ボタンを activeクラスを付与して表示      
@@ -8,8 +9,6 @@ $(function(){
         $(".l-sidebar").toggleClass('slideactive');  //サイドバーが出現
       });
       
-      console.log('test'); 
-
     $(".c-button--cross").click(function () {   //×ボタンがクリックされたら
         $(this).removeClass('active');   //ボタンの activeクラスを除去し
         $(".c-wrapper").toggleClass('backactive');   //ナビゲーションのpanelactiveクラスも除去
@@ -23,7 +22,7 @@ $(function(){
 
     //スクロール量を保存
     var scrollTop;
-
+   
     //スクロールを固定
     function bodyFixedOn() {
     scrollTop = $(window).scrollTop();
@@ -44,16 +43,19 @@ $(function(){
     $(window).scrollTop(scrollTop);
     }
 
-    //サイドバーが出ているとき背景固定
+
+//サイドバーが出ているとき背景固定
     $('.c-button--menu').on('click', function() {
     bodyFixedOn();
     });
 
-    //サイドバーが消えたら背景固定戻す
+
+//サイドバーが消えたら背景固定戻す
     $('.c-button--cross').on('click', function() {
     bodyFixedOff();
     });
 
 
+console.log('test'); 
 
 }); //最初のfunctionのかっこ//

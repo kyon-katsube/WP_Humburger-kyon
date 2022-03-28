@@ -26,7 +26,7 @@
                         $search_query = get_search_query();
                         ?>
                         
-                  <?php if( $total_results >1 ): ?>
+                  <?php if( $total_results >= 1 ): ?>
                    <h2 class="c-title p-subheading__wrapper__h2"> <?php echo $total_results; ?>件の記事が見つかりました。</h2>
                   <?php else:?>
                    <h2 class="c-title p-subheading__wrapper__h2">お探しのページが見つかりませんでした。</h2>
@@ -63,8 +63,8 @@
                </section> 
             <?php endwhile;?>
 
-            <?php elseif( empty($search_query)): ?>
-               <h2 class="c-title p-subheading__wrapper__h2">検索ワードが入力されていません。</h2> 
+            <?php elseif(! get_search_query()): ?>
+               <h2 class="c-title p-subheading__wrapper__h2">検索ワードが入力されていません。</h2>
             <?php else:?>
                <h2 class="c-title p-subheading__wrapper__h2">お探しのページが見つかりませんでした。</h2>
             <?php endif;?>

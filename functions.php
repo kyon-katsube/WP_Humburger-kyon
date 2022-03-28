@@ -10,11 +10,11 @@
             wp_enqueue_style( 'style', get_template_directory_uri(). '/scss/style.css',array(),'1,0,0' );
         
             // WordPressのjQueryの読み込みを解除
-            wp_deregister_script('jquery');
+            // wp_deregister_script('jquery');
 
             //js読み込み
-            wp_enqueue_script('script', get_template_directory_uri().'/script.js', array(), false, true );   //footerで読み込む
-            wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), false, true );  //footerで読み込む
+            wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), '3.6.0', true ); 
+            wp_enqueue_script('script', get_template_directory_uri().'/script.js', array(), false, true ); 
             }  
 
         add_action('wp_enqueue_scripts', 'wphumburgerkyon_script');

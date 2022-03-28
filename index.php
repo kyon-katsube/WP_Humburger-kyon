@@ -10,6 +10,8 @@
             <h2 class="p-page-title c-title">ダミーサイト</h2>
          </div>
 
+         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
          <div class="p-branch-menu">   <!--TakeOut全体のくくり-->
             <article class="p-branch-menu__contents-first">
               <h2 class="p-branch-menu__contents c-title--underline">Take Out</h2>
