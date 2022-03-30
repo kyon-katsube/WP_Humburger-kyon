@@ -4,7 +4,7 @@
 
 .p-sidebar {     //pinkのサイドバーの設定
     background-color:v.$sidebar-background-gray;
-    position:absolute;
+    position:fixed;  //absoluteにしていたがSP版の時右外側にはみ出て表示されてしまうので変更したら直った！！
     right:-120%;//menuボタンを押すまでは非表示 メインとサイドバーの割合
     top:0; 
     width:328px;
@@ -12,7 +12,7 @@
     z-index:3;
     &.slideactive {      //サイドバーが開く
         right:0; 
-        transition:all 0.8s;
+        transition:all 0.5s;
     }
     @include m.mq(pc) {
         position:static;

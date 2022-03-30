@@ -850,7 +850,7 @@ img {
 
 .p-sidebar {
   background-color: #F2EDE9;
-  position: absolute;
+  position: fixed;
   right: -120%;
   top: 0;
   width: 328px;
@@ -859,7 +859,7 @@ img {
 }
 .p-sidebar.slideactive {
   right: 0;
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 @media screen and (min-width:1025px) {
   .p-sidebar {
