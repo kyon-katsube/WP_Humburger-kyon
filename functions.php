@@ -13,8 +13,8 @@
             // wp_deregister_script('jquery');
 
             //js読み込み
-            wp_enqueue_script('jquery', get_template_directory_uri().'/js/jquery-3.6.0.min.js', array(), '3.6.0');
-            wp_enqueue_script('script', get_template_directory_uri().'/js/script.js', array(), '1.0.0' ); 
+            wp_enqueue_script('jquery', get_template_directory_uri().'/js/jquery-3.6.0.min.js', array(), '3.6.0',true);  //jsはfooterで読み込ませるのでtrue
+            wp_enqueue_script('script', get_template_directory_uri().'/js/script.js', array(), '1.0.0',true ); 
             }  
 
         add_action('wp_enqueue_scripts', 'wphumburgerkyon_script');
