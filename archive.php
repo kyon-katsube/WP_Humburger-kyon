@@ -48,15 +48,13 @@
                             ?>             
                         </figcaption>
                      </div>     <!--wrapper-->        
-                   
+
                      <form action="<?php the_permalink(); ?>"> 
                             <button class="c-button p-card__button" type="submit">詳しく見る</button>
-
+                     </form>
                   </div>   <!--p-archive-card-->
                </figure>     
             </section> 
-
-            <?php wp_link_pages(); ?> <!--テーマチェックが出たのでとりあえず記入-->
             
             <?php endwhile;
                endif; ?>   

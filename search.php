@@ -52,13 +52,10 @@
                            </figcaption>
                         </div>     <!--wrapper-->        
                      
-                        <!-- <button class="c-button p-card__button" type="button" onclick ="location.href='<?php the_permalink(); ?>'">詳しく見る</button>  -->
                         <form action="<?php the_permalink(); ?>"> 
                             <button class="c-button p-card__button" type="submit">詳しく見る</button>
-
-                    </form>
+                        </form>
                      </div>   <!--p-archive-card-->
-
                   </figure>     
                </section> 
             <?php endwhile;?>
